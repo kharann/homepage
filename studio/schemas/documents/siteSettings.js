@@ -2,18 +2,30 @@ export default {
   name: 'siteSettings',
   type: 'document',
   title: 'Site Settings',
-  __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   fields: [
     {
       name: 'title',
-      type: 'string',
-      title: 'Title'
+      title: 'Title',
+      type: 'string'
     },
     {
       name: 'description',
-      type: 'text',
       title: 'Description',
-      description: 'Describe your blog for search engines and social media.'
+      type: 'text'
+    },
+    {
+      name: 'keywords',
+      title: 'Keywords',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags'
+      }
+    },
+    {
+      name: 'author',
+      title: 'Author',
+      type: 'string'
     }
   ]
 }
