@@ -7,6 +7,10 @@
 /**
  * Create all the project pages.
  */
+const xd = () => {
+  console.log('KEK');
+};
+/*
 const createProjectPages = async (graphql, actions, reporter) => {
   const { createPage } = actions
   const getProjectsResult = await graphql(`
@@ -39,3 +43,4 @@ const createProjectPages = async (graphql, actions, reporter) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createProjectPages(graphql, actions, reporter);
 }
+*/

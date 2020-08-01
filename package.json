@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "sanity-sapper-blog",
+  "name": "kharann_homepage",
   "version": "1.0.19",
   "scripts": {
     "clean": "lerna clean",
