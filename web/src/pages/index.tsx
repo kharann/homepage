@@ -8,8 +8,14 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <p>{data.education.nodes[1].title}</p>
-      <p>{data.education.nodes[1].study}</p>
+      {data.education.nodes.map(edu => {
+        return (
+          <>
+            <p>School: {edu.title}</p>
+            <p>Major: {edu.study}</p>
+          </>
+        );
+      })}
     </Layout>
   );
 };
