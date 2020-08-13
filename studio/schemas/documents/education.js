@@ -6,22 +6,22 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Tittel'
+      title: 'Title'
     },
     {
       name: 'study',
       type: 'string',
-      title: 'Studie'
+      title: 'Study'
     },
     {
       name: 'details',
       type: 'text',
-      title: 'Detaljer'
+      title: 'Details'
     },
     {
       name: 'startDate',
       type: 'date',
-      title: 'Start Dato',
+      title: 'Start Date',
       options: {
         dateFormat: 'YYYY-MM-DD',
         calendarTodayLabel: 'Today'
@@ -30,7 +30,7 @@ export default {
     {
       name: 'endDate',
       type: 'date',
-      title: 'Slutt Dato',
+      title: 'End Date',
       options: {
         dateFormat: 'YYYY-MM-DD',
         calendarTodayLabel: 'Today'
@@ -39,7 +39,7 @@ export default {
     {
       name: 'visible',
       type: 'boolean',
-      title: 'Vises?'
+      title: 'Visible?'
     }
   ],
   initialValue: {

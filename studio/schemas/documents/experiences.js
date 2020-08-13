@@ -1,12 +1,12 @@
 export default {
   name: 'experiences',
   type: 'document',
-  title: 'Erfaringer',
+  title: 'Experiences',
   fields: [
     {
       name: 'role',
       type: 'string',
-      title: 'Rolle'
+      title: 'Role'
     }
   ]
 }
