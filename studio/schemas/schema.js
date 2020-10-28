@@ -8,7 +8,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import siteSettings from './documents/siteSettings'
 import education from './documents/education'
 import experiences from './documents/experiences'
+import personal_info from './documents/personal_info'
+
 export default createSchema({
   name: 'blog',
-  types: schemaTypes.concat([siteSettings, education, experiences])
+  types: schemaTypes.concat([siteSettings, education, personal_info, experiences])
 })

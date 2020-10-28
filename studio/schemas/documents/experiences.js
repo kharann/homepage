@@ -7,6 +7,16 @@ export default {
       name: 'role',
       type: 'string',
       title: 'Role'
+    },
+    {
+      name: 'company',
+      type: 'string',
+      title: 'Company'
+    },
+    {
+      name: 'preview',
+      type: 'image',
+      title: 'Preview image'
     }
   ]
 }

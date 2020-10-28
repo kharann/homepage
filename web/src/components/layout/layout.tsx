@@ -13,7 +13,6 @@ import Header from '../header/header';
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
       <div className="main-content-container">
         <main>{children}</main>
         <footer>
