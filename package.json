@@ -1,0 +1,4 @@
+{
+  "private": true,
+  "workspaces": ["homepage-web","cms"]
+}
