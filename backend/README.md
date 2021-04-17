@@ -1,1 +1,0 @@
-# homepage2-studio
