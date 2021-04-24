@@ -1,4 +1,7 @@
 {
   "private": true,
-  "workspaces": ["homepage-web","cms"]
+  "workspaces": ["web","cms"],
+  "scripts": {
+    "cms:start": "yarn workspace cms dev"
+  }
 }
