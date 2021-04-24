@@ -5,3 +5,17 @@
  */
 
 // You can delete this file if you're not using it
+
+import * as React from 'react';
+import { getCssString } from './stitches.config';
+
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <style
+      id="stitches"
+      dangerouslySetInnerHTML={{
+        __html: getCssString(),
+      }}
+    />,
+  ]);
+};
