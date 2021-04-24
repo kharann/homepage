@@ -16,6 +16,6 @@ export const { styled, css, getCssString, keyframes } = createCss({
     },
   },
   utils: {
-    full_bleed: (config) => (value) => value && { width: '100%', gridColumn: '1 / 4' },
+    full_bleed: (config) => (value) => value && { width: '100%', gridColumn: '1 / -1' },
   },
 });
