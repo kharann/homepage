@@ -14,8 +14,6 @@ const Text = styled('h1', {
   fontFamily: 'Hack',
   color: '$primary',
   margin: 0,
-  display: 'flex',
-  alignItems: 'center',
 });
 
 const AnimatedText = styled('span', {

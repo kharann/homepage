@@ -6,7 +6,7 @@ export const { styled, css, getCssString, keyframes } = createCss({
       system: 'Raleway',
     },
     colors: {
-      primary: '#8095FF',
+      primary: '#8595D5',
       richblack: '#0F161E',
     },
     fontSizes: {

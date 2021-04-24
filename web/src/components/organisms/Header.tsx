@@ -1,4 +1,5 @@
 import Logo from '@components/atoms/Logo';
+import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
 import { styled } from 'stitches';
 
@@ -9,10 +10,18 @@ const Div = styled('div', {
   background: '$richblack',
 });
 
+const Link = styled(GatsbyLink, {
+  textDecoration: 'none',
+  display: 'flex',
+  alignItems: 'center',
+});
+
 const Header: React.FC = () => {
   return (
     <Div>
-      <Logo />
+      <Link to="/" partiallyActive={true}>
+        <Logo />
+      </Link>
       <p>Links here</p>
     </Div>
   );
