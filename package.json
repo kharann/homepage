@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "workspaces": ["web","cms"],
-  "scripts": {
-    "cms:start": "yarn workspace cms dev"
-  }
-}

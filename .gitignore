@@ -1,2 +1,5 @@
 sanity-template-gatsby-blog/*
-node_modules
+/node_modules/
+/.svelte-kit/
+/build/
+
