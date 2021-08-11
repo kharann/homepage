@@ -1,12 +1,11 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
 	import '../app.postcss';
+	import Header from '../components/header.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <Header />
 <main>
 	<slot />
 </main>
-<footer>
-	<p>Nice footer nerd</p>
-</footer>
+<Footer />

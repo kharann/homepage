@@ -3,8 +3,14 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		colors: {
-			richblack: '#0F161E',
-			primary: '#8595D5'
+			'primary-light': '#f1f4ff',
+			primary: '#8595D5',
+			'primary-dark': '#6a77aa',
+			black: '#0F161E',
+			white: '#ffffff'
+		},
+		fontFamily: {
+			logo: 'Hack'
 		}
 	},
 	plugins: []
