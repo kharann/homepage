@@ -1,10 +1,11 @@
 {
   "private": true,
   "workspaces": [
-    "frontend",
+    "web",
     "cms"
   ],
   "scripts": {
-    "cms:start": "yarn workspace cms start"
+    "cms:start": "yarn workspace cms start",
+    "web:start": "yarn workspace web dev"
   }
 }

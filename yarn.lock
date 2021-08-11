@@ -14547,6 +14547,26 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"web@workspace:web":
+  version: 0.0.0-use.local
+  resolution: "web@workspace:web"
+  dependencies:
+    "@fontsource/fira-mono": ^4.2.2
+    "@lukeed/uuid": ^2.0.0
+    "@sveltejs/kit": next
+    autoprefixer: ^10.3.1
+    cookie: ^0.4.1
+    cssnano: ^5.0.6
+    postcss: ^8.3.5
+    postcss-load-config: ^3.1.0
+    prettier: ~2.2.1
+    prettier-plugin-svelte: ^2.2.0
+    svelte: ^3.34.0
+    svelte-preprocess: ^4.7.4
+    tailwindcss: ^2.2.7
+  languageName: unknown
+  linkType: soft
+
 "webidl-conversions@npm:^4.0.2":
   version: 4.0.2
   resolution: "webidl-conversions@npm:4.0.2"
@@ -14938,23 +14958,3 @@ fsevents@~2.3.2:
   checksum: 4a73da856738b0634700b52f4ab3fe0bf0a532bea6820ad962d0bda0163d2d5525df4859f89a7238e204a378384e12551985049790c1894c3ac191866e85887f
   languageName: node
   linkType: hard
-
-"~TODO~@workspace:frontend":
-  version: 0.0.0-use.local
-  resolution: "~TODO~@workspace:frontend"
-  dependencies:
-    "@fontsource/fira-mono": ^4.2.2
-    "@lukeed/uuid": ^2.0.0
-    "@sveltejs/kit": next
-    autoprefixer: ^10.3.1
-    cookie: ^0.4.1
-    cssnano: ^5.0.6
-    postcss: ^8.3.5
-    postcss-load-config: ^3.1.0
-    prettier: ~2.2.1
-    prettier-plugin-svelte: ^2.2.0
-    svelte: ^3.34.0
-    svelte-preprocess: ^4.7.4
-    tailwindcss: ^2.2.7
-  languageName: unknown
-  linkType: soft
