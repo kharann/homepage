@@ -16,9 +16,9 @@
 </script>
 
 <nav class="header">
-	<div class="w-full max-w-4xl flex m-auto justify-between">
+	<div class="w-full max-w-4xl flex m-auto justify-between px-4">
 		<div class="flex">
-			<a href="/" class="no-underline flex items-center pl-4 mr-6">
+			<a href="/" class="no-underline flex items-center mr-6">
 				<!-- logo -->
 				<Logo />
 			</a>

@@ -7,11 +7,11 @@
 </script>
 
 {#if style === 'h2'}
-	<h2 class="text-2xl font-bold text-accent mt-8 mb-4"><slot /></h2>
+	<h2 class="text-3xl font-bold text-accent mt-8 mb-4"><slot /></h2>
 {:else if style === 'h3'}
-	<h3 class="text-xl font-bold text-accent mt-8 mb-4"><slot /></h3>
+	<h3 class="text-2xl font-bold text-accent mt-8 mb-4"><slot /></h3>
 {:else if style === 'h4'}
-	<h4 class="text-lg font-bold text-accent mt-8 mb-4"><slot /></h4>
+	<h4 class="text-xl font-bold text-accent mt-8 mb-4"><slot /></h4>
 {:else if style === 'h5'}
 	<h5 class="text-lg text-gray-600"><slot /></h5>
 {:else if style === 'h6'}

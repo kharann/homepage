@@ -19,7 +19,7 @@
 </script>
 
 <Header {activePath} />
-<main class="w-full max-w-3xl m-auto mt-12">
+<main class="w-full max-w-3xl m-auto mt-12 px-4">
 	<slot />
 </main>
 <Footer />

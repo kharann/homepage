@@ -6,10 +6,10 @@
 </script>
 
 <li class={style}>
-	<a {href}>{text}</a>
+	<a sveltekit:prefetch {href}>{text}</a>
 </li>
 
-<style lang="scss">
+<style lang="postcss">
 	.link {
 		@apply mr-1 pl-2 pr-2 pt-1 pb-1 text-lg rounded-md hover:bg-primary-100 duration-300;
 	}

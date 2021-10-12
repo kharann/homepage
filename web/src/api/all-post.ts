@@ -4,7 +4,7 @@ import groq from 'groq';
 import type { QueryResult } from './types';
 
 export interface PreviewPost {
-	_createdAt: Date;
+	_createdAt: string;
 	title: string;
 	slug: string;
 	estimatedReadingTime: number;
