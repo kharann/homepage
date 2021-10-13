@@ -8,7 +8,7 @@
 	const publishedAt = DateTime.fromISO(_createdAt).toFormat('LLL dd, yyyy');
 </script>
 
-<article class="hover:text-secondary">
+<article class="hover:text-primary">
 	<h3 class={`${small ? 'text-xl' : 'text-2xl'}  mt-4`}>{title}</h3>
 	<p class="flex justify-between items-center">
 		<span class="text-gray-dark">{publishedAt}</span>
