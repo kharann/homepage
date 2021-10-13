@@ -8,8 +8,8 @@
 	const publishedAt = DateTime.fromISO(_createdAt).toFormat('LLL dd, yyyy');
 </script>
 
-<article>
-	<h3 class={`${small ? 'text-xl' : 'text-2xl'} text-gray-dark mt-4`}>{title}</h3>
+<article class="hover:text-secondary">
+	<h3 class={`${small ? 'text-xl' : 'text-2xl'}  mt-4`}>{title}</h3>
 	<p class="flex justify-between items-center">
 		<span class="text-gray-dark">{publishedAt}</span>
 		<span class="text-gray">{estimatedReadingTime} min read</span>

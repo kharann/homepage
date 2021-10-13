@@ -38,13 +38,13 @@
 	<p class="mt-4">{description}</p>
 </section>
 <section class="mt-8">
-	<h2 class="text-2xl font-bold text-accent">Latest posts</h2>
+	<h2 class="text-2xl font-bold text-secondary">Latest posts</h2>
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
 			<PostListItem {post} small={true} />
 		</a>
 	{/each}
-	<a class="flex mt-4 text-gray hover:text-accent" href="blog"
+	<a class="flex mt-4 text-gray hover:text-secondary" href="blog"
 		>Read all posts<i>{@html arrowRightIcon}</i></a
 	>
 </section>

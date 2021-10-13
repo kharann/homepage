@@ -11,6 +11,7 @@ const config = {
 				5: '#24326A',
 				DEFAULT: '#586EC6'
 			},
+			secondary: '#CC005C',
 			black: '#0F161E',
 			white: '#ffffff',
 			gray: {
