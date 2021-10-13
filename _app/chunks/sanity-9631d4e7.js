@@ -1,0 +1,1 @@
+const o="r4l4xmqo",e="production",n="v2021-11-11",t=(t,r)=>{let $=`https://${o}.api.sanity.io/${n}/data/query/${e}?query=${encodeURIComponent(t)}`;if(r){$+=Object.entries(r).map((([o,e])=>`&$${o}=${encodeURIComponent(`"${e}"`)}`)).join("")}return console.log($),$};export{t as g};
