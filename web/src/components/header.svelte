@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import Link from './link.svelte';
 	import Logo from './logo.svelte';
 	import feather from 'feather-icons';
-	export let activePath;
+	import Dropdown from './dropdown.svelte';
+	import Hamburger from './hamburger.svelte';
+	export let activePath: string;
 
 	const routes = [
 		{ link: '/', text: 'Home' },
@@ -11,8 +13,9 @@
 		{ link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }
 	];
-
-	const moonIcon = feather.icons.moon.toSvg();
+	const moonIcon = feather.icons.moon.toSvg({ height: '32px' });
+	const sunIcon = feather.icons.sun.toSvg({ height: '32px' });
+	let open: boolean = false;
 </script>
 
 <nav class="header">
@@ -22,17 +25,21 @@
 				<!-- logo -->
 				<Logo />
 			</a>
-			<ul class="list-outside flex items-center">
+			<ul class="hidden sm:flex list-outside items-center">
 				{#each routes as route}
 					<Link href={route.link} text={route.text} isActive={route.link === activePath} />
 				{/each}
 			</ul>
 		</div>
-		<div class="flex items-center">
-			<i>{@html moonIcon}</i>
+		<div class="flex sm:hidden">
+			<Hamburger bind:open />
 		</div>
+		<i class="hidden sm:flex">
+			{@html moonIcon}
+		</i>
 	</div>
 </nav>
+<Dropdown bind:open {routes} />
 
 <style lang="postcss">
 	.header {
