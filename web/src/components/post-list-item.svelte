@@ -9,7 +9,7 @@
 </script>
 
 <article>
-	<h3 class={`text-${small ? 'xl' : '2xl'} text-gray-dark mt-4`}>{title}</h3>
+	<h3 class={`${small ? 'text-xl' : 'text-2xl'} text-gray-dark mt-4`}>{title}</h3>
 	<p class="flex justify-between items-center">
 		<span class="text-gray-dark">{publishedAt}</span>
 		<span class="text-gray">{estimatedReadingTime} min read</span>
