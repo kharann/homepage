@@ -20,6 +20,5 @@ export const getFetchUrl = (query: string, parameters?: Parameters) => {
 			.join('');
 		url += urlParameters;
 	}
-	console.log(url);
 	return url;
 };

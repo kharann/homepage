@@ -1,6 +1,7 @@
 import { getFetchUrl } from '@lib/sanity';
 import groq from 'groq';
-import { allPostsQuery, PreviewPost } from './all-post';
+import { allPostsQuery } from './all-post';
+import type { PreviewPost } from './all-post';
 import type { SanityDataFetcher } from './types';
 
 interface FrontpageData {
