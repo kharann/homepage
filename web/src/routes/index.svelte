@@ -27,9 +27,9 @@
 	</h1>
 	<byline class="text-lg text-gray">{introduction.role}</byline>
 	<p class="mt-4">
-		My forte is creating products that promotes value for the end-user without sacrificing quality.<br
-		/>
-		I love every aspect of software development, from the infrastructure to the backend and frontend.
+		My forte is creating products that promotes value for the end-user without sacrificing quality.
+		I also love every aspect of software development, from the infrastructure to the backend and
+		frontend.
 	</p>
 	<!-- <h1 class="text-3xl font-bold">Latest post</h1> -->
 </section>

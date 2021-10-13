@@ -1,5 +1,4 @@
-import { Fetch, Parameter, getFetchUrl } from '$lib/sanity';
-import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes';
+import { Fetch, getFetchUrl, Parameter } from '@lib/sanity';
 import groq from 'groq';
 import type { QueryResult } from './types';
 
