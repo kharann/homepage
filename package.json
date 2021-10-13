@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "cms:start": "yarn workspace cms start",
-    "web:start": "yarn workspace web dev"
+    "web:start": "yarn workspace web dev",
+    "web:build": "yarn workspace web build"
   }
 }
