@@ -13,7 +13,7 @@ export interface BlogPost {
 	_updatedAt: string;
 }
 
-export const postBySlugQuery = groq`
+const postBySlugQuery = groq`
 		*[_type == "posts" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
 			_createdAt,
 			_updatedAt,

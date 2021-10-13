@@ -14,8 +14,7 @@ export const allPostsQuery = groq`
 			title,
 			"slug": slug.current,
             "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 )
-		}
-	`;
+		}`;
 
 export const fetchAllPosts: SanityDataFetcher<PreviewPost[]> = async (fetch, parameters?) => {
 	const url = getFetchUrl(allPostsQuery, parameters);
