@@ -24,6 +24,6 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-bold text-accent mt-8 mb-4;
+		@apply font-bold text-primary-5 mt-8 mb-4;
 	}
 </style>

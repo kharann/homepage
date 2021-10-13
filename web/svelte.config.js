@@ -14,6 +14,11 @@ const config = {
 			base: dev ? '' : '/homepage/',
 			appDir: 'build'
 		}),
+		prerender: {
+			crawl: true,
+			enabled: true,
+			entries: ['*']
+		},
 		vite: {
 			resolve: {
 				alias: {

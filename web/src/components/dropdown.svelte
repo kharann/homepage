@@ -28,6 +28,6 @@
 
 <style lang="postcss">
 	.big-link {
-		@apply text-xl font-semibold pb-4 mt-4 border-b-2 border-primary-light;
+		@apply text-xl font-semibold pb-4 mt-4 border-b-2 border-primary-1;
 	}
 </style>

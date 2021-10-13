@@ -51,6 +51,6 @@
 
 <style lang="postcss">
 	.name {
-		@apply text-primary-dark font-black font-hack;
+		@apply text-primary font-black font-hack;
 	}
 </style>

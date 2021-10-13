@@ -22,7 +22,7 @@
 		<div class="content">
 			<div class="grid grid-cols-3 w-max gap-5">
 				{#each iconLinks as iconLink}
-					<a class="text-primary hover:text-primary-dark duration-300" href={iconLink.link}
+					<a class="text-primary hover:text-primary-3 duration-300" href={iconLink.link}
 						>{@html iconLink.icon}</a
 					>
 				{/each}
@@ -34,7 +34,7 @@
 
 <style lang="postcss">
 	.footer_container {
-		@apply pt-6 pb-6 border-t-2 border-primary-light flex justify-center mr-4 ml-4;
+		@apply pt-6 pb-6 border-t-2 border-primary-2 flex justify-center mr-4 ml-4;
 	}
 	.content {
 		@apply max-w-4xl w-full m-auto h-full flex flex-col items-center;

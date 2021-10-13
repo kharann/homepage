@@ -3,10 +3,14 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		colors: {
-			'primary-100': '#f0f2fa',
-			'primary-light': '#dadff2',
-			primary: '#8595D5',
-			'primary-dark': '#6a77aa',
+			primary: {
+				1: '#f0f2fa',
+				2: '#dadff2',
+				3: '#586EC6',
+				4: '#394FA7',
+				5: '#24326A',
+				DEFAULT: '#586EC6'
+			},
 			black: '#0F161E',
 			white: '#ffffff',
 			gray: {
@@ -14,7 +18,7 @@ const config = {
 				DEFAULT: '#6f6e77',
 				dark: '#1a1523'
 			},
-			accent: '#11325E'
+			accent: '#586EC6'
 		},
 		fontFamily: {
 			hack: 'Hack',

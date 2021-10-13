@@ -43,7 +43,7 @@
 
 <style lang="postcss">
 	.header {
-		@apply h-16 bg-white border-b-2 border-primary-light shadow w-full flex;
+		@apply h-16 bg-white border-b-2 border-primary-2 shadow w-full flex;
 	}
 
 	.logo-container {
