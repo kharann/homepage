@@ -20,11 +20,14 @@
 
 <script lang="ts">
 	import type { PreviewPost } from '@api/all-post';
+	import feather from 'feather-icons';
 	import PostListItem from '@components/post-list-item.svelte';
 
 	export let posts: PreviewPost[];
 	export let role: string;
 	export let description: string;
+
+	const arrowRightIcon = feather.icons['arrow-right'].toSvg();
 </script>
 
 <div class="p-4">
@@ -42,6 +45,9 @@
 				<PostListItem {post} small={true} />
 			</a>
 		{/each}
+		<a class="flex mt-4 text-gray hover:text-accent" href="blog"
+			>Read all posts<i>{@html arrowRightIcon}</i></a
+		>
 	</section>
 </div>
 
