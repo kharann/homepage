@@ -2,7 +2,7 @@
 	import type { PreviewPost } from '@api/all-post';
 	import { DateTime } from 'luxon';
 	export let post: PreviewPost;
-	export let small: boolean | undefined;
+	export let small: boolean | undefined = undefined;
 
 	const { estimatedReadingTime, title, _createdAt } = post;
 	const publishedAt = DateTime.fromISO(_createdAt).toFormat('LLL dd, yyyy');
