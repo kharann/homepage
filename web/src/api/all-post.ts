@@ -1,6 +1,6 @@
-import { Fetch, getFetchUrl, Parameter } from '@lib/sanity';
+import { getFetchUrl } from '@lib/sanity';
 import groq from 'groq';
-import type { QueryResult } from './types';
+import type { SanityDataFetcher } from './types';
 
 export interface PreviewPost {
 	_createdAt: string;
@@ -17,10 +17,7 @@ export const allPostsQuery = groq`
 		}
 	`;
 
-export const fetchAllPosts = async (
-	fetch: Fetch,
-	parameters?: Parameter
-): Promise<QueryResult<PreviewPost[]>> => {
+export const fetchAllPosts: SanityDataFetcher<PreviewPost[]> = async (fetch, parameters?) => {
 	const url = getFetchUrl(allPostsQuery, parameters);
 	const res = await fetch(url);
 	const data = await res.json();

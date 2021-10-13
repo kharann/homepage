@@ -5,6 +5,7 @@
 		let base_regex = /(\/\w+)\//;
 		return {
 			props: {
+				// Get the active path for highlighting
 				activePath: page.path.replace(base_regex, '$1')
 			}
 		};

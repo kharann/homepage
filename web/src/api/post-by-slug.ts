@@ -1,7 +1,7 @@
-import { Fetch, getFetchUrl, Parameter } from '$lib/sanity';
+import { getFetchUrl } from '@lib/sanity';
 import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes';
 import groq from 'groq';
-import type { QueryResult } from './types';
+import type { SanityDataFetcher } from './types';
 
 export interface BlogPost {
 	title: string;
@@ -26,10 +26,7 @@ export const postBySlugQuery = groq`
 		}
 	`;
 
-export const fetchPostBySlug = async (
-	fetch: Fetch,
-	parameters?: Parameter
-): Promise<QueryResult<BlogPost>> => {
+export const fetchPostBySlug: SanityDataFetcher<BlogPost> = async (fetch, parameters?) => {
 	const url = getFetchUrl(postBySlugQuery, parameters);
 	const res = await fetch(url);
 	const data = await res.json();
