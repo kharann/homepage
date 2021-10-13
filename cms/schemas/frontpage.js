@@ -1,17 +1,9 @@
 export default {
-  name: "frontpage",
-  title: "Frontpage",
+  name: "whoami",
+  title: "Frontpage Introduction",
   type: "document",
   fields: [
-    {
-      title: "Introduction",
-      name: "introduction",
-      type: "object",
-      fields: [
-        { name: "title", type: "string", title: "Title" },
-        { name: "role", type: "string", title: "Role" },
-        { name: "description", type: "string", title: "Description" },
-      ],
-    },
+    { name: "role", type: "string", title: "Role" },
+    { name: "description", type: "string", title: "Description" },
   ],
 };
