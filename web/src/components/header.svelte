@@ -16,9 +16,9 @@
 </script>
 
 <nav class="header">
-	<div class="w-full max-w-4xl flex m-auto justify-between px-4">
+	<div class="header-items">
 		<div class="flex">
-			<a href="/" class="no-underline flex items-center mr-6">
+			<a href="/" class="logo-container">
 				<!-- logo -->
 				<Logo />
 			</a>
@@ -37,5 +37,13 @@
 <style lang="postcss">
 	.header {
 		@apply h-16 bg-white border-b-2 border-primary-light shadow w-full flex;
+	}
+
+	.logo-container {
+		@apply no-underline flex items-center mr-6;
+	}
+
+	.header-items {
+		@apply w-full max-w-4xl flex m-auto justify-between px-4;
 	}
 </style>
