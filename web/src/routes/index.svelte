@@ -21,18 +21,22 @@
 	export let introduction;
 </script>
 
-<section class="mt-4 p-4">
-	<h1 class="text-3xl mb-2">
-		Hei, I'm Anh-Kha Vo and on the web I go by <span class="name">Kharann 👋</span>
-	</h1>
-	<byline class="text-lg text-gray">{introduction.role}</byline>
-	<p class="mt-4">
-		My forte is creating products that promotes value for the end-user without sacrificing quality.
-		I also love every aspect of software development, from the infrastructure to the backend and
-		frontend.
-	</p>
-	<!-- <h1 class="text-3xl font-bold">Latest post</h1> -->
-</section>
+<div class="p-4">
+	<section class="mt-4">
+		<h1 class="text-3xl mb-2">
+			Hei, I'm Anh-Kha Vo and on the web I go by <span class="name">Kharann 👋</span>
+		</h1>
+		<byline class="text-lg text-gray">{introduction.role}</byline>
+		<p class="mt-4">
+			My forte is creating products that promotes value for the end-user without sacrificing
+			quality. I also love every aspect of software development, from the infrastructure to the
+			backend and frontend.
+		</p>
+	</section>
+	<section class="mt-4">
+		<h2 class="text-2xl font-bold text-accent">Latest posts</h2>
+	</section>
+</div>
 
 <style lang="postcss">
 	.name {
