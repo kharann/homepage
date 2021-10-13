@@ -2,10 +2,9 @@
 	export let text: string;
 	export let href: string;
 	export let isActive: boolean;
-	const style = isActive ? 'link font-extrabold' : 'link';
 </script>
 
-<li class={style}>
+<li class={`link ${isActive && 'font-extrabold'}`}>
 	<a sveltekit:prefetch {href}>{text}</a>
 </li>
 

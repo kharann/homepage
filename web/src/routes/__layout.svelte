@@ -12,15 +12,15 @@
 	};
 </script>
 
-<script>
+<script lang="ts">
 	import '../app.postcss';
 	import Header from '../components/header.svelte';
 	import Footer from '../components/footer.svelte';
-	export let activePath;
+	export let activePath: string;
 </script>
 
 <Header {activePath} />
-<main class="w-full max-w-3xl m-auto mt-12 px-4">
+<main class="w-full max-w-3xl m-auto mt-12 px-8">
 	<slot />
 </main>
 <Footer />
