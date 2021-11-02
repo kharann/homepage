@@ -37,6 +37,6 @@
 		@apply pt-6 pb-6 border-t-2 border-primary-light flex justify-center mr-4 ml-4;
 	}
 	.content {
-		@apply max-w-5xl w-full m-auto h-full flex flex-col items-center;
+		@apply max-w-4xl w-full m-auto h-full flex flex-col items-center;
 	}
 </style>

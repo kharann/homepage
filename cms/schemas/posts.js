@@ -4,9 +4,14 @@ const postSchema = {
   type: "document",
   fields: [
     {
-      title: "Greeting",
-      name: "greeting",
+      title: "Title",
+      name: "title",
       type: "string",
+    },
+    {
+      title: "Content",
+      name: "content",
+      type: "content",
     },
   ],
 };

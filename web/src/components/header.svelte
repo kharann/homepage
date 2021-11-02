@@ -6,7 +6,7 @@
 
 	const routes = [
 		{ link: '/', text: 'Home' },
-		{ link: '/posts', text: 'Posts' },
+		{ link: '/posts', text: 'Blog' },
 		{ link: '/projects', text: 'Projects' },
 		{ link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }
@@ -16,7 +16,7 @@
 </script>
 
 <nav class="header">
-	<div class="w-full max-w-5xl flex m-auto justify-between">
+	<div class="w-full max-w-4xl flex m-auto justify-between">
 		<div class="flex">
 			<a href="/" class="no-underline flex items-center pl-4 mr-6">
 				<!-- logo -->

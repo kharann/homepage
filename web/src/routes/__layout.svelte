@@ -14,11 +14,10 @@
 	import Header from '../components/header.svelte';
 	import Footer from '../components/footer.svelte';
 	export let activePath;
-	console.log(activePath);
 </script>
 
 <Header {activePath} />
-<main class="w-full max-w-5xl h-full m-auto">
+<main class="w-full max-w-4xl h-full m-auto">
 	<slot />
 </main>
 <Footer />
