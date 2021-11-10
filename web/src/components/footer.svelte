@@ -22,7 +22,7 @@
 		<div class="content">
 			<div class="grid grid-cols-3 w-max gap-5">
 				{#each iconLinks as iconLink}
-					<a class="text-primary hover:text-primary-dark" href={iconLink.link}
+					<a class="text-primary hover:text-primary-dark duration-300" href={iconLink.link}
 						>{@html iconLink.icon}</a
 					>
 				{/each}

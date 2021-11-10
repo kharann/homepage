@@ -9,8 +9,8 @@
 	<a {href}>{text}</a>
 </li>
 
-<style lang="postcss">
+<style lang="scss">
 	.link {
-		@apply mr-1 pl-2 pr-2 pt-1 pb-1 text-lg rounded-md hover:bg-primary-100;
+		@apply mr-1 pl-2 pr-2 pt-1 pb-1 text-lg rounded-md hover:bg-primary-100 duration-300;
 	}
 </style>

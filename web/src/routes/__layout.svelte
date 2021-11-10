@@ -1,4 +1,7 @@
 <script context="module">
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
 	export async function load({ page }) {
 		let base_regex = /(\/\w+)\//;
 		return {
