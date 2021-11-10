@@ -1495,6 +1495,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@portabletext/svelte@npm:^0.1.0-next.0":
+  version: 0.1.0-next.0
+  resolution: "@portabletext/svelte@npm:0.1.0-next.0"
+  peerDependencies:
+    svelte: ^3.40.0
+  checksum: c898e400d8f089708ddfa077282f78f6b792f6c42da94ef03d72d9a99b7f464917e23f7977999db9493b8590514b30c1dc6a4acd3b30cad389682d1289d439f7
+  languageName: node
+  linkType: hard
+
 "@reach/auto-id@npm:^0.13.2":
   version: 0.13.2
   resolution: "@reach/auto-id@npm:0.13.2"
@@ -14746,6 +14755,7 @@ typescript@^4.4.4:
   dependencies:
     "@fontsource/fira-mono": ^4.2.2
     "@lukeed/uuid": ^2.0.0
+    "@portabletext/svelte": ^0.1.0-next.0
     "@sveltejs/adapter-static": ^1.0.0-next.0
     "@sveltejs/kit": next
     "@tsconfig/svelte": ^2.0.1

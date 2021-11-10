@@ -1,6 +1,6 @@
 const postSchema = {
-  title: "My Example Document Type",
-  name: "exampleDocumentType",
+  title: "Post",
+  name: "posts",
   type: "document",
   fields: [
     {
@@ -9,9 +9,9 @@ const postSchema = {
       type: "string",
     },
     {
-      title: "Content",
-      name: "content",
-      type: "content",
+      title: "Post content",
+      name: "post_content",
+      type: "portable_text",
     },
   ],
 };

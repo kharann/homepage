@@ -1,6 +1,6 @@
 export default {
-  name: "content",
-  title: "Content",
+  name: "portable_text",
+  title: "Portable Text",
   type: "array",
   of: [
     {
