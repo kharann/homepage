@@ -29,7 +29,7 @@ const postSchema = {
     },
     {
       title: "Post content",
-      name: "post_content",
+      name: "content",
       type: "portable_text",
     },
   ],
