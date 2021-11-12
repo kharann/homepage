@@ -2577,6 +2577,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "@types/luxon@npm:2.0.7"
+  checksum: 81ee3bf5085dac398468e788c2bdc9d36a28c673453f335b6bfe0b31bacb907a7368b09e1794c93702e73c5ebf2733c562c2bfb12768e893a58ce7dc70beacd9
+  languageName: node
+  linkType: hard
+
 "@types/memoize-one@npm:^3.1.1":
   version: 3.1.2
   resolution: "@types/memoize-one@npm:3.1.2"
@@ -8882,6 +8889,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"luxon@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "luxon@npm:2.1.1"
+  checksum: 6d562796c4df195988f2afdca733e5a36457d6449c196cbf16710c706fde8d6b96c7d47fa54cd37c0cb29e4d2e7d8628a9677f36e23490139a8c90232f489e02
+  languageName: node
+  linkType: hard
+
 "magic-string@npm:^0.25.7":
   version: 0.25.7
   resolution: "magic-string@npm:0.25.7"
@@ -15131,12 +15145,14 @@ typescript@^4.4.4:
     "@sveltejs/adapter-static": ^1.0.0-next.0
     "@sveltejs/kit": next
     "@tsconfig/svelte": ^2.0.1
+    "@types/luxon": ^2.0.7
     autoprefixer: ^10.3.1
     cookie: ^0.4.1
     cssnano: ^5.0.6
     feather-icons: ^4.28.0
     groq: ^2.15.0
     groq-js: ^0.3.0-beta.2
+    luxon: ^2.1.1
     node-sass: ^6.0.1
     postcss: ^8.3.5
     postcss-load-config: ^3.1.0

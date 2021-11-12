@@ -27,7 +27,8 @@ const config = {
 				light: '#f9f8f9',
 				DEFAULT: '#6f6e77',
 				dark: '#1a1523'
-			}
+			},
+			accent: '#11325E'
 		},
 		fontFamily: {
 			hack: 'Hack',

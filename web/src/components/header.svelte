@@ -6,7 +6,7 @@
 
 	const routes = [
 		{ link: '/', text: 'Home' },
-		{ link: '/posts', text: 'Blog' },
+		{ link: '/blog', text: 'Blog' },
 		{ link: '/projects', text: 'Projects' },
 		{ link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }

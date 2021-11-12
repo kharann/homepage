@@ -17,7 +17,7 @@
 	];
 </script>
 
-<footer class="mt-auto shadow w-full">
+<footer class="mt-8 shadow w-full">
 	<div class="footer_container">
 		<div class="content">
 			<div class="grid grid-cols-3 w-max gap-5">
