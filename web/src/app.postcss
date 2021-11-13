@@ -1,6 +1,7 @@
 /* Write your global styles here, in PostCSS syntax */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +10,13 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	font-family: 'Lato';
+	font-family: 'Poppins';
 }
 
 #svelte {
-	height: 100%;
+	min-height: 100vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: white;
+	@apply bg-gray-light;
 }
