@@ -1,8 +1,9 @@
 <script lang="ts">
 	import PortableText from '@portabletext/svelte';
-	import type { PortableTextSlots } from '@portabletext/svelte/PortableText.svelte';
 	import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes';
 	import Heading from './heading.svelte';
+	import Link from './link.svelte';
+	import ListBullet from './list-bullet.svelte';
 
 	export let blocks: PortableTextBlocks;
 </script>
@@ -19,7 +20,11 @@
 			h6: Heading,
 			h7: Heading,
 			h8: Heading,
-			h9: Heading
+			h9: Heading,
+			list_bullet: ListBullet
+		},
+		marks: {
+			link: Link
 		}
 	}}
 />
