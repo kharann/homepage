@@ -13,9 +13,18 @@ body {
 }
 
 #svelte {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	@apply bg-gray-light;
+	@apply w-full h-full min-h-screen flex flex-col bg-gray-1 dark:bg-gray-5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+h8,
+h9 {
+	@apply text-black dark:text-white;
 }

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Link from './link.svelte';
 	import Logo from './logo.svelte';
-	import feather from 'feather-icons';
 	import Dropdown from './dropdown.svelte';
 	import Hamburger from './hamburger.svelte';
+	import ThemeToggler from './theme-toggler.svelte';
 	export let activePath: string;
 
 	const routes = [
@@ -13,8 +13,6 @@
 		{ link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }
 	];
-	const moonIcon = feather.icons.moon.toSvg({ height: '32px' });
-	const sunIcon = feather.icons.sun.toSvg({ height: '32px' });
 	let open: boolean = false;
 </script>
 
@@ -34,9 +32,7 @@
 		<div class="flex sm:hidden">
 			<Hamburger bind:open />
 		</div>
-		<i class="hidden sm:flex">
-			{@html moonIcon}
-		</i>
+		<ThemeToggler />
 	</div>
 </nav>
 <Dropdown bind:open {routes} />

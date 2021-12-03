@@ -13,7 +13,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 {#if open}
 	<aside class="absolute w-full h-full overflow-hidden">
-		<nav class="flex flex-col mt-20 px-8 bg-gray-light h-full">
+		<nav class="flex flex-col mt-20 px-8 bg-gray-1 h-full">
 			{#each routes as route, i}
 				<a
 					transition:fly={{ x: -15, delay: 50 * i }}

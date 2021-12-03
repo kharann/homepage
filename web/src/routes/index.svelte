@@ -34,17 +34,17 @@
 	<h1 class="text-3xl mb-2">
 		Hei, I'm Anh-Kha Vo and on the web I go by <span class="name">Kharann 👋</span>
 	</h1>
-	<byline class="text-lg text-gray">{role}</byline>
+	<byline class="text-lg text-gray dark:text-gray-2">{role}</byline>
 	<p class="mt-4">{description}</p>
 </section>
 <section class="mt-8">
-	<h2 class="text-2xl font-bold text-secondary">Latest posts</h2>
+	<h2 class="text-2xl font-bold text-secondary dark:text-secondary-dark">Latest posts</h2>
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
 			<PostListItem {post} small={true} />
 		</a>
 	{/each}
-	<a class="flex mt-4 text-gray hover:text-secondary" href="blog"
+	<a class="flex mt-4 text-gray hover:text-secondary dark:hover:text-secondary-dark" href="blog"
 		>Read all posts<i>{@html arrowRightIcon}</i></a
 	>
 </section>
