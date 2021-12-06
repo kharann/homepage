@@ -44,5 +44,9 @@
 		h5 {
 			@apply text-lg;
 		}
+
+		p {
+			@apply my-4;
+		}
 	}
 </style>
