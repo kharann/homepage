@@ -28,7 +28,7 @@
 	export let role: string;
 	export let description: string;
 
-	const arrowRightIcon = feather.icons['arrow-right'].toSvg();
+	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' });
 </script>
 
 <section class="mt-4">
@@ -47,7 +47,7 @@
 		</a>
 	{/each}
 	<a
-		class="flex mt-4 text-gray dark:text-gray-3 hover:text-secondary dark:hover:text-secondary-dark"
+		class="flex mt-4 text-gray dark:text-gray-3 hover:text-primary dark:hover:text-primary-3 items-center"
 		href="blog">Read all posts<i>{@html arrowRightIcon}</i></a
 	>
 </Section>

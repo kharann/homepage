@@ -16,7 +16,7 @@
 	let open: boolean = false;
 </script>
 
-<nav class="header bg-white dark:bg-gray-6 border-primary-2 dark:border-black ">
+<nav class="header bg-white dark:bg-primary-9 border-primary-2 dark:border-black ">
 	<div class="header-items">
 		<div class="flex">
 			<a href="/" class="logo-container">

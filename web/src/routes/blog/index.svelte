@@ -26,6 +26,11 @@
 
 <section>
 	<h1 class="text-4xl text-gray-5 font-bold">Blog</h1>
+	<p class="my-4">
+		In 2021, I made the decision to begin writing. It was always on my mind because I enjoyed
+		sharing my knowledge and mistakes with others. I primarily write about technology, whether it's
+		about career or new technologies that I've used.
+	</p>
 	<h2 class="text-3xl text-secondary dark:text-secondary-dark font-bold mt-4">All Posts</h2>
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>

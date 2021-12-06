@@ -1,3 +1,30 @@
+const blue = {
+	0: '#eef1f9',
+	1: '#dee2f4',
+	2: '#bcc5e8',
+	3: '#9ba8dd',
+	4: '#798bd1',
+	5: '#586EC6',
+	6: '#46589e',
+	7: '#354277',
+	8: '#232c4f',
+	9: '#121628',
+	DEFAULT: '#586EC6'
+};
+
+const gray = {
+	0: '#F9F8F9',
+	1: '#e2e2e4',
+	2: '#c5c5c9',
+	3: '#a9a8ad',
+	4: '#8c8b92',
+	5: '#6f6e77',
+	6: '#5f5b65',
+	7: '#48444f',
+	8: '#312c39',
+	9: '#1A1523'
+};
+
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
@@ -5,13 +32,8 @@ const config = {
 	theme: {
 		colors: {
 			primary: {
-				1: '#f0f2fa',
-				2: '#dadff2',
-				3: '#7688D0',
-				4: '#586EC6',
-				5: '#394FA7',
-				6: '#24326A',
-				DEFAULT: '#586EC6'
+				...blue,
+				DEFAULT: blue[5]
 			},
 			secondary: {
 				DEFAULT: '#D31E66',
@@ -20,15 +42,9 @@ const config = {
 			black: '#0F161E',
 			white: '#ffffff',
 			gray: {
-				1: '#f9f8f9',
-				2: '#CBCACE',
-				3: '#b5b4b9',
-				4: '#6f6e77',
-				5: '#48444f',
-				6: '#1a1523',
-				DEFAULT: '#6f6e77'
-			},
-			accent: '#586EC6'
+				...gray,
+				DEFAULT: gray[5]
+			}
 		},
 		fontFamily: {
 			hack: 'Hack',
