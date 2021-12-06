@@ -32,7 +32,9 @@
 		<div class="flex sm:hidden">
 			<Hamburger bind:open />
 		</div>
-		<ThemeToggler />
+		<div class="hidden sm:block">
+			<ThemeToggler />
+		</div>
 	</div>
 </nav>
 <Dropdown bind:open {routes} />

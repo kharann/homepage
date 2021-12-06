@@ -23,41 +23,38 @@
 	</svg>
 </button>
 
-<style lang="postcss">
-	svg {
+<style lang="scss" global>
+	:local(svg) {
 		min-height: 24px;
-		transition: transform 0.3s ease-in-out;
-	}
+		@apply transition-transform duration-300 ease-in-out;
 
-	svg line {
-		/* `currentColor` means inherit color from the text color */
-		stroke: currentColor;
-		stroke-width: 3;
-		transition: transform 0.3s ease-in-out;
+		line {
+			stroke-width: 3;
+			@apply stroke-current transition-transform duration-500 ease-in-out text-black dark:text-gray-2;
+		}
 	}
 
 	/* adjust the Z-index, so that the icon is on top of the sidebar */
-	button {
-		z-index: 20;
+	:local(button) {
+		@apply z-20;
 	}
 
-	.open svg {
-		transform: scale(0.7);
+	:local(.open) {
+		svg {
+			transform: scale(0.7);
+		}
+		#top {
+			transform: translate(6px, 0px) rotate(45deg);
+		}
+		#middle {
+			@apply transition-opacity ease-in-out duration-300 opacity-0;
+		}
+		#bottom {
+			transform: translate(-12px, 9px) rotate(-45deg);
+		}
 	}
-
 	/* rotate the top line */
-	.open #top {
-		transform: translate(6px, 0px) rotate(45deg);
-	}
-
 	/* hide the middle */
-	.open #middle {
-		opacity: 0;
-		@apply transition-opacity ease-in-out duration-300;
-	}
 
 	/* rotate the bottom line */
-	.open #bottom {
-		transform: translate(-12px, 9px) rotate(-45deg);
-	}
 </style>
