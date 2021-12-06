@@ -16,7 +16,7 @@
 	let open: boolean = false;
 </script>
 
-<nav class="header">
+<nav class="header bg-white dark:bg-gray-6 border-primary-2 dark:border-black ">
 	<div class="header-items">
 		<div class="flex">
 			<a href="/" class="logo-container">
@@ -39,7 +39,7 @@
 
 <style lang="postcss">
 	.header {
-		@apply h-16 bg-white border-b-2 border-primary-2 shadow w-full flex;
+		@apply h-16 border-b-2  shadow w-full flex;
 	}
 
 	.logo-container {

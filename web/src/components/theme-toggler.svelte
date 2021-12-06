@@ -15,7 +15,7 @@
 <svelte:body class={'dark'} />
 
 <i
-	class="hidden sm:flex hover:bg-primary-1 items-center rounded-md w-10 justify-center"
+	class="hidden sm:flex hover:bg-primary-1 dark:text-gray-3 dark:hover:bg-gray-5 items-center rounded-md w-10 justify-center"
 	on:click={handleToggleTheme}
 >
 	{@html currentIcon}
