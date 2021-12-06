@@ -26,7 +26,7 @@
 
 <section>
 	<h1 class="text-4xl text-gray-5 font-bold">Blog</h1>
-	<h2 class="text-3xl text-secondary font-bold mt-4">All Posts</h2>
+	<h2 class="text-3xl text-secondary dark:text-secondary-dark font-bold mt-4">All Posts</h2>
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
 			<PostListItem {post} />
