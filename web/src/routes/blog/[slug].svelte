@@ -27,7 +27,7 @@
 </script>
 
 <article class="max-w-2xl w-full m-auto flex flex-col">
-	<h1 class="text-4xl font-bold text-primary-6 dark:text-white">{post.title}</h1>
+	<h1 class="text-4xl font-bold text-primary-6 dark:text-secondary-dark">{post.title}</h1>
 	<div class="flex justify-between mt-4 mb-16 sm:flex-row flex-col">
 		<p>Anh-Kha Vo • {publishedDate}</p>
 		<p>{post.estimatedReadingTime} min read</p>
