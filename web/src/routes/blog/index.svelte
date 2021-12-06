@@ -25,11 +25,15 @@
 </script>
 
 <section>
-	<h1 class="text-4xl text-gray-5 font-bold">Blog</h1>
+	<h1 class="text-4xl text-primary-9 font-bold">Blog</h1>
 	<p class="my-4">
-		In 2021, I made the decision to begin writing. It was always on my mind because I enjoyed
-		sharing my knowledge and mistakes with others. I primarily write about technology, whether it's
-		about career or new technologies that I've used.
+		In 2021, I decided to begin sharing my thoughts in a more personal manner. Originally this
+		website was supposed to be a knowledge base where I store things I've learned or snippets for
+		myself in the future. However, I changed my mind and decided to share my stories, whether it's
+		about using a new technology or a mistake I've learned from.
+	</p>
+	<p class="my-4">
+		Currently, I've posted 2 posts, and I mostly write about technology, process, and careers.
 	</p>
 	<h2 class="text-3xl text-secondary dark:text-secondary-dark font-bold mt-4">All Posts</h2>
 	{#each posts as post}
