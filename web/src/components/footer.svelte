@@ -18,7 +18,7 @@
 </script>
 
 <footer class="mt-8 shadow w-full">
-	<div class="border-primary-2 dark:border-gray-5 footer_container">
+	<div class="border-primary-2 dark:border-primary-8 footer_container">
 		<div class="content">
 			<div class="grid grid-cols-3 w-max gap-5">
 				{#each iconLinks as iconLink}

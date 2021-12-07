@@ -19,8 +19,17 @@
 
 <style lang="scss" global>
 	:local(.content) {
+		ul,
+		ol {
+			@apply list-outside ml-10 my-6 text-black dark:text-white;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
 		ul {
-			@apply list-disc list-inside ml-4 my-4 text-black dark:text-white;
+			@apply list-disc;
 		}
 
 		h1,
@@ -29,7 +38,7 @@
 		h4,
 		h5,
 		h6 {
-			@apply font-bold text-primary-6 dark:text-secondary-dark mt-8 mb-4;
+			@apply font-bold text-primary-8 dark:text-secondary-dark mt-8 mb-4;
 		}
 
 		h2 {

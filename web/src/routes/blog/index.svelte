@@ -33,7 +33,7 @@
 		about using a new technology or a mistake I've learned from.
 	</p>
 	<p class="my-4">
-		Currently, I've posted 2 posts, and I mostly write about technology, process, and careers.
+		Currently, I've posted {posts.length} post, and I mostly write about technology, process, and careers.
 	</p>
 	<h2 class="text-3xl text-secondary dark:text-secondary-dark font-bold mt-4">All Posts</h2>
 	{#each posts as post}
