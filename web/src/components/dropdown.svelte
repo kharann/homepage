@@ -13,9 +13,9 @@
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 {#if open}
-	<aside class="absolute w-full h-full overflow-hidden">
+	<aside class="absolute w-full h-screen overflow-hidden">
 		<nav
-			class="flex flex-col mt-20 px-8 bg-gray-0 dark:bg-primary-9 h-full transition duration-300 ease-in-out"
+			class="flex flex-col mt-20 pb-2 px-8 bg-gray-0 dark:bg-primary-9 h-full transition duration-300 ease-in-out"
 		>
 			{#each routes as route, i}
 				<a
