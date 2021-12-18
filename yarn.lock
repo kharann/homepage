@@ -11986,6 +11986,20 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"prism-svelte@npm:^0.4.7":
+  version: 0.4.7
+  resolution: "prism-svelte@npm:0.4.7"
+  checksum: 7f3648ba67558eb510380587fecc511e903164f7c5eed856cbd16bbc00b144e1398eda84537f0e48cbc1a14cdb3835aba3a266f357848aa0e80f5b28d848d0b5
+  languageName: node
+  linkType: hard
+
+"prismjs@npm:^1.25.0":
+  version: 1.25.0
+  resolution: "prismjs@npm:1.25.0"
+  checksum: 04d8eae9d1b26b76c350bc65621584c8f8cab80ace7da3953f8aef2f9a8dd4b4f71c1d15bc5c67f126ddc90cd5af613919dc1340589a6c57355bed86fa3ac010
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:~1.24.0":
   version: 1.24.1
   resolution: "prismjs@npm:1.24.1"
@@ -15478,6 +15492,8 @@ typescript@^4.4.4:
     postcss-load-config: ^3.1.0
     prettier: ~2.2.1
     prettier-plugin-svelte: ^2.2.0
+    prism-svelte: ^0.4.7
+    prismjs: ^1.25.0
     svelte: ^3.44.1
     svelte-preprocess: ^4.9.8
     tailwindcss: ^2.2.19
