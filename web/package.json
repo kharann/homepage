@@ -38,6 +38,8 @@
 		"groq": "^2.15.0",
 		"luxon": "^2.1.1",
 		"node-sass": "^6.0.1",
+		"prism-svelte": "^0.4.7",
+		"prismjs": "^1.25.0",
 		"typescript": "^4.4.4"
 	}
 }

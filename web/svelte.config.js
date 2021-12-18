@@ -32,10 +32,6 @@ const config = {
 
 	preprocess: [
 		preprocess({
-			defaults: {
-				postcss: true,
-				typescript: true
-			},
 			postcss: true,
 			typescript: true
 		})
