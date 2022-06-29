@@ -1790,6 +1790,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sanity/code-input@npm:studio-v3":
+  version: 3.0.0-v3-studio.2
+  resolution: "@sanity/code-input@npm:3.0.0-v3-studio.2"
+  dependencies:
+    "@sanity/icons": ^1.2.8
+    "@sanity/incompatible-plugin": ^0.0.1-studio-v3.1
+    "@sanity/ui": ^0.37.8
+    ace-builds: ^1.4.13
+    react-ace: ^9.5.0
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0
+    sanity: "*"
+    styled-components: ^5.2.0
+  checksum: b8e6e2e8f2e16f216336dda30793f0a9fa80e336f8007f5c13e19d16e815c68550bc0bf911289364ddd1477095f6646be3fd4b66300905cb2e83622bdb007f2e
+  languageName: node
+  linkType: hard
+
 "@sanity/color@npm:^2.1.10, @sanity/color@npm:^2.1.11":
   version: 2.1.11
   resolution: "@sanity/color@npm:2.1.11"
@@ -1885,7 +1902,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/icons@npm:^1.3.0, @sanity/icons@npm:^1.3.1":
+"@sanity/icons@npm:^1.2.8, @sanity/icons@npm:^1.3.0, @sanity/icons@npm:^1.3.1":
   version: 1.3.1
   resolution: "@sanity/icons@npm:1.3.1"
   peerDependencies:
@@ -1924,6 +1941,21 @@ __metadata:
     split2: ^3.2.2
     tar-fs: ^2.1.1
   checksum: b56a621437e3618c9acd0f81003a2b5e3e7514b58e70a0f2dbfe8deb2eba2b385378150f6d4a9a0bca45ae74861109cfbf1c1e881fac9b2df05a64916a39f18b
+  languageName: node
+  linkType: hard
+
+"@sanity/incompatible-plugin@npm:^0.0.1-studio-v3.1":
+  version: 0.0.1
+  resolution: "@sanity/incompatible-plugin@npm:0.0.1"
+  dependencies:
+    "@sanity/icons": ^1.3.0
+    "@sanity/ui": ^0.37.0
+    react-copy-to-clipboard: ^5.0.0
+  peerDependencies:
+    react: ^16.9.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
+    styled-components: ^5.0.0
+  checksum: f0690dc95fe692bca743ab54a815edd5b504098edc421b2a85ce655ed7c8d0796ee006f2bf39b3a0590a3c8e66652acd6ba9875d200d6f882b308422c8be0e9c
   languageName: node
   linkType: hard
 
@@ -2060,7 +2092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/ui@npm:^0.37.11":
+"@sanity/ui@npm:^0.37.0, @sanity/ui@npm:^0.37.11, @sanity/ui@npm:^0.37.8":
   version: 0.37.12
   resolution: "@sanity/ui@npm:0.37.12"
   dependencies:
@@ -2524,6 +2556,13 @@ __metadata:
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
   checksum: a4a97ec07d7ea112c517036882b2ac22f3109b7b19077dc656316d07d308438aac28e4d9746dc4d84bf6b1e75b4a7b0a5f3cb30592419f128ca9a8cee3bcfa17
+  languageName: node
+  linkType: hard
+
+"ace-builds@npm:^1.4.13":
+  version: 1.7.1
+  resolution: "ace-builds@npm:1.7.1"
+  checksum: da1a550ab3332c055b15fa0fe804d8705e5527d687866f57d5931f080883b2d1c517f2f7bc652169d37aa9aa5eabeb74ffe168f4394e59dc34db3291061ceb41
   languageName: node
   linkType: hard
 
@@ -3411,6 +3450,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cms@workspace:cms"
   dependencies:
+    "@sanity/code-input": studio-v3
     "@sanity/eslint-config-studio": ^2.0.0
     eslint: ^8.6.0
     prettier: ^2.7.1
@@ -6877,6 +6917,20 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"lodash.get@npm:^4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
+  languageName: node
+  linkType: hard
+
+"lodash.isequal@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: da27515dc5230eb1140ba65ff8de3613649620e8656b19a6270afe4866b7bd461d9ba2ac8a48dcc57f7adac4ee80e1de9f965d89d4d81a0ad52bb3eec2609644
+  languageName: node
+  linkType: hard
+
 "lodash.isplainobject@npm:^4.0.6":
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
@@ -8610,7 +8664,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.10, prop-types@npm:^15.5.7, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.5.7, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8733,6 +8787,22 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"react-ace@npm:^9.5.0":
+  version: 9.5.0
+  resolution: "react-ace@npm:9.5.0"
+  dependencies:
+    ace-builds: ^1.4.13
+    diff-match-patch: ^1.0.5
+    lodash.get: ^4.4.2
+    lodash.isequal: ^4.5.0
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
+    react-dom: ^0.13.0 || ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
+  checksum: 4fcb8cf5c69507074c5fca1d40965abef8e411ac6ab66bdfbfc8505eb13e3bc2bb1c31edb80762bae9578802a53c50fda9037619b8ade1084a89244641ebb1c8
+  languageName: node
+  linkType: hard
+
 "react-clientside-effect@npm:^1.2.6":
   version: 1.2.6
   resolution: "react-clientside-effect@npm:1.2.6"
@@ -8744,7 +8814,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-copy-to-clipboard@npm:^5.0.4":
+"react-copy-to-clipboard@npm:^5.0.0, react-copy-to-clipboard@npm:^5.0.4":
   version: 5.1.0
   resolution: "react-copy-to-clipboard@npm:5.1.0"
   dependencies:
