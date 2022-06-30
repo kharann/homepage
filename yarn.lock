@@ -1683,13 +1683,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rexxars/eventsource-polyfill@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@rexxars/eventsource-polyfill@npm:1.0.0"
-  checksum: d5b9439738e93edcff0628c19d796207e5f27221a428d05983d02db1b9fec50230ab1b676dbaed89d9a2f8bc60b12a3daa228f621496e7f16a89564cac5dc7c5
-  languageName: node
-  linkType: hard
-
 "@rexxars/react-json-inspector@npm:^7.1.1":
   version: 7.1.1
   resolution: "@rexxars/react-json-inspector@npm:7.1.1"
@@ -1761,21 +1754,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/client@npm:^2.21.10":
-  version: 2.23.2
-  resolution: "@sanity/client@npm:2.23.2"
-  dependencies:
-    "@sanity/eventsource": 2.23.0
-    "@sanity/generate-help-url": 2.18.0
-    "@sanity/observable": 2.0.9
-    deep-assign: ^2.0.0
-    get-it: ^5.2.1
-    make-error: ^1.3.0
-    object-assign: ^4.1.1
-  checksum: d20aa3f49c74be70042b7e193245d43c0ab3d7f48b9be844c5ddabc34e0928cceb5209430f65097cd272db0fcbcf908e73a5b5e2f95482a0c217ee48ffc79ef2
-  languageName: node
-  linkType: hard
-
 "@sanity/client@npm:^3.3.2":
   version: 3.3.2
   resolution: "@sanity/client@npm:3.3.2"
@@ -1842,16 +1820,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sanity/eventsource@npm:2.23.0":
-  version: 2.23.0
-  resolution: "@sanity/eventsource@npm:2.23.0"
-  dependencies:
-    "@rexxars/eventsource-polyfill": ^1.0.0
-    eventsource: ^1.0.6
-  checksum: 644cebd235f3978eca32c820c8f2bb353a6ac47663252c88d5584dfdcf2dbaba5bd36aff2c9834c07dc4ff48ba1367dcbb054077397f95f6d71a92d2112167de
-  languageName: node
-  linkType: hard
-
 "@sanity/eventsource@npm:^3.0.1":
   version: 3.0.3
   resolution: "@sanity/eventsource@npm:3.0.3"
@@ -1885,13 +1853,6 @@ __metadata:
     rimraf: ^3.0.2
     split2: ^3.2.2
   checksum: 698114452a65ec32bb7c4a69eb64fb21ba05ddf82040ad52cfceb8c14502155c22fb730c8ec66bb792413bd7feb1b1762d266bb9d7293069c6ab8edfdcc3967f
-  languageName: node
-  linkType: hard
-
-"@sanity/generate-help-url@npm:2.18.0":
-  version: 2.18.0
-  resolution: "@sanity/generate-help-url@npm:2.18.0"
-  checksum: 2a6af4523428d4d7da2bfc9d88089932efd083350f099883bd287a95a529031c6c39adac5beeef6a709e2f5f4e98afb3a73876c9a8cfa9585530f5b21ead370c
   languageName: node
   linkType: hard
 
@@ -1978,16 +1939,6 @@ __metadata:
     diff-match-patch: ^1.0.4
     lodash: ^4.17.21
   checksum: 4dc3aa3dde45a7b726e45b89c9cf80abb97dd4d327f03584dd665896bd43bb52379bced75a54ecc68c0dc000b43a8fc30b2ae6b90e6f0596293d575b56c29bc2
-  languageName: node
-  linkType: hard
-
-"@sanity/observable@npm:2.0.9":
-  version: 2.0.9
-  resolution: "@sanity/observable@npm:2.0.9"
-  dependencies:
-    object-assign: ^4.1.1
-    rxjs: ^6.5.3
-  checksum: 10ccbb5043dbaf041f2cd9aceeba59ce8da184f117c5503d0fc70f88592cc9356942b366c80f7bf2ed6d4c7c0dce0834bf4f234b429156775ffadd8f9c98f995
   languageName: node
   linkType: hard
 
@@ -4108,15 +4059,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-assign@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "deep-assign@npm:2.0.0"
-  dependencies:
-    is-obj: ^1.0.0
-  checksum: f1208e46794d1e8e7c90d5747875e98caed2f4e8f1fae98d221b3cc61949ca2ed3fee2cbd4d990cb481d1f09ffe1721a3489c1308ff70355e9c6734848e03f37
-  languageName: node
-  linkType: hard
-
 "deep-is@npm:^0.1.3, deep-is@npm:~0.1.3":
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
@@ -4978,7 +4920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventsource@npm:^1.0.6, eventsource@npm:^1.1.1":
+"eventsource@npm:^1.1.1":
   version: 1.1.2
   resolution: "eventsource@npm:1.1.2"
   checksum: fe8f2ac3c70b1b63ee3cef5c0a28680cb00b5747bfda1d9835695fab3ed602be41c5c799b1fc997b34b02633573fead25b12b036bdf5212f23a6aa9f59212e9b
@@ -6408,13 +6350,6 @@ fsevents@~2.3.2:
   version: 7.0.0
   resolution: "is-number@npm:7.0.0"
   checksum: 456ac6f8e0f3111ed34668a624e45315201dff921e5ac181f8ec24923b99e9f32ca1a194912dc79d539c97d33dba17dc635202ff0b2cf98326f608323276d27a
-  languageName: node
-  linkType: hard
-
-"is-obj@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "is-obj@npm:1.0.1"
-  checksum: 3ccf0efdea12951e0b9c784e2b00e77e87b2f8bd30b42a498548a8afcc11b3287342a2030c308e473e93a7a19c9ea7854c99a8832a476591c727df2a9c79796c
   languageName: node
   linkType: hard
 
@@ -10929,7 +10864,7 @@ typescript@^4.4.4:
     "@fontsource/fira-mono": ^4.2.2
     "@lukeed/uuid": ^2.0.0
     "@portabletext/svelte": ^0.1.0-next.0
-    "@sanity/client": ^2.21.10
+    "@sanity/client": ^3.3.2
     "@sveltejs/adapter-static": ^1.0.0-next.0
     "@sveltejs/kit": ^1.0.0-next.1
     "@tsconfig/svelte": ^2.0.1

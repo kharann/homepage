@@ -1,12 +1,12 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ page }) => {
+	export const load: Load = async ({ url }) => {
 		let base_regex = /(\/\w+)\//;
 		return {
 			props: {
 				// Get the active path for highlighting
-				activePath: page.path.replace(base_regex, '$1')
+				activePath: url.pathname.replace(base_regex, '$1')
 			}
 		};
 	};

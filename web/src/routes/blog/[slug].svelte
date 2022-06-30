@@ -2,8 +2,8 @@
 	import { BlogPost, fetchPostBySlug } from '../../api/post-by-slug';
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ fetch, page }) => {
-		const res = await fetchPostBySlug(fetch, { slug: page.params.slug });
+	export const load: Load = async ({ fetch, params}) => {
+		const res = await fetchPostBySlug(fetch, { slug: params.slug });
 		if (res.ok) {
 			return {
 				props: {

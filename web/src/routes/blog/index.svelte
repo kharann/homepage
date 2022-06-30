@@ -1,24 +1,5 @@
-<script context="module" lang="ts">
-	import { fetchAllPosts, PreviewPost } from '../../api/all-post';
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetchAllPosts(fetch);
-		if (res.ok) {
-			return {
-				props: {
-					posts: res.data
-				}
-			};
-		}
-		return {
-			status: res.status,
-			error: new Error('Could not perform query')
-		};
-	};
-</script>
-
 <script lang="ts">
+	import type { PreviewPost } from '@api/all-post';
 	import PostListItem from '@components/post-list-item.svelte';
 
 	export let posts: PreviewPost[];

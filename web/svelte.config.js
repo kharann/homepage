@@ -8,7 +8,6 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
 		adapter: adapter({
 			fallback: '404.html',
 			base: dev ? '' : '/homepage/',
@@ -21,12 +20,13 @@ const config = {
 		},
 		vite: {
 			resolve: {
-				alias: {
-					'@lib': path.resolve('./src/lib'),
-					'@api': path.resolve('./src/api'),
-					'@components': path.resolve('./src/components/')
-				}
+				alias: {}
 			}
+		},
+		alias: {
+			'@lib': 'src/lib',
+			'@api': './src/api',
+			'@components': './src/components/'
 		}
 	},
 
