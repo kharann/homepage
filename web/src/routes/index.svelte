@@ -32,9 +32,9 @@
 </script>
 
 <section class="mt-4">
-	<h1 class="text-3xl mb-2">
-		 Hi, my name is <span
-			class="text-primary dark:text-primary-3 font-black font-hack">Anhkha</span> 👋
+	<h1 class="mb-2 text-3xl">
+		Hi, my name is <span class="font-hack font-black text-primary dark:text-primary-3">Anhkha</span>
+		👋
 	</h1>
 	<byline class="text-lg text-gray dark:text-gray-3">{role}</byline>
 	<p class="mt-4">{description}</p>
@@ -46,7 +46,7 @@
 		</a>
 	{/each}
 	<a
-		class="flex mt-4 text-gray dark:text-gray-3 hover:text-primary dark:hover:text-primary-3 items-center"
+		class="mt-4 flex items-center text-gray hover:text-primary dark:text-gray-3 dark:hover:text-primary-3"
 		href="blog">Read all posts<i>{@html arrowRightIcon}</i></a
 	>
 </Section>

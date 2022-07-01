@@ -1,4 +1,4 @@
-import sanity from "@sanity/client"
+import sanity from '@sanity/client';
 
 const config = {
 	projectId: 'r4l4xmqo',
@@ -7,7 +7,7 @@ const config = {
 	token: '' // or leave blank for unauthenticated usage
 };
 
-export const sanityClient  = sanity(config)
+export const sanityClient = sanity(config);
 
 export type Fetch = (input: RequestInfo, init?: RequestInit) => Promise<Response>;
 export type Parameters = {

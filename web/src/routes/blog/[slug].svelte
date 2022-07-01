@@ -10,9 +10,9 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<article class="max-w-2xl w-full m-auto flex flex-col">
+<article class="m-auto flex w-full max-w-2xl flex-col">
 	<h1 class="text-4xl font-bold text-primary-8 dark:text-secondary-dark">{post.title}</h1>
-	<div class="flex justify-between mt-4 mb-16 sm:flex-row flex-col">
+	<div class="mt-4 mb-16 flex flex-col justify-between sm:flex-row">
 		<p>Anh-Kha Vo • {publishedDate}</p>
 		<p>{post.estimatedReadingTime} min read</p>
 	</div>

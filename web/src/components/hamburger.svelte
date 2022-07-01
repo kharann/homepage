@@ -30,7 +30,7 @@
 
 		line {
 			stroke-width: 3;
-			@apply stroke-current transition-transform duration-500 ease-in-out text-black dark:text-gray-2;
+			@apply stroke-current text-black transition-transform duration-500 ease-in-out dark:text-gray-2;
 		}
 	}
 
@@ -47,7 +47,7 @@
 			transform: translate(6px, 0px) rotate(45deg);
 		}
 		#middle {
-			@apply transition-opacity ease-in-out duration-300 opacity-0;
+			@apply opacity-0 transition-opacity duration-300 ease-in-out;
 		}
 		#bottom {
 			transform: translate(-12px, 9px) rotate(-45deg);

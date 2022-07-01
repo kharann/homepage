@@ -30,7 +30,7 @@
 </svelte:head>
 
 <Header />
-<main class="w-full max-w-3xl m-auto mt-8 px-8">
+<main class="m-auto mt-8 w-full max-w-3xl px-8">
 	<slot />
 </main>
 <Footer />

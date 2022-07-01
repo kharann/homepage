@@ -26,4 +26,5 @@ const postBySlugQuery = groq`
 		}
 	`;
 
-export const fetchPostBySlug = async(slug: string) => sanityClient.fetch(postBySlugQuery, { slug })
+export const fetchPostBySlug = async (slug: string) =>
+	sanityClient.fetch(postBySlugQuery, { slug });

@@ -8,7 +8,7 @@
 </script>
 
 <i
-	class="flex items-center cursor-pointer text-gray-6 dark:text-gray-3 hover:text-gray-9 dark:hover:text-gray-1 justify-center"
+	class="flex cursor-pointer items-center justify-center text-gray-6 hover:text-gray-9 dark:text-gray-3 dark:hover:text-gray-1"
 	on:click={handleToggleTheme}
 >
 	<ThemeIcon isDark={$theme == 'dark'} />

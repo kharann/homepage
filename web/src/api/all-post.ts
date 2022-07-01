@@ -16,4 +16,4 @@ export const allPostsQuery = groq`
             "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 )
 		}`;
 
-export const fetchListPosts = async () => sanityClient.fetch<PreviewPost[]>(allPostsQuery)
+export const fetchListPosts = async () => sanityClient.fetch<PreviewPost[]>(allPostsQuery);

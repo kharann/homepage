@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { page } from "$app/stores"
+	import { page } from '$app/stores';
 	export let text: string;
 	export let href: string;
-	$: isActive = $page.routeId ? href.includes($page.routeId.split("/")[0]) : href === "/"
-
+	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/';
 </script>
 
 <li
@@ -16,6 +15,6 @@
 
 <style lang="postcss">
 	.link {
-		@apply mr-1 pl-2 pr-2 pt-1 pb-1 text-lg rounded-md  duration-300;
+		@apply mr-1 rounded-md pl-2 pr-2 pt-1 pb-1 text-lg  duration-300;
 	}
 </style>
