@@ -1,6 +1,6 @@
-<script>
-	export let title;
-	export let metaDescription;
+<script lang="ts">
+	export let title: string;
+	export let metaDescription: string;
 </script>
 
 <svelte:head>

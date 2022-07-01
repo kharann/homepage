@@ -29,7 +29,7 @@
 				{/each}
 			</div>
 			<div class="pt-4 text-center dark:text-white">
-				© 2021-present Anh-Kha Vo. All rights preserved
+				© 2021-present Anh-Kha Vo. All rights reserved
 			</div>
 		</div>
 	</div>
