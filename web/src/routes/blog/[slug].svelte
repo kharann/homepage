@@ -1,25 +1,5 @@
-<script context="module" lang="ts">
-	import { BlogPost, fetchPostBySlug } from '../../api/post-by-slug';
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ fetch, params}) => {
-		const res = await fetchPostBySlug(fetch, { slug: params.slug });
-		if (res.ok) {
-			return {
-				props: {
-					post: res.data
-				}
-			};
-		}
-
-		return {
-			status: res.status,
-			error: new Error('Could not perform query')
-		};
-	};
-</script>
-
 <script lang="ts">
+	import type { BlogPost } from '@api/post-by-slug';
 	import CustomPortableText from '@components/portable-text/index.svelte';
 	import { DateTime } from 'luxon';
 	export let post: BlogPost;

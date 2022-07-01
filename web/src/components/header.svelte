@@ -4,7 +4,6 @@
 	import Dropdown from './dropdown.svelte';
 	import Hamburger from './hamburger.svelte';
 	import ThemeToggler from './theme-toggler.svelte';
-	export let activePath: string;
 
 	const routes = [
 		{ link: '/', text: 'Home' },
@@ -25,16 +24,14 @@
 			</a>
 			<ul class="hidden sm:flex list-outside items-center">
 				{#each routes as route}
-					<Link href={route.link} text={route.text} isActive={route.link === activePath} />
+					<Link href={route.link} text={route.text} />
 				{/each}
 			</ul>
 		</div>
 		<div class="flex sm:hidden">
 			<Hamburger bind:open />
 		</div>
-		<div class="hidden sm:block">
-			<ThemeToggler />
-		</div>
+		<ThemeToggler />
 	</div>
 </nav>
 <Dropdown bind:open {routes} />

@@ -33,9 +33,8 @@
 
 <section class="mt-4">
 	<h1 class="text-3xl mb-2">
-		Hei, I'm Anh-Kha Vo and on the web I go by <span
-			class="text-primary dark:text-primary-3 font-black font-hack">Kharann 👋</span
-		>
+		 Hi, my name is <span
+			class="text-primary dark:text-primary-3 font-black font-hack">Anhkha</span> 👋
 	</h1>
 	<byline class="text-lg text-gray dark:text-gray-3">{role}</byline>
 	<p class="mt-4">{description}</p>

@@ -1,25 +1,9 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ url }) => {
-		let base_regex = /(\/\w+)\//;
-		return {
-			props: {
-				// Get the active path for highlighting
-				activePath: url.pathname.replace(base_regex, '$1')
-			}
-		};
-	};
-</script>
-
 <script lang="ts">
 	import '../app.postcss';
 	import Header from '../components/header.svelte';
 	import Footer from '../components/footer.svelte';
 	import { onMount } from 'svelte';
-	import { theme } from '@lib/shared/stores/theme';
-	import { browser } from '$app/env';
-	export let activePath: string;
+	import { theme } from '$lib/shared/stores/theme';
 
 	onMount(() => {
 		// Sets your theme based on prefers-color-scheme media query first time you're on the website.
@@ -28,10 +12,24 @@
 			theme.set(preferedTheme);
 		}
 	});
-	$: if (browser) document.body.classList.toggle('dark', $theme === 'dark');
 </script>
 
-<Header {activePath} />
+<svelte:head>
+	<script>
+		if (document) {
+			const mode = localStorage.getItem('theme');
+			const prefersDark =
+				mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (mode === 'dark' || prefersDark) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		}
+	</script>
+</svelte:head>
+
+<Header />
 <main class="w-full max-w-3xl m-auto mt-8 px-8">
 	<slot />
 </main>

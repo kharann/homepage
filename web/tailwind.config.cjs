@@ -50,6 +50,11 @@ const config = {
 			hack: 'Hack',
 			lato: 'Lato',
 			poppins: 'Poppins'
+		},
+		extend: {
+			rotate: {
+				360: '360deg'
+			}
 		}
 	},
 	plugins: []
