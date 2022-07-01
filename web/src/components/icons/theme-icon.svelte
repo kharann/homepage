@@ -9,26 +9,24 @@
 	export let isDark = true;
 </script>
 
-<div class={`origin-center `}>
-	<svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-		{#if isDark}
-			<path
-				in:fade={{ duration: 500 }}
-				out:fade={{ duration: 500 }}
-				d={sun}
-				fill="currentColor"
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-			/>
-		{:else}
-			<path
-				in:fade={{ duration: 500 }}
-				out:fade={{ duration: 500 }}
-				d={moon}
-				fill="currentColor"
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-			/>
-		{/if}
-	</svg>
-</div>
+<svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+	{#if isDark}
+		<path
+			in:fade={{ duration: 500 }}
+			out:fade={{ duration: 500 }}
+			d={sun}
+			fill="currentColor"
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+		/>
+	{:else}
+		<path
+			in:fade={{ duration: 500 }}
+			out:fade={{ duration: 500 }}
+			d={moon}
+			fill="currentColor"
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+		/>
+	{/if}
+</svg>
