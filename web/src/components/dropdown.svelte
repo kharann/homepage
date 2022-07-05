@@ -11,7 +11,6 @@
 	export let open: boolean;
 </script>
 
-<!-- This example requires Tailwind CSS v2.0+ -->
 {#if open}
 	<aside class="absolute h-screen w-full overflow-hidden">
 		<nav
@@ -20,7 +19,7 @@
 			{#each routes as route, i}
 				<a
 					transition:fly={{ x: -25, delay: 75 * i }}
-					class="big-link"
+					class="mt-4 border-b-2 border-primary-1 pb-4 text-xl font-semibold transition-colors dark:border-primary-8 dark:text-white"
 					href={route.link}
 					on:click={() => (open = false)}>{route.text}</a
 				>
@@ -31,9 +30,3 @@
 		</nav>
 	</aside>
 {/if}
-
-<style lang="scss" global>
-	:local(.big-link) {
-		@apply mt-4 border-b-2 border-primary-1 pb-4 text-xl font-semibold dark:border-primary-8 dark:text-white;
-	}
-</style>

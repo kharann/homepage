@@ -6,7 +6,7 @@
 </script>
 
 <li
-	class={`hover:bg-primary-1 dark:text-gray-2 dark:hover:bg-gray-5 link ${
+	class={`hover:bg-primary-0 dark:text-gray-1 dark:hover:bg-primary-8 link ${
 		isActive && 'font-extrabold dark:text-white'
 	}`}
 >

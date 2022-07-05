@@ -8,6 +8,5 @@ export const theme = writable(initialValue);
 theme.subscribe((value) => {
 	if (browser) {
 		localStorage.setItem('theme', value);
-		document.body.classList.toggle('dark', value === 'dark');
 	}
 });
