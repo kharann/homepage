@@ -30,7 +30,7 @@
 
 		line {
 			stroke-width: 3;
-			@apply stroke-current text-black transition-transform duration-500 ease-in-out dark:text-gray-2;
+			@apply stroke-current text-primary-8 transition-transform duration-500 ease-in-out dark:text-gray-1;
 		}
 	}
 

@@ -4,6 +4,8 @@
 	import Footer from '../components/footer.svelte';
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/shared/stores/theme';
+	import Transition from '@components/transition.svelte';
+	import { page } from '$app/stores';
 
 	onMount(() => {
 		// Sets your theme based on prefers-color-scheme media query first time you're on the website.
@@ -31,6 +33,8 @@
 
 <Header />
 <main class="m-auto mt-8 w-full max-w-3xl px-8">
-	<slot />
+	<Transition url={$page.url}>
+		<slot />
+	</Transition>
 </main>
 <Footer />
