@@ -6,7 +6,7 @@
 </script>
 
 <section>
-	<h1 class="text-4xl text-primary-9 font-bold">Blog</h1>
+	<h1 class="text-4xl font-bold text-primary-9">Blog</h1>
 	<p class="my-4">
 		In 2021, I decided to begin sharing my thoughts in a more personal manner. Originally this
 		website was supposed to be a knowledge base where I store things I've learned or snippets for
@@ -16,7 +16,7 @@
 	<p class="my-4">
 		Currently, I've posted {posts.length} post, and I mostly write about technology, process, and careers.
 	</p>
-	<h2 class="text-3xl text-secondary dark:text-secondary-dark font-bold mt-4">All Posts</h2>
+	<h2 class="mt-4 text-3xl font-bold text-secondary dark:text-secondary-dark">All Posts</h2>
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
 			<PostListItem {post} />

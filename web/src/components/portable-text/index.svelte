@@ -25,7 +25,7 @@
 	:local(.content) {
 		ul,
 		ol {
-			@apply list-outside ml-10 my-6 text-black dark:text-white;
+			@apply my-6 ml-10 list-outside text-black dark:text-white;
 		}
 
 		ol {
@@ -42,7 +42,7 @@
 		h4,
 		h5,
 		h6 {
-			@apply font-bold text-primary-8 dark:text-secondary-dark mt-8 mb-4;
+			@apply mt-8 mb-4 font-bold text-primary-8 dark:text-secondary-dark;
 		}
 
 		h2 {

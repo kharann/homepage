@@ -32,14 +32,15 @@
 </script>
 
 <section class="mt-4">
-	<h1 class="text-3xl mb-2">
-		Hei, I'm Anh-Kha Vo and on the web I go by <span
-			class="text-primary dark:text-primary-3 font-black font-hack">Kharann 👋</span
-		>
+	<h1 class="mb-2 text-4xl">
+		Hi, my name is <span class="font-hack font-black text-primary dark:text-primary-3"
+			>Anhkha Vo</span
+		> 👋
 	</h1>
-	<byline class="text-lg text-gray dark:text-gray-3">{role}</byline>
+	<byline class="text-lg text-primary-8 dark:text-gray-2">{role}</byline>
 	<p class="mt-4">{description}</p>
 </section>
+<Section name="About me">I enjoy working in teams</Section>
 <Section name="Latest posts">
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
@@ -47,7 +48,7 @@
 		</a>
 	{/each}
 	<a
-		class="flex mt-4 text-gray dark:text-gray-3 hover:text-primary dark:hover:text-primary-3 items-center"
+		class="mt-4 flex items-center text-gray hover:text-primary dark:text-gray-3 dark:hover:text-primary-3"
 		href="blog">Read all posts<i>{@html arrowRightIcon}</i></a
 	>
 </Section>

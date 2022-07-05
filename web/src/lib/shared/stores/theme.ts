@@ -6,5 +6,7 @@ const initialValue = browser ? localStorage.getItem('theme') ?? 'system' : 'syst
 export const theme = writable(initialValue);
 
 theme.subscribe((value) => {
-	if (browser) localStorage.setItem('theme', value);
+	if (browser) {
+		localStorage.setItem('theme', value);
+	}
 });

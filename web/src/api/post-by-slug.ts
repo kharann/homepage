@@ -1,4 +1,4 @@
-import { getFetchUrl } from '@lib/sanity';
+import { getFetchUrl, sanityClient } from '@lib/sanity';
 import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes';
 import groq from 'groq';
 import type { SanityDataFetcher } from './types';
@@ -26,9 +26,5 @@ const postBySlugQuery = groq`
 		}
 	`;
 
-export const fetchPostBySlug: SanityDataFetcher<BlogPost> = async (fetch, parameters?) => {
-	const url = getFetchUrl(postBySlugQuery, parameters);
-	const res = await fetch(url);
-	const data = await res.json();
-	return { data: data.result, status: res.status, ok: res.ok };
-};
+export const fetchPostBySlug = async (slug: string) =>
+	sanityClient.fetch(postBySlugQuery, { slug });

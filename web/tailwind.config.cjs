@@ -7,8 +7,9 @@ const blue = {
 	5: '#586EC6',
 	6: '#46589e',
 	7: '#354277',
-	8: '#232c4f',
+	8: '#27283F',
 	9: '#121628',
+	10: '#0D0F1C',
 	DEFAULT: '#586EC6'
 };
 
@@ -50,6 +51,11 @@ const config = {
 			hack: 'Hack',
 			lato: 'Lato',
 			poppins: 'Poppins'
+		},
+		extend: {
+			rotate: {
+				360: '360deg'
+			}
 		}
 	},
 	plugins: []

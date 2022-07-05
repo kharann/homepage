@@ -17,19 +17,19 @@
 	];
 </script>
 
-<footer class="mt-8 shadow w-full">
-	<div class="border-primary-2 dark:border-primary-8 footer_container">
+<footer class="mt-8 w-full shadow">
+	<div class="footer_container border-primary-2 dark:border-primary-8">
 		<div class="content">
-			<div class="grid grid-cols-3 w-max gap-5">
+			<div class="grid w-max grid-cols-3 gap-5">
 				{#each iconLinks as iconLink}
 					<a
-						class="text-primary hover:text-primary-5 dark:text-primary-3 dark:hover:text-primary-4 duration-300"
+						class="text-primary duration-300 hover:text-primary-5 dark:text-primary-3 dark:hover:text-primary-4"
 						href={iconLink.link}>{@html iconLink.icon}</a
 					>
 				{/each}
 			</div>
 			<div class="pt-4 text-center dark:text-white">
-				© 2021-present Anh-Kha Vo. All rights preserved
+				© 2021-present Anh-Kha Vo. All rights reserved
 			</div>
 		</div>
 	</div>
@@ -37,9 +37,9 @@
 
 <style lang="postcss">
 	.footer_container {
-		@apply pt-6 pb-6 border-t-2 flex justify-center mr-4 ml-4;
+		@apply mr-4 ml-4 flex justify-center border-t-2 pt-6 pb-6;
 	}
 	.content {
-		@apply max-w-4xl w-full m-auto h-full flex flex-col items-center;
+		@apply m-auto flex h-full w-full max-w-4xl flex-col items-center;
 	}
 </style>

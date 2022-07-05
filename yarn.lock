@@ -2176,6 +2176,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/feather-icons@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "@types/feather-icons@npm:4.7.0"
+  checksum: cfd81495d132851502a7ee94083435d30a18a5a315615d049a9a0d9ce54a19f64c87444d36896a30591c8d543be1bf1c20873423d6acaf5caf5441e4c88da79b
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:^7.1.1":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
@@ -8503,6 +8510,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"prettier-plugin-tailwindcss@npm:^0.1.11":
+  version: 0.1.11
+  resolution: "prettier-plugin-tailwindcss@npm:0.1.11"
+  peerDependencies:
+    prettier: ">=2.2.0"
+  checksum: b06a81a22242407676de7b69342c1d69078e731e6363c7abd5877b044f2ddd83eba7281b085ea77754a49de88dcde164f394c31ae724a99fd46c0f9a4d4547a0
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
@@ -11020,6 +11036,7 @@ typescript@^4.4.4:
     "@sveltejs/adapter-static": ^1.0.0-next.0
     "@sveltejs/kit": ^1.0.0-next.1
     "@tsconfig/svelte": ^2.0.1
+    "@types/feather-icons": ^4.7.0
     "@types/luxon": ^2.0.7
     autoprefixer: ^10.3.1
     cookie: ^0.4.1
@@ -11033,6 +11050,7 @@ typescript@^4.4.4:
     postcss-load-config: ^3.1.0
     prettier: ~2.2.1
     prettier-plugin-svelte: ^2.2.0
+    prettier-plugin-tailwindcss: ^0.1.11
     prism-svelte: ^0.4.7
     prismjs: ^1.25.0
     svelte: ^3.44.1
