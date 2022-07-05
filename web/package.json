@@ -2,7 +2,7 @@
 	"name": "web",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"start": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"deploy": "gh-pages -d build",

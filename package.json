@@ -1,15 +1,18 @@
 {
+  "name": "monorepo",
   "private": true,
   "workspaces": [
     "web",
     "cms"
   ],
   "scripts": {
+    "start": "turbo run start",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "dev": "turbo run dev"
   },
+  "packageManager": "yarn@3.2.0",
   "devDependencies": {
     "@sanity/cli": "^3.0.0-dev-preview.9",
     "eslint": "^8.12.0",

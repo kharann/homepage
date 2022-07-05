@@ -40,7 +40,9 @@
 	<byline class="text-lg text-primary-8 dark:text-gray-2">{role}</byline>
 	<p class="mt-4">{description}</p>
 </section>
-<Section name="About me">I enjoy working in teams</Section>
+<Section name="About me">
+	
+</Section>
 <Section name="Latest posts">
 	{#each posts as post}
 		<a sveltekit:prefetch href={`blog/${post.slug}`}>
