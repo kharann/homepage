@@ -2176,6 +2176,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/feather-icons@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "@types/feather-icons@npm:4.7.0"
+  checksum: cfd81495d132851502a7ee94083435d30a18a5a315615d049a9a0d9ce54a19f64c87444d36896a30591c8d543be1bf1c20873423d6acaf5caf5441e4c88da79b
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:^7.1.1":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
@@ -10877,6 +10884,7 @@ typescript@^4.4.4:
     "@sveltejs/adapter-static": ^1.0.0-next.0
     "@sveltejs/kit": ^1.0.0-next.1
     "@tsconfig/svelte": ^2.0.1
+    "@types/feather-icons": ^4.7.0
     "@types/luxon": ^2.0.7
     autoprefixer: ^10.3.1
     cookie: ^0.4.1
