@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PreviewPost } from '@api/all-post'
-	import PostListItem from '@components/post-list-item.svelte'
+	import LatestPosts from '@components/post/latest-posts.svelte'
 
 	export let posts: PreviewPost[]
 </script>
@@ -17,9 +17,5 @@
 		Currently, I've posted {posts.length} post, and I mostly write about technology, process, and careers.
 	</p>
 	<h2 class="mt-4 text-3xl font-bold text-secondary dark:text-secondary-dark">All Posts</h2>
-	{#each posts as post}
-		<a sveltekit:prefetch href={`blog/${post.slug}`}>
-			<PostListItem {post} />
-		</a>
-	{/each}
+	<LatestPosts {posts}/>
 </section>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss'
-	import Header from '../components/header.svelte'
+	import Header from '../components/header'
 	import Footer from '../components/footer.svelte'
 	import { onMount } from 'svelte'
 	import { theme } from '$lib/shared/stores/theme'

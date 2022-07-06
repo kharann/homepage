@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { theme } from '@lib/shared/stores/theme'
-	import ThemeIcon from './icons/theme-icon.svelte'
+	import ThemeIcon from './theme-icon.svelte'
 
 	const handleToggleTheme = () => {
 		const isDark = $theme === 'dark'

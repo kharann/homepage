@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { PreviewPost } from '@api/all-post'
 	import feather from 'feather-icons'
-	import PostListItem from '@components/post-list-item.svelte'
 	import Section from '@components/frontpage-section.svelte'
-	import { fly } from 'svelte/transition'
+	import LatestPosts from '@components/post/latest-posts.svelte'
+	import Link from '@components/link.svelte'
 
 	export let posts: PreviewPost[]
 	export let role: string
@@ -19,15 +19,8 @@
 	</h1>
 	<byline class="text-lg text-primary-8 dark:text-gray-2">{role}</byline>
 </section>
-<Section name="About me">I'm a</Section>
+<Section name="About me">{description}</Section>
 <Section name="Latest posts">
-	{#each posts as post, i}
-		<a sveltekit:prefetch href={`blog/${post.slug}`}>
-			<PostListItem {post} small={true} />
-		</a>
-	{/each}
-	<a
-		class="mt-4 flex items-center text-gray hover:text-primary dark:text-gray-3 dark:hover:text-primary-3"
-		href="blog">Read all posts<i>{@html arrowRightIcon}</i></a
-	>
+	<LatestPosts {posts} />
+	<Link url="blog">Read all posts<i>{@html arrowRightIcon}</i></Link>
 </Section>

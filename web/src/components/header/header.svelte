@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Link from './link.svelte'
+	import RouteLink from './route-link.svelte'
 	import Logo from './logo.svelte'
 	import Dropdown from './dropdown.svelte'
 	import Hamburger from './hamburger.svelte'
@@ -24,7 +24,7 @@
 		<div class="flex">
 			<ul class="hidden list-outside items-center sm:flex">
 				{#each routes as route}
-					<Link href={route.link} text={route.text} />
+					<RouteLink href={route.link} text={route.text} />
 				{/each}
 				<ThemeToggler />
 			</ul>
