@@ -11,7 +11,7 @@ const blue = {
 	9: '#121628',
 	10: '#0D0F1C',
 	DEFAULT: '#586EC6'
-};
+}
 
 const gray = {
 	0: '#F9F8F9',
@@ -24,7 +24,7 @@ const gray = {
 	7: '#48444f',
 	8: '#312c39',
 	9: '#1A1523'
-};
+}
 
 const config = {
 	mode: 'jit',
@@ -36,6 +36,7 @@ const config = {
 				...blue,
 				DEFAULT: blue[5]
 			},
+			areo: '#73bbc5',
 			secondary: {
 				DEFAULT: '#D31E66',
 				dark: '#FFEF5C'
@@ -58,7 +59,7 @@ const config = {
 			}
 		}
 	},
-	plugins: []
-};
+	plugins: [require('@tailwindcss/line-clamp')]
+}
 
-module.exports = config;
+module.exports = config

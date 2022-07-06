@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<link
-		href="https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-shades-of-purple.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.5.0/prism-nord.min.css"
 		rel="stylesheet"
 	/>
 </svelte:head>

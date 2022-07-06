@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	export let text: string;
-	export let href: string;
-	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/';
+	import {page} from '$app/stores'
+	export let text: string
+	export let href: string
+	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/'
 </script>
 
 <li
 	class={`hover:bg-primary-0 dark:text-gray-1 dark:hover:bg-primary-8 link ${
-		isActive && 'font-extrabold dark:text-white'
+		isActive && 'font-bold dark:text-white'
 	}`}
 >
 	<a sveltekit:prefetch {href}>{text}</a>
