@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type {MarkComponentProps} from '@portabletext/svelte'
+	import type { MarkComponentProps } from '@portabletext/svelte'
 
-	export let portableText: MarkComponentProps<{href: string}>
+	export let portableText: MarkComponentProps<{ href: string }>
 	console.log(portableText)
 </script>
 

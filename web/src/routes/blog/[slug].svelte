@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { BlogPost } from '@api/post-by-slug';
-	import CustomPortableText from '@components/portable-text/index.svelte';
-	import { DateTime } from 'luxon';
-	export let post: BlogPost;
-	const publishedDate = DateTime.fromISO(post._createdAt).toFormat('LLLL dd, yyyy');
+	import type { BlogPost } from '@api/post-by-slug'
+	import CustomPortableText from '@components/portable-text/index.svelte'
+	import { DateTime } from 'luxon'
+	export let post: BlogPost
+	const publishedDate = DateTime.fromISO(post._createdAt).toFormat('LLLL dd, yyyy')
 </script>
 
 <svelte:head>

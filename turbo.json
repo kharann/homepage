@@ -15,7 +15,7 @@
     "lint": {
       "outputs": []
     },
-    "lint:fix": {
+    "format": {
       "outputs": []
     },
     "dev": {

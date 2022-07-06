@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type {ListComponentProps} from '@portabletext/svelte'
+	import type { ListComponentProps } from '@portabletext/svelte'
 	export let portableText: ListComponentProps
-	$: ({value} = portableText)
-	$: ({listItem} = value)
+	$: ({ value } = portableText)
+	$: ({ listItem } = value)
 </script>
 
 {#if listItem === 'number'}

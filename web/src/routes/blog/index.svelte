@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { PreviewPost } from '@api/all-post';
-	import PostListItem from '@components/post-list-item.svelte';
+	import type { PreviewPost } from '@api/all-post'
+	import PostListItem from '@components/post-list-item.svelte'
 
-	export let posts: PreviewPost[];
+	export let posts: PreviewPost[]
 </script>
 
 <section>

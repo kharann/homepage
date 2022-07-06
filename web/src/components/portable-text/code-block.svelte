@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {CustomBlockComponentProps} from '@portabletext/svelte'
+	import type { CustomBlockComponentProps } from '@portabletext/svelte'
 	import Prism from 'prismjs'
 	import 'prism-svelte'
 
@@ -7,7 +7,7 @@
 		code: string
 		language: string
 	}>
-	const {code, language} = portableText.value
+	const { code, language } = portableText.value
 	const highlight = Prism.highlight(code, Prism.languages[language], 'svelte')
 </script>
 

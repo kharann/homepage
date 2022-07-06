@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import ThemeToggler from './theme-toggler.svelte';
+	import { fly } from 'svelte/transition'
+	import ThemeToggler from './theme-toggler.svelte'
 
 	interface Route {
-		link: string;
-		text: string;
+		link: string
+		text: string
 	}
 
-	export let routes: Route[];
-	export let open: boolean;
+	export let routes: Route[]
+	export let open: boolean
 </script>
 
 {#if open}

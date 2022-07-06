@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Link from './link.svelte';
-	import Logo from './logo.svelte';
-	import Dropdown from './dropdown.svelte';
-	import Hamburger from './hamburger.svelte';
-	import ThemeToggler from './theme-toggler.svelte';
+	import Link from './link.svelte'
+	import Logo from './logo.svelte'
+	import Dropdown from './dropdown.svelte'
+	import Hamburger from './hamburger.svelte'
+	import ThemeToggler from './theme-toggler.svelte'
 
 	const routes = [
 		{ link: '/', text: 'Home' },
@@ -11,8 +11,8 @@
 		{ link: '/projects', text: 'Projects' },
 		{ link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }
-	];
-	let open: boolean = false;
+	]
+	let open: boolean = false
 </script>
 
 <nav class="flex h-16 w-full">

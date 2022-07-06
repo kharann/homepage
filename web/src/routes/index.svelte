@@ -1,10 +1,10 @@
 <script context="module">
-	import {fetchIntroAndPosts} from '@api/frontpage'
+	import { fetchIntroAndPosts } from '@api/frontpage'
 
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
-	export const load = async ({fetch}) => {
+	export const load = async ({ fetch }) => {
 		const res = await fetchIntroAndPosts(fetch)
 		if (res.ok) {
 			return {
@@ -19,17 +19,17 @@
 </script>
 
 <script lang="ts">
-	import type {PreviewPost} from '@api/all-post'
+	import type { PreviewPost } from '@api/all-post'
 	import feather from 'feather-icons'
 	import PostListItem from '@components/post-list-item.svelte'
 	import Section from '@components/frontpage-section.svelte'
-	import {fly} from 'svelte/transition'
+	import { fly } from 'svelte/transition'
 
 	export let posts: PreviewPost[]
 	export let role: string
 	export let description: string
 
-	const arrowRightIcon = feather.icons['arrow-right'].toSvg({height: '24px'})
+	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' })
 </script>
 
 <section class="mt-4">

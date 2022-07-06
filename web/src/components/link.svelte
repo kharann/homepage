@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {page} from '$app/stores'
+	import { page } from '$app/stores'
 	export let text: string
 	export let href: string
 	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/'

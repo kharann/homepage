@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { theme } from '@lib/shared/stores/theme';
-	import ThemeIcon from './icons/theme-icon.svelte';
+	import { theme } from '@lib/shared/stores/theme'
+	import ThemeIcon from './icons/theme-icon.svelte'
 
 	const handleToggleTheme = () => {
-		const isDark = $theme === 'dark';
-		theme.set(isDark ? 'light' : 'dark');
+		const isDark = $theme === 'dark'
+		theme.set(isDark ? 'light' : 'dark')
 		if (!isDark) {
-			document.documentElement.classList.add('dark');
+			document.documentElement.classList.add('dark')
 		} else {
-			document.documentElement.classList.remove('dark');
+			document.documentElement.classList.remove('dark')
 		}
-	};
+	}
 </script>
 
 <i

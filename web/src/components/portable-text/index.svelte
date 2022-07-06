@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {PortableText} from '@portabletext/svelte'
-	import type {InputValue} from '@portabletext/svelte/ptTypes'
+	import { PortableText } from '@portabletext/svelte'
+	import type { InputValue } from '@portabletext/svelte/ptTypes'
 	import CodeBlock from './code-block.svelte'
 	import Link from './link.svelte'
 	import List from './list.svelte'
