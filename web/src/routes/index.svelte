@@ -1,23 +1,3 @@
-<script context="module">
-	import { fetchIntroAndPosts } from '@api/frontpage'
-
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export const load = async ({ fetch }) => {
-		const res = await fetchIntroAndPosts(fetch)
-		if (res.ok) {
-			return {
-				props: {
-					posts: res.data.latest_posts,
-					role: res.data.introduction.role,
-					description: res.data.introduction.description
-				}
-			}
-		}
-	}
-</script>
-
 <script lang="ts">
 	import type { PreviewPost } from '@api/all-post'
 	import feather from 'feather-icons'
