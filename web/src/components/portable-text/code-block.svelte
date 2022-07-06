@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { BlockProps } from '@portabletext/svelte';
-	import Prism from 'prismjs';
-	import 'prism-svelte';
+	import type {CustomBlockComponentProps} from '@portabletext/svelte'
+	import Prism from 'prismjs'
+	import 'prism-svelte'
 
-	export let portableText: BlockProps<{
-		code: string;
-		language: string;
-	}>;
-	const { code, language } = portableText.block;
-	const highlight = Prism.highlight(code, Prism.languages[language], 'svelte');
+	export let portableText: CustomBlockComponentProps<{
+		code: string
+		language: string
+	}>
+	const {code, language} = portableText.value
+	const highlight = Prism.highlight(code, Prism.languages[language], 'svelte')
 </script>
 
 <svelte:head>
@@ -19,7 +19,5 @@
 </svelte:head>
 
 <pre class={`language-${language} rounded-md`}>
-    <code>
-        {@html highlight}
-    </code>
+<code>{@html highlight}</code>
 </pre>

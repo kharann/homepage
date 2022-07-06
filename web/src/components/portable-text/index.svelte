@@ -1,41 +1,30 @@
 <script lang="ts">
-	import PortableText from '@portabletext/svelte';
-	import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes';
-	import CodeBlock from './code-block.svelte';
-	import Link from './link.svelte';
+	import {PortableText} from '@portabletext/svelte'
+	import type {InputValue} from '@portabletext/svelte/ptTypes'
+	import CodeBlock from './code-block.svelte'
+	import Link from './link.svelte'
+	import List from './list.svelte'
 
-	export let blocks: PortableTextBlocks;
+	export let blocks: InputValue
 </script>
 
 <div class="content">
 	<PortableText
-		{blocks}
-		serializers={{
+		value={blocks}
+		components={{
 			types: {
 				code_block: CodeBlock
 			},
 			marks: {
 				link: Link
-			}
+			},
+			list: List
 		}}
 	/>
 </div>
 
 <style lang="scss" global>
 	:local(.content) {
-		ul,
-		ol {
-			@apply my-6 ml-10 list-outside text-black dark:text-white;
-		}
-
-		ol {
-			@apply list-decimal;
-		}
-
-		ul {
-			@apply list-disc;
-		}
-
 		h1,
 		h2,
 		h3,
