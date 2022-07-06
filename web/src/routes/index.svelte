@@ -4,6 +4,7 @@
 	import Section from '@components/frontpage-section.svelte'
 	import LatestPosts from '@components/post/latest-posts.svelte'
 	import Link from '@components/link.svelte'
+	import SEO from "@components/seo/index.svelte"
 
 	export let posts: PreviewPost[]
 	export let role: string
@@ -11,6 +12,8 @@
 
 	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' })
 </script>
+
+<SEO title="Anhkha Vo" metaDescription="Personal portfolio to Anhkha Vo"/>
 
 <section class="mt-4">
 	<h1 class="mb-2 text-4xl font-bold text-primary-7">
