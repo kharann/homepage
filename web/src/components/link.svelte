@@ -1,8 +1,11 @@
 <script lang="ts">
 	export let url: string
+	export let accent: boolean = true
 </script>
 
 <a
-	class="inline-flex text-foreground transition-colors duration-300 hover:text-highlight"
+	class={`inline-flex transition-colors duration-300 hover:text-primary-7 ${
+		accent && 'text-highlight '
+	}`}
 	href={url}><slot /></a
 >

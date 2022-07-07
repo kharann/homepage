@@ -28,6 +28,6 @@
 <Section name="Latest posts.">
 	<LatestPosts {posts} />
 	<div class="mt-4">
-		<Link url="blog">Read all posts<i>{@html arrowRightIcon}</i></Link>
+		<Link url="blog" accent={false}>Read all posts<i>{@html arrowRightIcon}</i></Link>
 	</div>
 </Section>
