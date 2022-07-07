@@ -27,9 +27,8 @@
 				>
 			{/each}
 		</div>
-		<div class="mb-4 border-b-2 border-accent pb-2 mt-4" >
+		<div class="mb-4 mt-4 border-b-2 border-accent pb-2">
 			<Link url="https://github.com/kharann/homepage">Website built by Anh-Kha Vo</Link>
 		</div>
 	</div>
 </footer>
-

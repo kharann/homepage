@@ -4,12 +4,12 @@
 	import CodeBlock from './code-block.svelte'
 	import Link from './portable-link.svelte'
 	import List from './list.svelte'
-import PostListItem from '@components/post/post-list-item.svelte';
+	import PostListItem from '@components/post/post-list-item.svelte'
 
 	export let blocks: InputValue
 </script>
 
-<div class="prose" >
+<div class="prose">
 	<PortableText
 		value={blocks}
 		components={{
@@ -19,7 +19,7 @@ import PostListItem from '@components/post/post-list-item.svelte';
 			marks: {
 				link: Link
 			},
-			list: List,
+			list: List
 		}}
 	/>
 </div>

@@ -1,1 +1,1 @@
-export { default } from "./header.svelte"
+export { default } from './header.svelte'

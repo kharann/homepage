@@ -8,7 +8,7 @@
 </script>
 
 <article class="text-foreground hover:text-highlight">
-	<h3 class="text-inherit mt-4 text-xl">{title}</h3>
+	<h3 class="mt-4 text-xl text-inherit">{title}</h3>
 	<p class="flex items-center justify-between">
 		<span class="text-gray dark:text-gray-300">{publishedAt}</span>
 		<span class="text-gray dark:text-gray-300">{estimatedReadingTime} min read</span>

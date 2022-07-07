@@ -6,9 +6,7 @@
 </script>
 
 {#if listItem === 'number'}
-	<ol class="list-decimal list-outside"><slot /></ol>
+	<ol class="list-outside list-decimal"><slot /></ol>
 {:else}
-	<ul class="list-disc list-outside"><slot /></ul>
+	<ul class="list-outside list-disc"><slot /></ul>
 {/if}
-
-

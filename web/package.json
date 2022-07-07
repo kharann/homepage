@@ -5,8 +5,8 @@
 		"start": "run -T vite dev",
 		"build": "run -T vite build",
 		"preview": "run -T vite preview",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
-		"format": "prettier --ignore-path .gitignore --write ."
+		"lint": "run -T prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+		"format": "run -T prettier --ignore-path .gitignore --write ."
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^1.0.0-next.360",
