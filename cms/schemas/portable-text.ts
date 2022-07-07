@@ -1,4 +1,4 @@
-export default {
+const portableText = {
   name: "portable_text",
   title: "Portable Text",
   type: "array",
@@ -50,4 +50,5 @@ export default {
       },
     },
   ],
-};
+}
+export default portableText

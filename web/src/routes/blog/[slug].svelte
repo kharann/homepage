@@ -1,38 +1,20 @@
-<script context="module" lang="ts">
-	import { BlogPost, fetchPostBySlug } from '../../api/post-by-slug';
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ fetch, page }) => {
-		const res = await fetchPostBySlug(fetch, { slug: page.params.slug });
-		if (res.ok) {
-			return {
-				props: {
-					post: res.data
-				}
-			};
-		}
-
-		return {
-			status: res.status,
-			error: new Error('Could not perform query')
-		};
-	};
-</script>
-
 <script lang="ts">
-	import CustomPortableText from '@components/portable-text/index.svelte';
-	import { DateTime } from 'luxon';
-	export let post: BlogPost;
-	const publishedDate = DateTime.fromISO(post._createdAt).toFormat('LLLL dd, yyyy');
+	import type { BlogPost } from '@api/post-by-slug'
+	import Divider from '@components/divider.svelte'
+	import CustomPortableText from '@components/portable-text/index.svelte'
+	import { DateTime } from 'luxon'
+	export let post: BlogPost
+	const publishedDate = DateTime.fromISO(post._createdAt).toFormat('LLLL dd, yyyy')
 </script>
 
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
 
-<article class="max-w-2xl w-full m-auto flex flex-col">
-	<h1 class="text-4xl font-bold text-primary-8 dark:text-secondary-dark">{post.title}</h1>
-	<div class="flex justify-between mt-4 mb-16 sm:flex-row flex-col">
+<article class="m-auto flex w-full max-w-2xl flex-col">
+	<h1 class="mb-4 text-4xl font-bold text-foreground-accent">{post.title}</h1>
+	<Divider />
+	<div class="mt-2 mb-16 flex flex-col justify-between sm:flex-row">
 		<p>Anh-Kha Vo • {publishedDate}</p>
 		<p>{post.estimatedReadingTime} min read</p>
 	</div>

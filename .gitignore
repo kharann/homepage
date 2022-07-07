@@ -10,3 +10,5 @@ sanity-template-gatsby-blog/*
 !.yarn/versions
 .pnp.*
 */node_modules/
+
+.turbo

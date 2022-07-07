@@ -1,5 +1,6 @@
 <script>
-	import feather from 'feather-icons';
+	import feather from 'feather-icons'
+	import Link from '@components/link.svelte'
 
 	const iconLinks = [
 		{
@@ -14,32 +15,21 @@
 			icon: feather.icons.mail.toSvg(),
 			link: 'mailto:hey@akvo.no'
 		}
-	];
+	]
 </script>
 
-<footer class="mt-8 shadow w-full">
-	<div class="border-primary-2 dark:border-primary-8 footer_container">
-		<div class="content">
-			<div class="grid grid-cols-3 w-max gap-5">
-				{#each iconLinks as iconLink}
-					<a
-						class="text-primary hover:text-primary-5 dark:text-primary-3 dark:hover:text-primary-4 duration-300"
-						href={iconLink.link}>{@html iconLink.icon}</a
-					>
-				{/each}
-			</div>
-			<div class="pt-4 text-center dark:text-white">
-				© 2021-present Anh-Kha Vo. All rights preserved
-			</div>
+<footer class="mt-16 w-full">
+	<div class="m-auto flex h-full w-full max-w-4xl flex-col items-center">
+		<div class="grid w-max grid-cols-3 gap-5">
+			{#each iconLinks as iconLink}
+				<a class="text-highlight duration-300 hover:text-foreground-accent" href={iconLink.link}
+					>{@html iconLink.icon}</a
+				>
+			{/each}
+		</div>
+		<div class="mb-4 border-b-2 border-accent pb-2 mt-4" >
+			<Link url="https://github.com/kharann/homepage">Website built by Anh-Kha Vo</Link>
 		</div>
 	</div>
 </footer>
 
-<style lang="postcss">
-	.footer_container {
-		@apply pt-6 pb-6 border-t-2 flex justify-center mr-4 ml-4;
-	}
-	.content {
-		@apply max-w-4xl w-full m-auto h-full flex flex-col items-center;
-	}
-</style>

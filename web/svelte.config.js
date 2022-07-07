@@ -1,14 +1,13 @@
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
-import path from 'path';
+import preprocess from 'svelte-preprocess'
+import adapter from '@sveltejs/adapter-static'
+import path from 'path'
 
-const dev = process.env.NODE_ENV === 'development';
+const dev = process.env.NODE_ENV === 'development'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
 		adapter: adapter({
 			fallback: '404.html',
 			base: dev ? '' : '/homepage/',
@@ -21,12 +20,13 @@ const config = {
 		},
 		vite: {
 			resolve: {
-				alias: {
-					'@lib': path.resolve('./src/lib'),
-					'@api': path.resolve('./src/api'),
-					'@components': path.resolve('./src/components/')
-				}
+				alias: {}
 			}
+		},
+		alias: {
+			'@lib': 'src/lib',
+			'@api': './src/api',
+			'@components': './src/components/'
 		}
 	},
 
@@ -36,6 +36,6 @@ const config = {
 			typescript: true
 		})
 	]
-};
+}
 
-export default config;
+export default config

@@ -7,52 +7,68 @@ const blue = {
 	5: '#586EC6',
 	6: '#46589e',
 	7: '#354277',
-	8: '#232c4f',
+	8: '#27283F',
 	9: '#121628',
+	10: '#0D0F1C',
 	DEFAULT: '#586EC6'
-};
+}
 
 const gray = {
-	0: '#F9F8F9',
-	1: '#e2e2e4',
-	2: '#c5c5c9',
-	3: '#a9a8ad',
-	4: '#8c8b92',
-	5: '#6f6e77',
-	6: '#5f5b65',
-	7: '#48444f',
-	8: '#312c39',
-	9: '#1A1523'
-};
+	50: '#F9F8F9',
+	100: '#e2e2e4',
+	200: '#c5c5c9',
+	300: '#a9a8ad',
+	400: '#8c8b92',
+	500: '#6f6e77',
+	600: '#5f5b65',
+	700: '#48444f',
+	800: '#312c39',
+	900: '#1A1523',
+	DEFAULT: '#48444f'
+}
+const colors = {
+	background: gray[50],
+	foreground: {
+		accent: '#2C3763',
+		DEFAULT: gray[900]
+	},
+	accent: '#73bbc5',
+	highlight: '#586EC6',
+	gray: gray,
+	primary: {
+		...blue,
+		DEFAULT: blue[5]
+	},
+	black: '#0F161E'
+}
 
+/** @type {import('tailwindcss').Config} */
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
 	theme: {
-		colors: {
-			primary: {
-				...blue,
-				DEFAULT: blue[5]
+		extend: {
+			colors: colors,
+			fontFamily: {
+				hack: 'Hack',
+				lato: 'Lato',
+				poppins: 'Poppins'
 			},
-			secondary: {
-				DEFAULT: '#D31E66',
-				dark: '#FFEF5C'
+			rotate: {
+				360: '360deg'
 			},
-			black: '#0F161E',
-			white: '#ffffff',
-			gray: {
-				...gray,
-				DEFAULT: gray[5]
+			typography: {
+				DEFAULT: {
+					css: {
+						'--tw-prose-body': colors.foreground.DEFAULT,
+						'--tw-prose-headings': colors.foreground.accent
+					}
+				}
 			}
-		},
-		fontFamily: {
-			hack: 'Hack',
-			lato: 'Lato',
-			poppins: 'Poppins'
 		}
 	},
-	plugins: []
-};
+	plugins: [require('@tailwindcss/typography')]
+}
 
-module.exports = config;
+module.exports = config

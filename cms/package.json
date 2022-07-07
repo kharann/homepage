@@ -2,9 +2,7 @@
   "name": "cms",
   "private": true,
   "version": "1.0.0",
-  "description": "",
   "main": "package.json",
-  "author": "Kharann <anhkhav@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -14,18 +12,12 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.21.9",
-    "@sanity/code-input": "^2.21.9",
-    "@sanity/components": "^2.14.0",
-    "@sanity/core": "^2.21.8",
-    "@sanity/default-layout": "^2.21.9",
-    "@sanity/default-login": "^2.21.9",
-    "@sanity/desk-tool": "^2.21.9",
-    "@sanity/vision": "^2.21.9",
-    "ace-builds": "^1.4.13",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
+    "@sanity/code-input": "studio-v3",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "eslint": "^8.6.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "sanity": "dev-preview",
     "styled-components": "^5.2.0"
   }
 }

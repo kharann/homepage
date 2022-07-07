@@ -1,53 +1,33 @@
-<script context="module">
-	import { fetchIntroAndPosts } from '@api/frontpage';
-
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export const load = async ({ fetch }) => {
-		const res = await fetchIntroAndPosts(fetch);
-		if (res.ok) {
-			return {
-				props: {
-					posts: res.data.latest_posts,
-					role: res.data.introduction.role,
-					description: res.data.introduction.description
-				}
-			};
-		}
-	};
-</script>
-
 <script lang="ts">
-	import type { PreviewPost } from '@api/all-post';
-	import feather from 'feather-icons';
-	import PostListItem from '@components/post-list-item.svelte';
-	import Section from '@components/frontpage-section.svelte';
+	import type { PreviewPost } from '@api/all-post'
+	import feather from 'feather-icons'
+	import Section from '@components/frontpage-section.svelte'
+	import LatestPosts from '@components/post/latest-posts.svelte'
+	import Link from '@components/link.svelte'
+	import SEO from '@components/seo/index.svelte'
+	import { PortableText } from '@portabletext/svelte'
+	import type { InputValue } from '@portabletext/svelte/ptTypes'
 
-	export let posts: PreviewPost[];
-	export let role: string;
-	export let description: string;
+	export let posts: PreviewPost[]
+	export let role: string
+	export let about_me: InputValue
 
-	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' });
+	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' })
 </script>
+
+<SEO title="Anhkha Vo" metaDescription="Personal portfolio to Anhkha Vo" />
 
 <section class="mt-4">
-	<h1 class="text-3xl mb-2">
-		Hei, I'm Anh-Kha Vo and on the web I go by <span
-			class="text-primary dark:text-primary-3 font-black font-hack">Kharann 👋</span
-		>
+	<h1 class="mb-2 text-4xl font-bold text-foreground-accent">
+		Hi, my name is
+		<span class="font-hack font-bold text-primary dark:text-primary-3">Anhkha 👋</span>
 	</h1>
-	<byline class="text-lg text-gray dark:text-gray-3">{role}</byline>
-	<p class="mt-4">{description}</p>
+	<byline class="text-lg text-primary-9 dark:text-gray-200">{role}</byline>
 </section>
+<Section name="About me"><PortableText value={about_me} /></Section>
 <Section name="Latest posts">
-	{#each posts as post}
-		<a sveltekit:prefetch href={`blog/${post.slug}`}>
-			<PostListItem {post} small={true} />
-		</a>
-	{/each}
-	<a
-		class="flex mt-4 text-gray dark:text-gray-3 hover:text-primary dark:hover:text-primary-3 items-center"
-		href="blog">Read all posts<i>{@html arrowRightIcon}</i></a
-	>
+	<LatestPosts {posts} />
+	<div class="mt-4">
+		<Link url="blog">Read all posts<i>{@html arrowRightIcon}</i></Link>
+	</div>
 </Section>

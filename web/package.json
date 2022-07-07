@@ -2,44 +2,45 @@
 	"name": "web",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"start": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"deploy": "gh-pages -d build",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+		"format": "prettier --ignore-path .gitignore --write ."
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.0",
 		"@sveltejs/kit": "^1.0.0-next.1",
 		"@tsconfig/svelte": "^2.0.1",
+		"@types/feather-icons": "^4.7.0",
 		"@types/luxon": "^2.0.7",
+		"@types/prismjs": "^1.26.0",
 		"autoprefixer": "^10.3.1",
 		"cssnano": "^5.0.6",
-		"gh-pages": "^3.2.3",
 		"postcss": "^8.3.5",
 		"postcss-load-config": "^3.1.0",
-		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
+		"prettier-plugin-tailwindcss": "^0.1.11",
 		"svelte": "^3.44.1",
-		"svelte-preprocess": "^4.9.8",
-		"tailwindcss": "^2.2.19"
+		"svelte-preprocess": "^4.9.8"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.2.2",
 		"@lukeed/uuid": "^2.0.0",
-		"@portabletext/svelte": "^0.1.0-next.0",
-		"@sanity/client": "^2.21.10",
+		"@portabletext/svelte": "^1.0.1",
+		"@sanity/client": "^3.3.2",
+		"@tailwindcss/typography": "latest",
 		"cookie": "^0.4.1",
 		"feather-icons": "^4.28.0",
 		"groq": "^2.15.0",
 		"luxon": "^2.1.1",
-		"node-sass": "^6.0.1",
+		"node-sass": "^7.0.1",
 		"prism-svelte": "^0.4.7",
 		"prismjs": "^1.25.0",
-		"typescript": "^4.4.4"
+		"tailwindcss": "^3.1.4"
 	}
 }
