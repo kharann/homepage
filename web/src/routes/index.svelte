@@ -5,7 +5,7 @@
 	import LatestPosts from '@components/post/latest-posts.svelte'
 	import Link from '@components/link.svelte'
 	import SEO from '@components/seo/index.svelte'
-	import { PortableText } from '@portabletext/svelte'
+	import PortableText from '@components/portable-text/index.svelte'
 	import type { InputValue } from '@portabletext/svelte/ptTypes'
 
 	export let posts: PreviewPost[]
@@ -24,8 +24,8 @@
 	</h1>
 	<byline class="text-lg text-primary-9 dark:text-gray-200">{role}</byline>
 </section>
-<Section name="About me"><PortableText value={about_me} /></Section>
-<Section name="Latest posts">
+<Section name="About me."><PortableText blocks={about_me} /></Section>
+<Section name="Latest posts.">
 	<LatestPosts {posts} />
 	<div class="mt-4">
 		<Link url="blog">Read all posts<i>{@html arrowRightIcon}</i></Link>

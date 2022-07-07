@@ -17,7 +17,7 @@
 	<p class="my-4">
 		Currently, I've posted {posts.length} post, and I mostly write about technology, process, and careers.
 	</p>
-	<Section name="All posts">
+	<Section name="All posts.">
 		<LatestPosts {posts} />
 	</Section>
 </section>
