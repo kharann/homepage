@@ -7,9 +7,9 @@
 
 	const routes = [
 		{ link: '/', text: 'Home' },
-		{ link: '/blog', text: 'Blog' },
-		{ link: '/projects', text: 'Projects' },
-		{ link: '/about', text: 'About' }
+		{ link: '/blog', text: 'Blog' }
+		// { link: '/projects', text: 'Projects' },
+		// { link: '/about', text: 'About' }
 		// { link: '/resume', text: 'Resume' }
 	]
 	let open: boolean = false
@@ -26,7 +26,7 @@
 				{#each routes as route}
 					<RouteLink href={route.link} text={route.text} />
 				{/each}
-				<ThemeToggler />
+				<!-- <ThemeToggler /> -->
 			</ul>
 		</div>
 		<div class="flex sm:hidden">

@@ -3,6 +3,6 @@
 </script>
 
 <a
-	class="inline-flex text-foreground transition-colors duration-300 hover:text-primary"
+	class="inline-flex text-foreground transition-colors duration-300 hover:text-highlight"
 	href={url}><slot /></a
 >
