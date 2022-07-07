@@ -29,6 +29,7 @@
 		"@lukeed/uuid": "^2.0.0",
 		"@portabletext/svelte": "^1.0.1",
 		"@sanity/client": "^3.3.2",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.66",
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
 		"@tailwindcss/typography": "latest",
 		"cookie": "^0.4.1",

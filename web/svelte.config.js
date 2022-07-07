@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-static'
+import adapter from '@sveltejs/adapter-netlify'
 
 const dev = process.env.NODE_ENV === 'development'
 
@@ -7,10 +7,7 @@ const dev = process.env.NODE_ENV === 'development'
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		adapter: adapter({
-			pages: 'build',
-			fallback: '404.html'
-		}),
+		adapter: adapter(),
 		prerender: {
 			crawl: true,
 			enabled: true,

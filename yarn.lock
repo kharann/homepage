@@ -1464,6 +1464,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iarna/toml@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "@iarna/toml@npm:2.2.5"
+  checksum: b63b2b2c4fd67969a6291543ada0303d45593801ee744b60f5390f183c03d9192bc67a217abb24be945158f1935f02840d9ffff40c0142aa171b5d3b6b6a3ea5
+  languageName: node
+  linkType: hard
+
 "@jridgewell/gen-mapping@npm:^0.1.0":
   version: 0.1.1
   resolution: "@jridgewell/gen-mapping@npm:0.1.1"
@@ -2189,6 +2196,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sveltejs/adapter-netlify@npm:^1.0.0-next.66":
+  version: 1.0.0-next.66
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.66"
+  dependencies:
+    "@iarna/toml": ^2.2.5
+    esbuild: ^0.14.42
+    set-cookie-parser: ^2.4.8
+    tiny-glob: ^0.2.9
+  checksum: d3940f570104cee95af518dbe6e5b481f5e044aa6baf8788d870b57fc330994b1b9e5ef34778789d5a7e5097f96c9d8c57e4f601f2776d619fbaaff5a79f9cfa
+  languageName: node
+  linkType: hard
+
 "@sveltejs/adapter-static@npm:^1.0.0-next.34":
   version: 1.0.0-next.34
   resolution: "@sveltejs/adapter-static@npm:1.0.0-next.34"
@@ -2198,7 +2217,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.1":
+"@sveltejs/kit@npm:^1.0.0-next.360":
   version: 1.0.0-next.360
   resolution: "@sveltejs/kit@npm:1.0.0-next.360"
   dependencies:
@@ -4555,7 +4574,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.14.27":
+"esbuild@npm:^0.14.27, esbuild@npm:^0.14.42":
   version: 0.14.48
   resolution: "esbuild@npm:0.14.48"
   dependencies:
@@ -9332,6 +9351,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"set-cookie-parser@npm:^2.4.8":
+  version: 2.5.0
+  resolution: "set-cookie-parser@npm:2.5.0"
+  checksum: df277b2c49f05738997f78a9848b8a9954a77ff57989d32e373622921788cf6b154c30b7fab8d69bc8d1cf7687cb904efa642d5adee7a9ebae883c15cea3c145
+  languageName: node
+  linkType: hard
+
 "shallow-equals@npm:^1.0.0":
   version: 1.0.0
   resolution: "shallow-equals@npm:1.0.0"
@@ -10669,8 +10695,9 @@ typescript@^4.6.3:
     "@lukeed/uuid": ^2.0.0
     "@portabletext/svelte": ^1.0.1
     "@sanity/client": ^3.3.2
+    "@sveltejs/adapter-netlify": ^1.0.0-next.66
     "@sveltejs/adapter-static": ^1.0.0-next.34
-    "@sveltejs/kit": ^1.0.0-next.1
+    "@sveltejs/kit": ^1.0.0-next.360
     "@tailwindcss/typography": latest
     "@tsconfig/svelte": ^2.0.1
     "@types/feather-icons": ^4.7.0
