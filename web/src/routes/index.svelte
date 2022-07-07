@@ -10,7 +10,7 @@
 
 	export let posts: PreviewPost[]
 	export let role: string
-	export let about_me: InputValue
+	export let aboutMeContent: InputValue
 
 	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' })
 </script>
@@ -24,7 +24,7 @@
 	</h1>
 	<byline class="text-lg text-primary-9 dark:text-gray-200">{role}</byline>
 </section>
-<Section name="About me."><PortableText blocks={about_me} /></Section>
+<Section name="About me."><PortableText blocks={aboutMeContent} /></Section>
 <Section name="Latest posts.">
 	<LatestPosts {posts} />
 	<div class="mt-4">

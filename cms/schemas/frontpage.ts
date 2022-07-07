@@ -10,6 +10,11 @@ const frontpageSchema: Schema.DocumentDefinition = {
 			name: 'about_me',
 			type: 'portable_text',
 			title: 'About me'
+		},
+		{
+			name: 'resume',
+			type: 'file',
+			title: 'Resume'
 		}
 	]
 }

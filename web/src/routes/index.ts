@@ -6,15 +6,17 @@ import type { InputValue } from '@portabletext/svelte/ptTypes'
 interface HomePageProps {
 	posts: PreviewPost[]
 	role: string
-	about_me: InputValue
+	aboutMeContent: InputValue
 }
 
 export const get: RequestHandler<HomePageProps> = async () => {
 	const data = await fetchIntroAndPosts()
+	const { about_me, role } = data.introduction
 	return {
 		body: {
 			posts: data.latest_posts,
-			...data.introduction
+			aboutMeContent: about_me,
+			role: role
 		},
 		status: 200
 	}
