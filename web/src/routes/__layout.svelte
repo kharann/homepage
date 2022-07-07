@@ -23,9 +23,9 @@
 			const prefersDark =
 				mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches
 			if (mode === 'dark' || prefersDark) {
-				document.documentElement.classList.add('dark')
+				// document.documentElement.classList.add('dark')
 			} else {
-				document.documentElement.classList.remove('dark')
+				// document.documentElement.classList.remove('dark')
 			}
 		}
 	</script>
