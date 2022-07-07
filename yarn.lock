@@ -2196,15 +2196,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-netlify@npm:^1.0.0-next.66":
-  version: 1.0.0-next.66
-  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.66"
+"@sveltejs/adapter-netlify@npm:1.0.0-next.65":
+  version: 1.0.0-next.65
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.65"
   dependencies:
     "@iarna/toml": ^2.2.5
     esbuild: ^0.14.42
     set-cookie-parser: ^2.4.8
     tiny-glob: ^0.2.9
-  checksum: d3940f570104cee95af518dbe6e5b481f5e044aa6baf8788d870b57fc330994b1b9e5ef34778789d5a7e5097f96c9d8c57e4f601f2776d619fbaaff5a79f9cfa
+  checksum: a1b70f9107e0a578e3ca89c7dd8879c93aa564bf8708c08187f663c1fe3c43eded2ec3652f4e2c86ec301f39e452bac3bf8615f77f5d686aa60b559ea4014852
   languageName: node
   linkType: hard
 
@@ -8306,7 +8306,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.6.1":
+"prettier@npm:^2.6.1, prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -10695,7 +10695,7 @@ typescript@^4.6.3:
     "@lukeed/uuid": ^2.0.0
     "@portabletext/svelte": ^1.0.1
     "@sanity/client": ^3.3.2
-    "@sveltejs/adapter-netlify": ^1.0.0-next.66
+    "@sveltejs/adapter-netlify": 1.0.0-next.65
     "@sveltejs/adapter-static": ^1.0.0-next.34
     "@sveltejs/kit": ^1.0.0-next.360
     "@tailwindcss/typography": latest
@@ -10712,6 +10712,7 @@ typescript@^4.6.3:
     node-sass: ^7.0.1
     postcss: ^8.3.5
     postcss-load-config: ^3.1.0
+    prettier: ^2.7.1
     prettier-plugin-svelte: ^2.2.0
     prettier-plugin-tailwindcss: ^0.1.11
     prism-svelte: ^0.4.7
@@ -10719,6 +10720,7 @@ typescript@^4.6.3:
     svelte: ^3.44.1
     svelte-preprocess: ^4.9.8
     tailwindcss: ^3.1.4
+    vite: ^2.9.13
   languageName: unknown
   linkType: soft
 
