@@ -6,7 +6,11 @@ const frontpageSchema: Schema.DocumentDefinition = {
 	type: 'document',
 	fields: [
 		{ name: 'role', type: 'string', title: 'Role' },
-		{ name: 'description', type: 'text', title: 'Description' }
+		{
+			name: 'about_me',
+			type: 'portable_text',
+			title: 'About me'
+		}
 	]
 }
 export default frontpageSchema

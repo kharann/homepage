@@ -16,6 +16,6 @@
 	<p class="my-4">
 		Currently, I've posted {posts.length} post, and I mostly write about technology, process, and careers.
 	</p>
-	<h2 class="mt-4 text-3xl font-bold text-secondary dark:text-secondary-dark">All Posts</h2>
-	<LatestPosts {posts}/>
+	<h2 class="mt-4 text-3xl font-bold">All Posts</h2>
+	<LatestPosts {posts} />
 </section>

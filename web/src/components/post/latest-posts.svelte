@@ -13,7 +13,7 @@
 	<ul in:fly={{ x: 50, delay: 100 }}>
 		{#each posts as post, i}
 			<a sveltekit:prefetch href={`blog/${post.slug}`}>
-				<PostListItem {post} small={true} />
+				<PostListItem {post} />
 			</a>
 		{/each}
 	</ul>

@@ -1,11 +1,12 @@
 import type { PreviewPost } from '@api/all-post'
 import type { RequestHandler } from './__types'
 import { fetchIntroAndPosts } from '@api/frontpage'
+import type { InputValue } from '@portabletext/svelte/ptTypes'
 
 interface HomePageProps {
 	posts: PreviewPost[]
 	role: string
-	description: string
+	about_me: InputValue
 }
 
 export const get: RequestHandler<HomePageProps> = async () => {

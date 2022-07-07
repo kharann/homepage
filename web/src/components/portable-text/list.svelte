@@ -6,14 +6,9 @@
 </script>
 
 {#if listItem === 'number'}
-	<ol class="list-decimal dark:text-white"><slot /></ol>
+	<ol class="list-decimal list-outside"><slot /></ol>
 {:else}
-	<ul class="list-disc dark:text-white"><slot /></ul>
+	<ul class="list-disc list-outside"><slot /></ul>
 {/if}
 
-<style lang="postcss">
-	ol,
-	ul {
-		@apply my-6 ml-10 list-outside text-black;
-	}
-</style>
+

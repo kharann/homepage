@@ -14,52 +14,61 @@ const blue = {
 }
 
 const gray = {
-	0: '#F9F8F9',
-	1: '#e2e2e4',
-	2: '#c5c5c9',
-	3: '#a9a8ad',
-	4: '#8c8b92',
-	5: '#6f6e77',
-	6: '#5f5b65',
-	7: '#48444f',
-	8: '#312c39',
-	9: '#1A1523'
+	50: '#F9F8F9',
+	100: '#e2e2e4',
+	200: '#c5c5c9',
+	300: '#a9a8ad',
+	400: '#8c8b92',
+	500: '#6f6e77',
+	600: '#5f5b65',
+	700: '#48444f',
+	800: '#312c39',
+	900: '#1A1523',
+	DEFAULT: '#48444f'
+}
+const colors = {
+	background: gray[50],
+	foreground: {
+		accent: '#2C3763',
+		DEFAULT: gray[900]
+	},
+	accent: '#73bbc5',
+	highlight: '#586EC6',
+	gray: gray,
+	primary: {
+		...blue,
+		DEFAULT: blue[5]
+	},
+	black: '#0F161E'
 }
 
+/** @type {import('tailwindcss').Config} */
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
 	theme: {
-		colors: {
-			primary: {
-				...blue,
-				DEFAULT: blue[5]
-			},
-			areo: '#73bbc5',
-			secondary: {
-				DEFAULT: '#D31E66',
-				dark: '#FFEF5C'
-			},
-			black: '#0F161E',
-			white: '#ffffff',
-			gray: {
-				...gray,
-				DEFAULT: gray[5]
-			}
-		},
-		fontFamily: {
-			hack: 'Hack',
-			lato: 'Lato',
-			poppins: 'Poppins'
-		},
 		extend: {
+			colors: colors,
+			fontFamily: {
+				hack: 'Hack',
+				lato: 'Lato',
+				poppins: 'Poppins'
+			},
 			rotate: {
 				360: '360deg'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						'--tw-prose-body': colors.foreground.DEFAULT,
+						'--tw-prose-headings': colors.foreground.accent
+					}
+				}
 			}
 		}
 	},
-	plugins: [require('@tailwindcss/line-clamp')]
+	plugins: [require('@tailwindcss/typography')]
 }
 
 module.exports = config

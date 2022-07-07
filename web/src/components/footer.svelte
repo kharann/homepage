@@ -1,5 +1,6 @@
 <script>
 	import feather from 'feather-icons'
+	import Link from '@components/link.svelte'
 
 	const iconLinks = [
 		{
@@ -17,27 +18,18 @@
 	]
 </script>
 
-<footer class="mt-8 w-full">
-	<div class="content">
+<footer class="mt-16 w-full">
+	<div class="m-auto flex h-full w-full max-w-4xl flex-col items-center">
 		<div class="grid w-max grid-cols-3 gap-5">
 			{#each iconLinks as iconLink}
-				<a
-					class="text-primary duration-300 hover:text-primary-5 dark:text-primary-3 dark:hover:text-primary-4"
-					href={iconLink.link}>{@html iconLink.icon}</a
+				<a class="text-highlight duration-300 hover:text-foreground-accent" href={iconLink.link}
+					>{@html iconLink.icon}</a
 				>
 			{/each}
 		</div>
-		<a
-			href="https://github.com/kharann/homepage"
-			target="_blank"
-			class="mb-2 mt-4 border-b-2 border-areo pb-1 text-center transition-colors hover:text-primary dark:text-white"
-			>Website built by Anh-Kha Vo</a
-		>
+		<div class="mb-4 border-b-2 border-accent pb-2 mt-4" >
+			<Link url="https://github.com/kharann/homepage">Website built by Anh-Kha Vo</Link>
+		</div>
 	</div>
 </footer>
 
-<style lang="postcss">
-	.content {
-		@apply m-auto flex h-full w-full max-w-4xl flex-col items-center;
-	}
-</style>

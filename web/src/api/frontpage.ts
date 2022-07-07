@@ -1,13 +1,13 @@
-import { getFetchUrl, sanityClient } from '@lib/sanity'
+import { sanityClient } from '@lib/sanity'
 import groq from 'groq'
 import { allPostsQuery } from './all-post'
 import type { PreviewPost } from './all-post'
-import type { SanityDataFetcher } from './types'
+import type { InputValue } from '@portabletext/svelte/ptTypes'
 
 interface FrontpageData {
 	introduction: {
 		role: string
-		description: string
+		about_me: InputValue
 	}
 	latest_posts: PreviewPost[]
 }
@@ -15,11 +15,9 @@ interface FrontpageData {
 const frontpageQuery = groq`{
 	"introduction" : *[_type == "whoami" ] {
 		role,
-		description
+		about_me
 	}[0],
 	"latest_posts": ${allPostsQuery}[0...3] | order(_createdAt asc)
 }`
 
 export const fetchIntroAndPosts = () => sanityClient.fetch<FrontpageData>(frontpageQuery)
-	
-
