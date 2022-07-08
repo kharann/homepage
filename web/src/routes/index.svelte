@@ -7,10 +7,14 @@
 	import SEO from '@components/seo/index.svelte'
 	import PortableText from '@components/portable-text/index.svelte'
 	import type { InputValue } from '@portabletext/svelte/ptTypes'
+	import Timeline from '@components/timeline'
+	import type { Experience } from '@api/all-experience'
+	import Chips from '@components/chips/chips.svelte'
 
 	export let posts: PreviewPost[]
 	export let role: string
 	export let aboutMeContent: InputValue
+	export let experiences: Experience[]
 
 	const arrowRightIcon = feather.icons['arrow-right'].toSvg({ height: '24px' })
 </script>
@@ -30,4 +34,9 @@
 	<div class="mt-4">
 		<Link url="blog" accent={false}>Read all posts<i>{@html arrowRightIcon}</i></Link>
 	</div>
+</Section>
+
+<Section name="Experience.">
+	<Chips />
+	<Timeline {experiences} />
 </Section>
