@@ -4,7 +4,7 @@ const config = {
 	projectId: 'r4l4xmqo',
 	dataset: 'production',
 	apiVersion: 'v2021-11-11', // use current UTC date - see "specifying API version"!
-	token: '' // or leave blank for unauthenticated usage
+	useCdn: true
 }
 
 export const sanityClient = sanity(config)
