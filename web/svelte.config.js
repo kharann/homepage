@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess'
-import adapter from '@sveltejs/adapter-netlify'
+import adapter from '@sveltejs/adapter-vercel'
 
 const dev = process.env.NODE_ENV === 'development'
 
@@ -7,7 +7,9 @@ const dev = process.env.NODE_ENV === 'development'
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		adapter: adapter(),
+		adapter: adapter({
+			edge: true,
+		}),
 		prerender: {
 			crawl: true,
 			enabled: true,
