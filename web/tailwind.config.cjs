@@ -45,8 +45,12 @@ const colors = {
 /** @type {import('tailwindcss').Config} */
 const config = {
 	mode: 'jit',
-	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
+	content: [
+		// Example content paths...
+		'./src/**/*.html',
+		'./src/**/*.{js,ts,svelte}',
+	],
 	theme: {
 		extend: {
 			colors: colors,
