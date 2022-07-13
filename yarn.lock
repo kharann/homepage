@@ -9943,6 +9943,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"svelte-feather-icons@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "svelte-feather-icons@npm:4.0.0"
+  dependencies:
+    svelte: ^3.38.2
+  checksum: 9f93a5d68298f476f186f8636942c4f5dcb989c3d8d5688b6bda46549902edeab0f038a7bc6b1531efe1459395536a1a69cdca8a745895425e3391718454c274
+  languageName: node
+  linkType: hard
+
 "svelte-hmr@npm:^0.14.12":
   version: 0.14.12
   resolution: "svelte-hmr@npm:0.14.12"
@@ -9998,6 +10007,13 @@ resolve@^2.0.0-next.3:
     typescript:
       optional: true
   checksum: 51a0820c14bcc411ddf3b1cf4c772e73873626ed0b6c54dfca9e06bd6a6b22c9502436df3f1a4dab9eb3a404bba95002fd70cadea29a84fc36da3071309a8b91
+  languageName: node
+  linkType: hard
+
+"svelte@npm:^3.38.2":
+  version: 3.49.0
+  resolution: "svelte@npm:3.49.0"
+  checksum: 5b7cb8dbf6b6581b50fab1de63cbcb81816081a1240b03e234b299268fff2f3237bf8f92b683a848f95453353b5694dfe26fa05a55da185a4bb0cd8b80d87dd4
   languageName: node
   linkType: hard
 
@@ -10832,6 +10848,7 @@ typescript@^4.6.3:
     prism-svelte: ^0.4.7
     prismjs: ^1.25.0
     svelte: ^3.44.1
+    svelte-feather-icons: ^4.0.0
     svelte-preprocess: ^4.9.8
     tailwindcss: ^3.1.4
     vite: ^2.9.13
