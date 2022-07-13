@@ -1,7 +1,7 @@
 import { Schema } from 'sanity'
 
 const experienceSchema: Schema.DocumentDefinition = {
-	title: 'Experiences',
+	title: 'Experience',
 	name: 'experience',
 	type: 'document',
 	fields: [
@@ -43,6 +43,18 @@ const experienceSchema: Schema.DocumentDefinition = {
 			title: 'Current position',
 			name: 'current_position',
 			type: 'boolean'
+		},
+		{
+			title: 'Role',
+			name: 'role',
+			type: 'string',
+			options: {
+				list: [
+					{ title: 'Software Engineer Intern', value: 'Software Engineer Intern' },
+					{ title: 'Tech Consultant', value: 'Tech Consultant	' },
+					{ title: 'Project Manager', value: 'Project Manager' }
+				]
+			}
 		},
 		{
 			title: 'Description',

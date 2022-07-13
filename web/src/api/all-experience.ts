@@ -7,6 +7,7 @@ export interface Experience {
 	start: string
 	end: string | null
 	description: string | null
+	role: string
 }
 export const allExperienceQuery = groq`
 		*[_type == "experience" && !(_id in path("drafts.**")) && !hidden] {
@@ -14,5 +15,6 @@ export const allExperienceQuery = groq`
 			type,
             start,
 			end,
+			role,
             description
 		}`
