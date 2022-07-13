@@ -4,11 +4,20 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.png" />
 		<link
-			rel="stylesheet"
+			rel="preload"
 			href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
 		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<noscript>
+			<link
+				href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
 		%sveltekit.head%
 	</head>
 	<body>

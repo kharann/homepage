@@ -49,7 +49,7 @@ const config = {
 	content: [
 		// Example content paths...
 		'./src/**/*.html',
-		'./src/**/*.{js,ts,svelte}',
+		'./src/**/*.{js,ts,svelte,postcss}'
 	],
 	theme: {
 		extend: {
