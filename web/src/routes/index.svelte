@@ -7,9 +7,8 @@
 	import SEO from '@components/seo/index.svelte'
 	import PortableText from '@components/portable-text/index.svelte'
 	import type { InputValue } from '@portabletext/svelte/ptTypes'
-	import Timeline from '@components/timeline'
 	import type { Experience } from '@api/all-experience'
-	import Chips from '@components/chips/chips.svelte'
+	import Experiences from '@components/experiences.svelte'
 
 	export let posts: PreviewPost[]
 	export let role: string
@@ -37,6 +36,5 @@
 </Section>
 
 <Section name="Experience.">
-	<Chips />
-	<Timeline {experiences} />
+	<Experiences {experiences} />
 </Section>
