@@ -7,7 +7,7 @@ const dev = process.env.NODE_ENV === 'development'
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		adapter: adapter(),
+		adapter: adapter({ edge: true }),
 		prerender: {
 			crawl: true,
 			enabled: true,
