@@ -14,7 +14,7 @@
 </svelte:head>
 
 <!-- defines a CSS class `.open` when `open == true` -->
-<button class:open on:click={() => (open = !open)}>
+<button class:open on:click={() => (open = !open)} aria-label="Hamburger">
 	<!-- svg with 3 lines -->
 	<svg width="32" height="32">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />

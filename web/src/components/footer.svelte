@@ -5,15 +5,18 @@
 	const iconLinks = [
 		{
 			icon: feather.icons.github.toSvg(),
-			link: 'https://github.com/kharann'
+			link: 'https://github.com/kharann',
+			text: "Github"
 		},
 		{
 			icon: feather.icons.linkedin.toSvg(),
-			link: 'https://linkedin.com/in/akvo'
+			link: 'https://linkedin.com/in/akvo',
+			text: "Linkedin"
 		},
 		{
 			icon: feather.icons.mail.toSvg(),
-			link: 'mailto:hey@akvo.no'
+			link: 'mailto:hey@akvo.no',
+			text: "Mail"
 		}
 	]
 </script>
@@ -22,8 +25,8 @@
 	<div class="m-auto flex h-full w-full max-w-4xl flex-col items-center">
 		<div class="grid w-max grid-cols-3 gap-5">
 			{#each iconLinks as iconLink}
-				<a class="text-highlight duration-300 hover:text-primary-7" href={iconLink.link}
-					>{@html iconLink.icon}</a
+				<a class="text-highlight duration-300 hover:text-primary-7" href={iconLink.link} aria-hidden={true}
+					>{@html iconLink.icon}<span class="sr-only">{iconLink.text}</span></a
 				>
 			{/each}
 		</div>
