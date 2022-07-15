@@ -33,7 +33,7 @@ const colors = {
 		DEFAULT: gray[900]
 	},
 	accent: '#73bbc5',
-	highlight: '#586EC6',
+	highlight: '#4961C1',
 	gray: gray,
 	primary: {
 		...blue,

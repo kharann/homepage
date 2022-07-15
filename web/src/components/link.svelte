@@ -4,7 +4,7 @@
 </script>
 
 <a
-	class={`inline-flex transition-colors duration-300 hover:text-primary-7 font-medium ${
+	class={`inline-flex transition-colors duration-300 hover:text-primary-7 ${
 		accent && 'text-highlight '
 	}`}
 	href={url}><slot /></a
