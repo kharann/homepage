@@ -1,30 +1,13 @@
 import { Schema } from 'sanity'
 
-const experienceSchema: Schema.DocumentDefinition = {
-	title: 'Experience',
-	name: 'experience',
-	type: 'document',
+const position: Schema.ObjectDefinition = {
+	title: 'Position',
+	type: 'object',
+	name: 'position',
 	fields: [
 		{
-			title: 'Title',
-			name: 'title',
-			type: 'string',
-			validation: (Rule) => Rule.required()
-		},
-		{
-			title: 'Type',
-			name: 'type',
-			type: 'string',
-			options: {
-				list: [
-					{ title: 'Work', value: 'work' },
-					{ title: 'Volunteering', value: 'volunteer' },
-					{ title: 'Academic', value: 'academic' },
-					{ title: 'Other', value: 'other' }
-				], // <-- predefined values
-				layout: 'radio' // <-- defaults to 'dropdown'
-			},
-			initialValue: 'work'
+			name: 'role',
+			type: 'string'
 		},
 		{
 			title: 'Start',
@@ -36,31 +19,51 @@ const experienceSchema: Schema.DocumentDefinition = {
 			title: 'End',
 			name: 'end',
 			type: 'date',
-			hidden: ({ value, parent }) => !value && parent?.current_position,
-			initialValue: false
+			initialValue: null
 		},
 		{
-			title: 'Current position',
-			name: 'current_position',
-			type: 'boolean'
-		},
-		{
-			title: 'Role',
-			name: 'role',
+			title: 'Type',
+			name: 'type',
 			type: 'string',
 			options: {
 				list: [
-					{ title: 'Software Engineer Intern', value: 'Software Engineer Intern' },
-					{ title: 'Tech Consultant', value: 'Tech Consultant	' },
-					{ title: 'Project Manager', value: 'Project Manager' }
-				]
-			}
+					{ title: 'Work', value: 'work' },
+					{ title: 'Volunteering', value: 'volunteer' },
+					{ title: 'Other', value: 'other' }
+				], // <-- predefined values
+				layout: 'radio' // <-- defaults to 'dropdown'
+			},
+			initialValue: 'work'
 		},
 		{
 			title: 'Description',
 			name: 'description',
-			type: 'text',
+			type: 'text'
+		}
+	]
+}
+
+const experienceSchema: Schema.DocumentDefinition = {
+	title: 'Experience',
+	name: 'experience',
+	type: 'document',
+	fields: [
+		{
+			title: 'Company',
+			name: 'company',
+			type: 'string',
 			validation: (Rule) => Rule.required()
+		},
+		{
+			title: 'Company page',
+			name: 'url',
+			type: 'url'
+		},
+		{
+			title: 'Positions',
+			name: 'positions',
+			type: 'array',
+			of: [position]
 		},
 		{
 			title: 'Hidden',

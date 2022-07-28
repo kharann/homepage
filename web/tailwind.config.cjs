@@ -69,6 +69,9 @@ const config = {
 						'--tw-prose-headings': colors.foreground.accent
 					}
 				}
+			},
+			width: {
+				thin: '2px'
 			}
 		}
 	},
