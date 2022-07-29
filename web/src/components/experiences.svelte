@@ -5,8 +5,7 @@
 	import { tweened } from 'svelte/motion'
 	import ExternalLink from './icons/external-link.svelte'
 	import Link from './link.svelte'
-	import { flip } from 'svelte/animate'
-	import { fly } from 'svelte/transition'
+	import { fly, fade } from 'svelte/transition'
 
 	export let experiences: Experience[]
 	let active: number = 0
@@ -38,45 +37,44 @@
 		}
 	}
 
-	const computeID = (company: string, role: string) =>
-		`${company.toLowerCase()}_${role.toLowerCase()}`
 </script>
 
-<div class="mt-8 flex w-full">
-	<div class="relative h-10 w-thin bg-accent" style={`top:${40 * $leftBar}px;`} />
-	<ul class="flex flex-col">
+<div class="mt-8 flex w-full sm:flex-row flex-col">
+	<div class="relative h-10 w-thin bg-accent sm:block hidden" style={`top:${40 * $leftBar}px;`} />
+	<ul class="flex flex-row sm:flex-col overflow-scroll sm:overflow-auto pb-2 mb-4">
 		{#each experiences as exp, i (exp.company)}
 			<li
-				class={`p-2 flex justify-start transition-colors duration-500 font-medium ${
-					i == active ? 'bg-slate-100 text-foreground-accent' : 'bg-background'
+				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
+					i == active ? 'bg-slate-100 text-foreground-accent border-b-2 border-accent sm:border-none' : 'bg-background border-none'
 				}`}
 			>
-				<button on:click={() => handleClick(i)}>
+				<button class="w-32" on:click={() => handleClick(i)}>
 					{exp.company}
 				</button>
 			</li>
 		{/each}
 	</ul>
-	<div class="flex-1 pl-8">
-		<Link url={selected.url} accent={false}>
-			<h4 class="mb-4 flex items-center text-sm font-medium text-inherit">
-				{selected.company.toLocaleUpperCase()}
-				<i class="pl-1"><ExternalLink /></i>
-			</h4>
-		</Link>
-		{#each selected.positions as pos (computeID(selected.company, pos.role))}
-			<div
-				class="pb-2"
-				in:fly={{ y: 150, duration: 400 }}
-				out:fly={{ x: 150, duration: 300 }}
-				animate:flip
-			>
-				<h3 class="text-lg font-medium text-primary-9">{pos.role}</h3>
-				<time class="text-sm font-medium text-slate-700" datetime={pos.start}
-					>{formatDate(pos.start, pos.end)}</time
-				>
-				<p>{pos.description || ''}</p>
-			</div>
-		{/each}
-	</div>
+	{#key selected}
+		<div
+			class="flex-1 pl-8"
+			in:fly={{ delay: 200, duration: 400, x: 50 }}
+			out:fade={{ duration: 200 }}
+		>
+			<Link url={selected.url} accent={false}>
+					<h4 class="mb-4 flex items-center text-sm font-medium text-inherit">
+						{(selected.company_full_name || selected.company).toLocaleUpperCase()}
+						<i class="pl-1"><ExternalLink /></i>
+					</h4>
+			</Link>
+			{#each selected.positions as pos}
+				<div class="pb-2">
+					<h3 class="text-lg font-medium text-primary-9">{pos.role}</h3>
+					<time class="text-sm font-medium text-slate-700" datetime={pos.start}
+						>{formatDate(pos.start, pos.end)}</time
+					>
+					<p>{pos.description || ''}</p>
+				</div>
+			{/each}
+		</div>
+	{/key}
 </div>

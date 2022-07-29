@@ -49,10 +49,15 @@ const experienceSchema: Schema.DocumentDefinition = {
 	type: 'document',
 	fields: [
 		{
-			title: 'Company',
+			title: 'Company short name',
 			name: 'company',
 			type: 'string',
 			validation: (Rule) => Rule.required()
+		},
+		{
+			title: "Company full name",
+			name: "company_full_name",
+			type: 'string',
 		},
 		{
 			title: 'Company page',

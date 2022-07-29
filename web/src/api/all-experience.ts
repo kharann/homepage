@@ -1,8 +1,8 @@
-import { sanityClient } from '@lib/sanity'
 import groq from 'groq'
 
 export interface Experience {
 	company: string
+	company_full_name: string,
 	positions: {
 		role: string
 		start: string
@@ -15,6 +15,7 @@ export interface Experience {
 export const allExperienceQuery = groq`
 		*[_type == "experience" && !(_id in path("drafts.**")) && !hidden] {
 			company,
+			company_full_name,
 			positions,
 			url
 		}`
