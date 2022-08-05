@@ -12,11 +12,11 @@
 {#key url}
 	<ul in:fly={{ x: 50, delay: 100 }}>
 		{#each posts as post, i}
-		<li>
-			<a sveltekit:prefetch href={`blog/${post.slug}`}>
-				<PostListItem {post} />
-			</a>
-		</li>
+			<li>
+				<a sveltekit:prefetch href={`blog/${post.slug}`}>
+					<PostListItem {post} />
+				</a>
+			</li>
 		{/each}
 	</ul>
 {/key}
