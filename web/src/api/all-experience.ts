@@ -1,14 +1,15 @@
+import type { InputValue } from '@portabletext/svelte/ptTypes'
 import groq from 'groq'
 
 export interface Experience {
 	company: string
-	company_full_name: string,
+	company_full_name: string
 	positions: {
 		role: string
 		start: string
 		end: string
 		type: string
-		description: string
+		description: InputValue | undefined
 	}[]
 	url: string
 }

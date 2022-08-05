@@ -1,12 +1,11 @@
-import { getFetchUrl, sanityClient } from '@lib/sanity'
-import type { PortableTextBlocks } from '@portabletext/svelte/ptTypes'
+import { sanityClient } from '@lib/sanity'
+import type { InputValue } from '@portabletext/svelte/ptTypes'
 import groq from 'groq'
-import type { SanityDataFetcher } from './types'
 
 export interface BlogPost {
 	title: string
 	tags: string[]
-	content: PortableTextBlocks
+	content: InputValue
 	slug: string
 	estimatedReadingTime: number
 	_createdAt: string

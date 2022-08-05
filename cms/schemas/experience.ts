@@ -38,7 +38,7 @@ const position: Schema.ObjectDefinition = {
 		{
 			title: 'Description',
 			name: 'description',
-			type: 'text'
+			type: 'portable_text'
 		}
 	]
 }

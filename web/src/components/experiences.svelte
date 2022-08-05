@@ -6,6 +6,7 @@
 	import ExternalLink from './icons/external-link.svelte'
 	import Link from './link.svelte'
 	import { fly, fade } from 'svelte/transition'
+	import CustomPortableText from '@components/portable-text/index.svelte'
 
 	export let experiences: Experience[]
 	let active: number = 0
@@ -36,16 +37,17 @@
 			return `${startText} - ${endText}`
 		}
 	}
-
 </script>
 
-<div class="mt-8 flex w-full sm:flex-row flex-col">
-	<div class="relative h-10 w-thin bg-accent sm:block hidden" style={`top:${40 * $leftBar}px;`} />
-	<ul class="flex flex-row sm:flex-col overflow-scroll sm:overflow-auto pb-2 mb-4">
+<div class="mt-8 flex w-full flex-col sm:flex-row">
+	<div class="relative hidden h-10 w-thin bg-accent sm:block" style={`top:${40 * $leftBar}px;`} />
+	<ul class="mb-4 flex flex-row overflow-scroll pb-2 sm:flex-col sm:overflow-auto">
 		{#each experiences as exp, i (exp.company)}
 			<li
 				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
-					i == active ? 'bg-slate-100 text-foreground-accent border-b-2 border-accent sm:border-none' : 'bg-background border-none'
+					i == active
+						? 'bg-slate-100 text-foreground-accent border-b-2 border-accent sm:border-none'
+						: 'bg-background border-none'
 				}`}
 			>
 				<button class="w-32" on:click={() => handleClick(i)}>
@@ -61,10 +63,10 @@
 			out:fade={{ duration: 200 }}
 		>
 			<Link url={selected.url} accent={false}>
-					<h4 class="mb-4 flex items-center text-sm font-medium text-inherit">
-						{(selected.company_full_name || selected.company).toLocaleUpperCase()}
-						<i class="pl-1"><ExternalLink /></i>
-					</h4>
+				<h4 class="mb-4 flex items-center text-sm font-medium text-inherit">
+					{(selected.company_full_name || selected.company).toLocaleUpperCase()}
+					<i class="pl-1"><ExternalLink /></i>
+				</h4>
 			</Link>
 			{#each selected.positions as pos}
 				<div class="pb-2">
@@ -72,7 +74,9 @@
 					<time class="text-sm font-medium text-slate-700" datetime={pos.start}
 						>{formatDate(pos.start, pos.end)}</time
 					>
-					<p>{pos.description || ''}</p>
+					{#if pos.description}
+						<CustomPortableText blocks={pos.description} />
+					{/if}
 				</div>
 			{/each}
 		</div>
