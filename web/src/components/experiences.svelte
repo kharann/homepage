@@ -41,7 +41,7 @@
 
 <div class="mt-8 flex w-full flex-col sm:flex-row">
 	<div class="relative hidden h-10 w-thin bg-accent sm:block" style={`top:${40 * $leftBar}px;`} />
-	<ul class="mb-4 flex flex-row overflow-scroll pb-2 sm:flex-col sm:overflow-auto">
+	<ul class="flex flex-row overflow-scroll pb-32 sm:flex-col sm:overflow-auto">
 		{#each experiences as exp, i (exp.company)}
 			<li
 				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
