@@ -9,7 +9,7 @@
 		{ link: '/', text: 'Home' },
 		{ link: '/blog', text: 'Blog' },
 		{
-			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/83c578177d0e1d2bbbd07b7a255bf61159fd5887.pdf',
+			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/59c3336b1fc6a49bd48e1283bebec0bdc1178fe7.pdf',
 			text: 'Resume'
 		}
 		// { link: '/about', text: 'About' }
