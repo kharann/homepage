@@ -3,13 +3,12 @@
 	import Logo from './logo.svelte'
 	import Dropdown from './dropdown.svelte'
 	import Hamburger from './hamburger.svelte'
-	import ThemeToggler from './theme-toggler.svelte'
 
 	const routes = [
 		{ link: '/', text: 'Home' },
 		{ link: '/blog', text: 'Blog' },
 		{
-			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/59c3336b1fc6a49bd48e1283bebec0bdc1178fe7.pdf',
+			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/8a3fb1a5f8d2dbdbfb965b6d28023030afb61abc.pdf',
 			text: 'Resume'
 		}
 		// { link: '/about', text: 'About' }
