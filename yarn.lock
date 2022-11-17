@@ -1951,8 +1951,10 @@ __metadata:
   dependencies:
     "@astrojs/svelte": ^1.0.2
     "@astrojs/tailwind": ^2.1.2
+    "@sanity/client": ^3.4.1
     astro: ^1.6.10
     feather-icons: ^4.29.0
+    groq: ^2.33.2
     svelte: ^3.46.4
     tailwindcss: ^3.0.24
   languageName: unknown
@@ -7746,6 +7748,13 @@ fsevents@~2.3.2:
   version: 2.29.3
   resolution: "groq@npm:2.29.3"
   checksum: c698381e5fc1cccbe50b3925a1d2dd8804aa240bf6d5cf8fc02e2a95b5cdbb4b297d226153fdf6fab4471df974cba0d0ce8d3621ac075bc690aefe12eecdd02e
+  languageName: node
+  linkType: hard
+
+"groq@npm:^2.33.2":
+  version: 2.33.2
+  resolution: "groq@npm:2.33.2"
+  checksum: 41725912b12eae5c1ab1e4fc1eb63634bea9bc6ebd689af8abe7cd956cd8ec0319f333c33bc881c0cdd26df3145f8abc61414acc63c234bba2846671f3400e52
   languageName: node
   linkType: hard
 

@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores'
 	export let text: string
 	export let href: string
 	export let external: boolean = false
-	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/'
+	export let isActive: boolean = false
 </script>
 
 <li

@@ -1,5 +1,6 @@
 ---
-import Footer from '../components/Footer.svelte';
+import Footer from '../components/Footer.svelte'
+import Header from '../components/Header/Header.svelte'
 export interface Props {
 	title: string
 }
@@ -14,21 +15,42 @@ const { title } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link
+			href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="preload"
+			href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
-		<Footer />
+	<body class="bg-sage-1">
+		<div
+			class="flex h-full min-h-screen w-full flex-col text-primary-9 transition duration-300 text-mauve-12"
+		>
+			<Header />
+			<main class="m-auto mt-8 w-full max-w-3xl px-8">
+				<slot />
+			</main>
+			<Footer />
+		</div>
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&display=swap');
+
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
+		font-family: Satoshi, system-ui, sans-serif;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
