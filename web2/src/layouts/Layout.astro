@@ -6,6 +6,7 @@ export interface Props {
 }
 
 const { title } = Astro.props
+const url = Astro.url.pathname
 ---
 
 <!DOCTYPE html>
@@ -35,14 +36,12 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body class="bg-sage-1">
-		<div
-			class="flex h-full min-h-screen w-full flex-col text-primary-9 transition duration-300 text-mauve-12"
-		>
-			<Header />
+		<div class="flex h-full min-h-screen w-full flex-col transition duration-300 text-mauve-12">
+			<Header url={url} client:load />
 			<main class="m-auto mt-8 w-full max-w-3xl px-8">
 				<slot />
 			</main>
-			<Footer />
+			<Footer client:load />
 		</div>
 	</body>
 </html>
@@ -51,6 +50,7 @@ const { title } = Astro.props
 
 	html {
 		font-family: Satoshi, system-ui, sans-serif;
+		font-size: 16px;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

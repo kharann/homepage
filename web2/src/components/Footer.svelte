@@ -1,20 +1,21 @@
 <script>
 	import feather from 'feather-icons'
-    import Link from "./Link.svelte"
+	import Link from './Link.svelte'
+	import 'iconify-icon'
 
 	const iconLinks = [
 		{
-			icon: feather.icons.github.toSvg(),
+			icon: 'tabler:brand-github',
 			link: 'https://github.com/kharann',
 			text: 'Github'
 		},
 		{
-			icon: feather.icons.linkedin.toSvg(),
+			icon: 'tabler:brand-linkedin',
 			link: 'https://linkedin.com/in/akvo',
 			text: 'Linkedin'
 		},
 		{
-			icon: feather.icons.mail.toSvg(),
+			icon: 'tabler:mail',
 			link: 'mailto:hey@akvo.no',
 			text: 'Mail'
 		}
@@ -26,7 +27,7 @@
 		<div class="grid w-max grid-cols-3 gap-5">
 			{#each iconLinks as iconLink}
 				<Link url={iconLink.link}
-					><i aria-hidden="true">{@html iconLink.icon}</i><span class="sr-only"
+					><iconify-icon icon={iconLink.icon} width="24" height="24" /><span class="sr-only"
 						>{iconLink.text}</span
 					></Link
 				>
@@ -34,7 +35,9 @@
 		</div>
 		<div class="mb-6 mt-4">
 			<Link url="https://github.com/kharann/homepage" accent={false}
-				><span class="border-b-2 border-accent py-2 px-1">Website built by Anh-Kha Vo</span></Link
+				><span class="border-brown-11 border-b-2 py-2 px-1 font-medium"
+					>Website built by Anh-Kha Vo</span
+				></Link
 			>
 		</div>
 	</div>

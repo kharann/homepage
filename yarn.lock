@@ -1968,10 +1968,14 @@ __metadata:
   dependencies:
     "@astrojs/svelte": ^1.0.2
     "@astrojs/tailwind": ^2.1.2
+    "@portabletext/svelte": ^1.0.1
     "@sanity/client": ^3.4.1
+    "@tailwindcss/typography": ^0.5.8
     astro: ^1.6.10
+    astro-icon: ^0.8.0
     feather-icons: ^4.29.0
     groq: ^2.33.2
+    iconify-icon: ^1.0.1
     svelte: ^3.46.4
     tailwindcss: ^3.0.24
   languageName: unknown
@@ -2041,6 +2045,13 @@ __metadata:
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
   checksum: b63b2b2c4fd67969a6291543ada0303d45593801ee744b60f5390f183c03d9192bc67a217abb24be945158f1935f02840d9ffff40c0142aa171b5d3b6b6a3ea5
+  languageName: node
+  linkType: hard
+
+"@iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: 029f58542c160e9d4a746869cf2e475b603424d3adf3994c5cc8d0406c47e6e04a3b898b2707840c1c5b9bd5563a1660a34b110d89fce43923baca5222f4e597
   languageName: node
   linkType: hard
 
@@ -2920,6 +2931,20 @@ __metadata:
     diff-match-patch:
       optional: true
   checksum: c78ce263baf824570fb6af0918cd561e310a73e9b3cef0cfa6f0a40a24a2892e314f4b21d9c3e320aa651efb0183e9f1f2f13de2d1b7b9b46c6b7f4f423a054b
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/typography@npm:^0.5.8":
+  version: 0.5.8
+  resolution: "@tailwindcss/typography@npm:0.5.8"
+  dependencies:
+    lodash.castarray: ^4.4.0
+    lodash.isplainobject: ^4.0.6
+    lodash.merge: ^4.6.2
+    postcss-selector-parser: 6.0.10
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: afe172c75ddf086f840b10f95e562bb210dde5612fccfcfd3c4cee688c57ca5b79569b3c2cb75687b34b1b7f9ad194b14e9fbb09a741cd69198bb92b5ac3838f
   languageName: node
   linkType: hard
 
@@ -3849,6 +3874,17 @@ __metadata:
   dependencies:
     tslib: ^2.0.1
   checksum: 8674a77307764979f0a0b2006b7223a4b789abffaa7acbf6a1132650a799252155170173a1ff6a7fb6897f59437fc955f2707bdfc391b0797750898876e6c9ed
+  languageName: node
+  linkType: hard
+
+"astro-icon@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "astro-icon@npm:0.8.0"
+  dependencies:
+    node-fetch: ^3.1.0
+    resolve-pkg: ^2.0.0
+    svgo: ^2.8.0
+  checksum: 0e5a46e88a05327c1dfff6c2419a4d60094e52aa320fd9795416be2dfb06434ee988cb699c2fdd883afe6bce3f131133a0ad88a7c921a7b0a6053ae81a1c6428
   languageName: node
   linkType: hard
 
@@ -8164,6 +8200,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"iconify-icon@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "iconify-icon@npm:1.0.1"
+  dependencies:
+    "@iconify/types": ^2.0.0
+  checksum: a90d9c76492fcd5738ff916697d5c170ab1e26b2f88c9cacc164aa6d321569f89ddb72d344912600a265f0f577e53aac3dbbc009690bc036d0c9b39b5c610b97
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -10380,7 +10425,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^3.2.5":
+"node-fetch@npm:^3.1.0, node-fetch@npm:^3.2.5":
   version: 3.3.0
   resolution: "node-fetch@npm:3.3.0"
   dependencies:
@@ -11509,7 +11554,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.4, postcss-selector-parser@npm:^6.0.5, postcss-selector-parser@npm:^6.0.6, postcss-selector-parser@npm:^6.0.9":
+"postcss-selector-parser@npm:6.0.10, postcss-selector-parser@npm:^6.0.10, postcss-selector-parser@npm:^6.0.4, postcss-selector-parser@npm:^6.0.5, postcss-selector-parser@npm:^6.0.6, postcss-selector-parser@npm:^6.0.9":
   version: 6.0.10
   resolution: "postcss-selector-parser@npm:6.0.10"
   dependencies:
@@ -12359,6 +12404,15 @@ fsevents@~2.3.2:
   version: 3.0.0
   resolution: "resolve-pathname@npm:3.0.0"
   checksum: 6147241ba42c423dbe83cb067a2b4af4f60908c3af57e1ea567729cc71416c089737fe2a73e9e79e7a60f00f66c91e4b45ad0d37cd4be2d43fec44963ef14368
+  languageName: node
+  linkType: hard
+
+"resolve-pkg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "resolve-pkg@npm:2.0.0"
+  dependencies:
+    resolve-from: ^5.0.0
+  checksum: 4a14cc38effed20ff362c8f377719af9a45ebe27ee07d79d4802b4568858cd96033f4edc3a2add7fd27e361d24101a042047297a9ef9476696ba16b72e0a05fc
   languageName: node
   linkType: hard
 
@@ -13645,7 +13699,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"svgo@npm:^2.7.0":
+"svgo@npm:^2.7.0, svgo@npm:^2.8.0":
   version: 2.8.0
   resolution: "svgo@npm:2.8.0"
   dependencies:

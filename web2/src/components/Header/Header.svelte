@@ -16,6 +16,7 @@
 	]
 
 	let open: boolean = false
+	export let url: string
 </script>
 
 <nav class="flex h-16 w-full">
@@ -27,7 +28,12 @@
 		<div class="flex">
 			<ul class="hidden list-outside items-center sm:flex">
 				{#each routes as route}
-					<RouteLink href={route.link} text={route.text} external={route.text === 'Resume'} />
+					<RouteLink
+						href={route.link}
+						text={route.text}
+						external={route.text === 'Resume'}
+						isActive={route.link === url}
+					/>
 				{/each}
 				<!-- <ThemeToggler /> -->
 			</ul>

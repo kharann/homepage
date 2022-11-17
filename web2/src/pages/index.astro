@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Divider from '../components/divider.svelte'
 import { fetchFrontpageData } from '../api/frontpage'
+import PortableText from '../components/PortableText/index.svelte'
 
 const { introduction } = await fetchFrontpageData()
 ---
@@ -15,7 +16,8 @@ const { introduction } = await fetchFrontpageData()
 		<byline class="text-lg">{introduction.role}</byline>
 	</section>
 	<section class="mt-8">
-		<h2 class="pb-2 text-2xl font-bold text-primary-0">About me</h2>
+		<h2 class="pb-2 text-2xl font-bold text-primary-0">About me.</h2>
 		<Divider />
+		<PortableText blocks={introduction.about_me} />
 	</section>
 </Layout>
