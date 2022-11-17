@@ -1,21 +1,21 @@
-import type { Schema } from 'sanity'
+import { defineField, defineType } from "sanity"
 
-const frontpageSchema: Schema.DocumentDefinition = {
-	name: 'whoami',
-	title: 'Frontpage Introduction',
-	type: 'document',
-	fields: [
-		{ name: 'role', type: 'string', title: 'Role' },
-		{
-			name: 'about_me',
-			type: 'portable_text',
-			title: 'About me'
-		},
-		{
-			name: 'resume',
-			type: 'file',
-			title: 'Resume'
-		}
-	]
-}
+const frontpageSchema = defineType({
+    name: 'whoami',
+    title: 'Frontpage Introduction',
+    type: 'document',
+    fields: [
+        defineField({ name: 'role', type: 'string', title: 'Role' }),
+        defineField({
+            name: 'about_me',
+            type: 'portable_text',
+            title: 'About me'
+        }),
+        defineField({
+            name: 'resume',
+            type: 'file',
+            title: 'Resume'
+        })
+    ]
+})
 export default frontpageSchema

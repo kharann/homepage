@@ -1,30 +1,18 @@
-const portableText = {
-  name: "portable_text",
-  title: "Portable Text",
-  type: "array",
+import { defineType, defineArrayMember } from 'sanity'
+
+export default defineType({
+  title: 'Portable Text',
+  name: 'portable_text',
+  type: 'array',
   of: [
-    {
-      type: "block",
-    },
-    {
-      type: "image",
-      fields: [
-        {
-          type: "text",
-          name: "alt",
-          title: "Alternative text",
-          description: `Some of your visitors cannot see images, 
-            be they blind, color-blind, low-sighted; 
-            alternative text is of great help for those 
-            people that can rely on it to have a good idea of 
-            what\'s on your page.`,
-          options: {
-            isHighlighted: true,
-          },
-        },
-      ],
-    },
-    {
+    defineArrayMember({
+      title: 'Block',
+      type: 'block',
+    }),
+    // You can add additional types here. Note that you can't use
+    // primitive types such as 'string' and 'number' in the same array
+    // as a block type.
+    defineArrayMember({
       title: "Code Block",
       name: "code_block",
       type: "code",
@@ -48,7 +36,6 @@ const portableText = {
           { title: "Svelte", value: "svelte" },
         ],
       },
-    },
+    }),
   ],
-}
-export default portableText
+})

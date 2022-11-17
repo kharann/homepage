@@ -1,9 +1,9 @@
-import {createConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {codeInput} from "@sanity/code-input"
-import {schemaTypes} from './schemas'
+import { defineConfig } from 'sanity'
+import { deskTool } from 'sanity/desk'
+import { codeInput } from "@sanity/code-input"
+import { schemaTypes } from './schemas'
 
-export default createConfig({
+export default defineConfig({
   name: 'default',
   title: 'homepage',
 
