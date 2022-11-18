@@ -3,9 +3,7 @@
 	"private": true,
 	"workspaces": [
 		"web",
-		"web2",
-		"cms",
-		"cms2"
+		"cms"
 	],
 	"scripts": {
 		"start": "turbo run start",

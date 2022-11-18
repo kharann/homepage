@@ -14,47 +14,38 @@
 </svelte:head>
 
 <!-- defines a CSS class `.open` when `open == true` -->
-<button class:open on:click={() => (open = !open)} aria-label="Hamburger">
+<button class:open class="z-20" on:click={() => (open = !open)} aria-label="Hamburger">
 	<!-- svg with 3 lines -->
-	<svg width="32" height="32">
+	<svg width="32" height="32" class="min-h-[24px] transition-transform duration-300 ease-out text-brown-11">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />
 		<line id="middle" x1="0" y1="12" x2="32" y2="12" />
 		<line id="bottom" x1="0" y1="22" x2="32" y2="22" />
 	</svg>
 </button>
 
-<style lang="scss" global>
-	:local(svg) {
-		min-height: 24px;
-		@apply transition-transform duration-300 ease-in-out;
-
-		line {
-			stroke-width: 3;
-			@apply text-brown-11 stroke-current transition-transform duration-500 ease-in-out;
-		}
+<style>
+	line {
+		stroke-width: 3;
+		stroke: currentColor;
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+		transition-duration: 300ms;
+	}
+	.open > svg {
+		transform: scale(0.7);
+	}
+	.open > svg >  #top {
+		transform: translate(6px, 0px) rotate(45deg);
 	}
 
-	/* adjust the Z-index, so that the icon is on top of the sidebar */
-	:local(button) {
-		@apply z-20;
+	.open > svg > #middle {
+		opacity: 0;
+		transition-property: opacity;
+		transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+		transition-duration: 300ms;
 	}
-
-	:local(.open) {
-		svg {
-			transform: scale(0.7);
-		}
-		#top {
-			transform: translate(6px, 0px) rotate(45deg);
-		}
-		#middle {
-			@apply opacity-0 transition-opacity duration-300 ease-in-out;
-		}
-		#bottom {
-			transform: translate(-12px, 9px) rotate(-45deg);
-		}
+	.open > svg > #bottom {
+		transform: translate(-12px, 9px) rotate(-45deg);
 	}
-	/* rotate the top line */
-	/* hide the middle */
-
-	/* rotate the bottom line */
+		
 </style>

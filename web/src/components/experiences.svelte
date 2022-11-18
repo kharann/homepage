@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Experience } from '../api/frontpage'
-	import { DateTime } from 'luxon'
 	import { cubicInOut } from 'svelte/easing'
+	import {format,isSameYear} from "date-fns"
 	import { tweened } from 'svelte/motion'
 	import Link from './Link.svelte'
 	import { fade } from 'svelte/transition'
@@ -24,16 +24,13 @@
 	}
 	const formatDate = (start: string, end: string | undefined) => {
 		const monthYearFormat = 'MMMM y'
+		const startDate = new Date(start)
 		if (!end) {
-			return `${DateTime.fromISO(start).toFormat(monthYearFormat)} - present`
+			return `${format(startDate,monthYearFormat)} - present`
 		} else {
-			const startDate = DateTime.fromISO(start)
-			const endDate = DateTime.fromISO(end)
-			const startText =
-				startDate.year === endDate.year
-					? startDate.toFormat('MMMM')
-					: startDate.toFormat(monthYearFormat)
-			const endText = endDate.toFormat(monthYearFormat)
+			const endDate =new Date(end)
+			const startText = format(startDate, isSameYear(startDate, endDate) ? "MMMM" : monthYearFormat)
+			const endText = format(endDate, monthYearFormat)
 			return `${startText} - ${endText}`
 		}
 	}

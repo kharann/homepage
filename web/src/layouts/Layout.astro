@@ -38,7 +38,7 @@ const url = Astro.url.pathname
 	</head>
 	<body class="bg-background">
 		<div class="flex h-full min-h-screen w-full flex-col transition duration-300 text-mauve-12">
-			<Header url={url} client:load />
+			<Header url={url} client:media="(max-width: 640px)" />
 			<main class="m-auto mt-8 w-full max-w-3xl px-8">
 				<slot />
 			</main>
