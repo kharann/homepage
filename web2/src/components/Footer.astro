@@ -1,0 +1,44 @@
+---
+import Link from './Link.svelte'
+import { Icon } from 'astro-icon'
+
+const iconLinks = [
+	{
+		icon: 'tabler:brand-github',
+		link: 'https://github.com/kharann',
+		text: 'Github'
+	},
+	{
+		icon: 'tabler:brand-linkedin',
+		link: 'https://linkedin.com/in/akvo',
+		text: 'Linkedin'
+	},
+	{
+		icon: 'tabler:mail',
+		link: 'mailto:hey@akvo.no',
+		text: 'Mail'
+	}
+]
+---
+
+<footer class="mt-16 w-full">
+	<div class="m-auto flex h-full w-full max-w-4xl flex-col items-center">
+		<div class="grid w-max grid-cols-3 gap-5">
+			{
+				iconLinks.map((iconLink) => (
+					<Link url={iconLink.link}>
+						<Icon name={iconLink.icon} width="24" height="24" />
+						<span class="sr-only">{iconLink.text}</span>
+					</Link>
+				))
+			}
+		</div>
+		<div class="mb-6 mt-4">
+			<Link url="https://github.com/kharann/homepage" accent={false}
+				><span class="border-brown-11 border-b-2 py-2 px-1 font-medium"
+					>Website built by Anh-Kha Vo</span
+				>
+			</Link>
+		</div>
+	</div>
+</footer>
