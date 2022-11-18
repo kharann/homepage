@@ -121,6 +121,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/partytown@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@astrojs/partytown@npm:1.0.1"
+  dependencies:
+    "@builder.io/partytown": ^0.7.1
+    mrmime: ^1.0.0
+  checksum: 5e50b1b10c6ca5c45594ebbcfa6a41d76fdbdc3ec051583f1f86c363833d5b638128f78dc1554762a0387a950681816790862aa071bd963a0e9b5dfaff93029b
+  languageName: node
+  linkType: hard
+
 "@astrojs/prism@npm:^1.0.0":
   version: 1.0.2
   resolution: "@astrojs/prism@npm:1.0.2"
@@ -1874,6 +1884,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@builder.io/partytown@npm:^0.7.1":
+  version: 0.7.2
+  resolution: "@builder.io/partytown@npm:0.7.2"
+  bin:
+    partytown: bin/partytown.cjs
+  checksum: 1fdfb737d49f6492b38162106b47e9955f513f1a0d90e9f8287c8561cd21853fd1430ed0037f79564f9e97c2be3a1d88807bf0928cdfe925bd5fde13ec13df13
+  languageName: node
+  linkType: hard
+
 "@emmetio/abbreviation@npm:^2.2.3":
   version: 2.2.3
   resolution: "@emmetio/abbreviation@npm:2.2.3"
@@ -1995,6 +2014,7 @@ __metadata:
   resolution: "@example/basics@workspace:web"
   dependencies:
     "@astrojs/image": ^0.11.6
+    "@astrojs/partytown": ^1.0.1
     "@astrojs/svelte": ^1.0.2
     "@astrojs/tailwind": ^2.1.2
     "@portabletext/svelte": ^1.0.1
