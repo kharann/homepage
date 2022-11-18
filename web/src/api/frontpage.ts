@@ -1,7 +1,6 @@
-
 import type { InputValue } from '@portabletext/svelte/ptTypes'
 import groq from 'groq'
-import { sanityClient } from "../lib/sanity"
+import { sanityClient } from '../lib/sanity'
 
 export interface Experience {
 	company: string
@@ -13,7 +12,6 @@ export interface Experience {
 		type: string
 		description: InputValue | undefined
 	}[]
-	url: string
 }
 
 interface FrontpageData {
@@ -34,8 +32,9 @@ const frontpageQuery = groq`
 			company,
 			company_full_name,
 			positions,
-			urla
+			url
 	} | order(end desc)
 }`
 
-export const fetchFrontpageData = async () => await sanityClient.fetch<FrontpageData>(frontpageQuery)
+export const fetchFrontpageData = async () =>
+	await sanityClient.fetch<FrontpageData>(frontpageQuery)

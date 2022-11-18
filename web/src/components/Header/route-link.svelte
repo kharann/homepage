@@ -10,5 +10,5 @@
 		isActive && 'font-bold text-brand-1'
 	}`}
 >
-	<a sveltekit:prefetch {href} target={external ? '_blank' : undefined}>{text}</a>
+	<a {href} target={external ? '_blank' : undefined}>{text}</a>
 </li>

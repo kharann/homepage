@@ -7,7 +7,7 @@
 	class={`inline-flex transition-colors duration-300 hover:text-highlight-hover ${
 		accent && 'text-highlight '
 	}`}
-	href={url}><slot /></a
+	href={url} target="_blank" rel="noreferrer"><slot /></a
 >
 
 <style>
