@@ -1,35 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Divider from '../components/divider.svelte'
 import { fetchFrontpageData } from '../api/frontpage'
 import PortableText from '../components/PortableText/index.svelte'
 import Experiences from '../components/experiences.svelte'
 import Card from '../components/Card.astro'
+import Section from '../components/Section.astro'
 
 const { introduction, experiences } = await fetchFrontpageData()
 ---
 
 <Layout title="Kharann • Homepage">
-	<section class="mt-4">
+	<Section>
 		<h1 class="mb-2 text-4xl font-bold">
 			Hi, my name is
 			<span class="font-hack font-bold text-primary">Anhkha 👋</span>
 		</h1>
 		<byline class="text-lg">{introduction.role}</byline>
-	</section>
-	<section class="mt-8">
-		<h2 class="pb-2 text-2xl font-bold text-primary">About me.</h2>
-		<Divider />
+	</Section>
+	<Section name="About me.">
 		<PortableText blocks={introduction.about_me} />
-	</section>
-	<section class="mt-8">
-		<h2 class="pb-2 text-2xl font-bold text-primary">Experiences.</h2>
-		<Divider />
+	</Section>
+	<Section name="Experiences.">
 		<Experiences experiences={experiences} client:load />
-	</section>
-	<div class="flex justify-between">
-		<Card />
-		<Card />
-		<Card />
-	</div>
+	</Section>
+	<!-- <Section name="Projects.">
+		<div class="grid grid-cols-2 mt-8 gap-4">
+			<Card title="Monoweb" />
+			<Card title="Grades" />
+			<Card title="Bomba" />
+			<Card title="Scrimbot" />
+		</div>
+	</Section> -->
 </Layout>

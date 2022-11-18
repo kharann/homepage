@@ -1,17 +1,23 @@
 ---
 import Divider from './divider.svelte'
+import clsx from 'clsx'
 
 export interface Props {
-	name: string
+	name?: string
+	className?: string
 }
 
-const { name } = Astro.props
+const { name, className } = Astro.props
 ---
 
-<section class="mt-8">
-	<h2 class="pb-2 text-2xl font-bold text-foreground-accent transition duration-300">
-		{name}
-	</h2>
-	<Divider />
+<section class={clsx('mt-8', className)}>
+	{
+		name ? (
+			<>
+				<h2 class="pb-2 text-2xl font-bold text-brand-2">{name}</h2>
+				<Divider />
+			</>
+		) : null
+	}
 	<slot />
 </section>

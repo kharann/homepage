@@ -43,7 +43,7 @@
 			<li
 				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
 					i == active
-						? 'font-semibold bg-green-3 text-brand-1 border-b-2 border-brown-11 sm:border-none'
+						? 'font-semibold bg-brown-4 text-brand-1 border-b-2 border-brown-11 sm:border-none'
 						: 'bg-background border-none'
 				}`}
 			>
