@@ -20,7 +20,7 @@ const posts = await fetchListPosts()
 				{
 					posts.map((post) => (
 						<li>
-							<a href={`blog/${post.slug}`}>
+							<a href={`/blog/${post.slug}`}>
 								<article class="text-foreground hover:text-highlight">
 									<h3 class="mt-4 text-xl text-inherit">{post.title}</h3>
 									<p class="flex items-center justify-between">
