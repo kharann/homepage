@@ -1,4 +1,4 @@
-import { sanityClient } from '@lib/sanity'
+import { sanityClient } from '../lib/sanity'
 import type { InputValue } from '@portabletext/svelte/ptTypes'
 import groq from 'groq'
 
@@ -25,4 +25,5 @@ const postBySlugQuery = groq`
 		}
 	`
 
-export const fetchPostBySlug = async (slug: string) => sanityClient.fetch(postBySlugQuery, { slug })
+export const fetchPostBySlug = async (slug: string) =>
+	await sanityClient.fetch<BlogPost>(postBySlugQuery, { slug })

@@ -1,0 +1,60 @@
+---
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header/Header.svelte'
+export interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+const url = Astro.url.pathname
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+		<meta name="generator" content={Astro.generator} />
+		<link
+			href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="preload"
+			href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
+		<title>{title}</title>
+	</head>
+	<body class="bg-background">
+		<div class="flex h-full min-h-screen w-full flex-col transition duration-300 text-mauve-12">
+			<Header url={url} client:media="(max-width: 640px)" />
+			<main class="m-auto mt-8 w-full max-w-3xl px-8">
+				<slot />
+			</main>
+			<Footer />
+		</div>
+	</body>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&display=swap');
+
+	html {
+		font-family: Satoshi, system-ui, sans-serif;
+		font-size: 16px;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
