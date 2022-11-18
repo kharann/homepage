@@ -54,7 +54,7 @@ const mauve = {
 }
 
 const colors = {
-	background: mauve[1],
+	background: mauve[2],
 	foreground: {
 		DEFAULT: mauve[12],
 		accent: brand[1]

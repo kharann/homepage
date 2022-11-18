@@ -4,6 +4,7 @@ import Divider from '../components/divider.svelte'
 import { fetchFrontpageData } from '../api/frontpage'
 import PortableText from '../components/PortableText/index.svelte'
 import Experiences from '../components/experiences.svelte'
+import Card from '../components/Card.astro'
 
 const { introduction, experiences } = await fetchFrontpageData()
 ---
@@ -26,4 +27,9 @@ const { introduction, experiences } = await fetchFrontpageData()
 		<Divider />
 		<Experiences experiences={experiences} client:load />
 	</section>
+	<div class="flex justify-between">
+		<Card />
+		<Card />
+		<Card />
+	</div>
 </Layout>
