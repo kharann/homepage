@@ -68,7 +68,7 @@ const colors = {
 		hover: brand[5],
 		DEFAULT: brand[1]
 	},
-	primary: brand[1]
+	primary: brand[2]
 }
 
 /** @type {import('tailwindcss').Config} */
