@@ -1,1 +1,1 @@
-<div class="mb-2 w-24 border-b-4 border-accent" />
+<div class="border-brown-11 mb-2 w-24 border-b-4" />

@@ -1,6 +1,5 @@
-import { getFetchUrl, sanityClient } from '@lib/sanity'
+import { sanityClient } from '../lib/sanity'
 import groq from 'groq'
-import type { SanityDataFetcher } from './types'
 
 export interface PreviewPost {
 	_createdAt: string
@@ -16,4 +15,4 @@ export const allPostsQuery = groq`
             "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 )
 		}`
 
-export const fetchListPosts = async () => sanityClient.fetch<PreviewPost[]>(allPostsQuery)
+export const fetchListPosts = async () => await sanityClient.fetch<PreviewPost[]>(allPostsQuery)
