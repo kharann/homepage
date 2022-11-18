@@ -84,7 +84,7 @@ const gray = {
 	DEFAULT: '#48444f'
 }
 const colors = {
-	background: gray[50],
+	background: mauve[1],
 	foreground: {
 		accent: '#2C3763',
 		DEFAULT: gray[900]
@@ -98,10 +98,7 @@ const colors = {
 		DEFAULT: brand[1],
 	},
 	gray: gray,
-	primary: {
-		...blue,
-		DEFAULT: "#b7e4c7"
-	},
+	primary: brand[1],
 	sage,
 	black: '#0F161E'
 }

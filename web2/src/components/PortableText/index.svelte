@@ -4,6 +4,7 @@
 	import CodeBlock from './code-block.svelte'
 	import Link from './portable-link.svelte'
 	import List from './list.svelte'
+	import ListItem from './portable-list-item.svelte'
 
 	export let blocks: InputValue
 </script>
@@ -18,7 +19,8 @@
 			marks: {
 				link: Link
 			},
-			list: List
+			list: List,
+			listItem: ListItem
 		}}
 	/>
 </div>
