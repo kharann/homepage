@@ -8,16 +8,16 @@
 		language: string
 	}>
 	const { code, language } = portableText.value
-	const highlight = Prism.highlight(code, Prism.languages[language], 'svelte')
+	const highlight = Prism.highlight(code, Prism.languages[language], language)
 </script>
 
 <svelte:head>
 	<link
-		href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.5.0/prism-nord.min.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-gruvbox-dark.min.css"
 		rel="stylesheet"
 	/>
 </svelte:head>
 
-<pre class={`language-${language} rounded-md`}>
-<code>{@html highlight}</code>
+<pre>
+<code class="whitespace-nowrap">{@html highlight}</code>
 </pre>
