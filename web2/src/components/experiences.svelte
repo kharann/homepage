@@ -41,12 +41,12 @@
 
 <div class="mt-8 flex h-full min-h-[300px] w-full flex-col sm:flex-row">
 	<div class="w-thin bg-brown-11 relative hidden h-10 sm:block" style={`top:${40 * $leftBar}px;`} />
-	<ul class="pb- flex flex-row overflow-scroll sm:flex-col sm:overflow-auto">
+	<ul class="flex flex-row overflow-scroll pb-2 sm:flex-col sm:overflow-auto">
 		{#each experiences as exp, i (exp.company)}
 			<li
 				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
 					i == active
-						? 'bg-brown-2 text-brand-1 border-b-2 border-accent sm:border-none'
+						? 'font-semibold bg-brand-8 text-brand-1 border-b-2 border-brown-11 sm:border-none'
 						: 'bg-background border-none'
 				}`}
 			>

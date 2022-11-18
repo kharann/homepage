@@ -5,8 +5,4 @@
 	$: ({ listItem } = value)
 </script>
 
-{#if listItem === 'bullet'}
-	<li><slot /></li>
-{:else}
-	<li><slot /></li>
-{/if}
+<li><slot /></li>

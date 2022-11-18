@@ -19,8 +19,13 @@
 			marks: {
 				link: Link
 			},
-			list: List,
-			listItem: ListItem
+			list: {
+				bullet: List
+			},
+			listItem: {
+				bullet: ListItem,
+				normal: ListItem
+			}
 		}}
 	/>
 </div>
