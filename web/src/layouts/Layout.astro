@@ -34,7 +34,8 @@ const url = Astro.url.pathname
 				type="text/css"
 			/>
 		</noscript>
-		<script async src="https://cdn.panelbear.com/analytics.js?site=2Q3NP9Hckbz"></script>
+		<!-- Put it locally to avoid cors errors -->
+		<script type="text/partytown" is:inline src="/analytics.js"></script>
 		<script type="text/partytown">
 			window.panelbear =
 				window.panelbear ||

@@ -17,7 +17,6 @@
 
 	let open: boolean = false
 	export let url: string
-	console.log(url)
 </script>
 
 <nav class="flex h-16 w-full">

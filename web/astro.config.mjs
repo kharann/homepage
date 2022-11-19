@@ -18,6 +18,10 @@ export default defineConfig({
 		image({
 			serviceEntryPoint: '@astrojs/image/sharp'
 		}),
-		partytown()
+		partytown({
+			config: {
+				forward: 'panelbear.apply'
+			}
+		})
 	]
 })
