@@ -7,6 +7,7 @@
 	import { fade } from 'svelte/transition'
 	import PortableText from './PortableText/index.svelte'
 	import 'iconify-icon'
+	import clsx from "clsx"
 
 	export let experiences: Experience[]
 	let active: number = 0
@@ -40,13 +41,12 @@
 	<div class="w-thin bg-brown-11 relative hidden h-10 sm:block" style={`top:${40 * $leftBar}px;`} />
 	<ul class="flex flex-row overflow-scroll pb-2 sm:flex-col sm:overflow-auto">
 		{#each experiences as exp, i (exp.company)}
-			<li
-				class={`py-2 flex justify-start transition-colors duration-500 font-medium ${
+			<li class={clsx(
+					"py-2 flex justify-start transition-colors duration-500", 
 					i == active
-						? 'font-semibold bg-brown-4 text-brand-1 border-b-2 border-brown-11 sm:border-none'
-						: 'bg-background border-none'
-				}`}
-			>
+						? 'font-bold bg-brown-4 text-brown-11 border-b-2 border-brown-11 sm:border-none'
+						: 'font-medium bg-background border-none')
+				}>
 				<button class="w-32" on:click={() => handleClick(i)}>
 					{exp.company}
 				</button>
@@ -56,12 +56,12 @@
 	{#key selected}
 		<div class="flex-1 pl-8" in:fade={{ duration: 500 }}>
 			<Link url={selected.url} accent={false}>
-				<h4 class="mb-3 flex items-center text-sm font-medium text-inherit">
+				<h3 class="mb-3 flex items-center text-sm font-medium text-inherit">
 					{(selected.company_full_name || selected.company).toLocaleUpperCase()}
 					<i class="pl-1">
 						<iconify-icon icon="tabler:external-link" width="16" height="16" />
 					</i>
-				</h4>
+				</h3>
 			</Link>
 			{#each selected.positions as pos}
 				<div class="pb-2">

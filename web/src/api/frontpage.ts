@@ -5,6 +5,7 @@ import { sanityClient } from '../lib/sanity'
 export interface Experience {
 	company: string
 	company_full_name: string
+	url: string
 	positions: {
 		role: string
 		start: string
