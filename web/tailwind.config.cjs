@@ -100,15 +100,20 @@ module.exports = {
 			rotate: {
 				360: '360deg'
 			},
-			typography: {
+			typography: (theme) => ({
 				DEFAULT: {
 					css: {
 						'--tw-prose-body': colors.gray[12],
-						'--tw-prose-headings': colors.foreground.accent,
 						'--tw-prose-bold': colors.brown[11],
+						'--tw-prose-invert-bullets': colors.brown[11],
+						code: {
+							'background-color': theme("colors.gray.3"),
+							'padding': theme("spacing.1"),
+							'border-radius': theme("borderRadius.DEFAULT")
+						}
 					}
 				}
-			},
+			}),
 			width: {
 				thin: '2px'
 			}

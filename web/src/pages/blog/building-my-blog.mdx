@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout.astro
 title: 'Building my blog'
 pubDate: 2022-10-03
 description: 'This is a post about a rewrite of my sveltekit blog into astro'
@@ -8,14 +8,14 @@ tags: ['astro', 'sveltekit', 'blog', 'typescript', 'building in public']
 
 import { Image } from '@astrojs/image/components'
 
-I recently decided to rewrite my personal page into astro.
+I recently decided to rewrite my personal page into Astro.
 Previously, it was built with SvelteKit which I was quite satisfied with.
 The performance was quite good and the development experience was great.
 
 ![Performance of my blog](/assets/old_performance.png)
 
-However, I wanted to try out Astro as I had heard good things about it and was curious of their island architecture.
-Afterall, my blog was server-side-rendered and thought that it obviously should be static.
+However, I wanted to try out Astro as I had heard good things about it and was curious about its island architecture.
+After all, my blog was server-side-rendered and thought that it obviously should be static.
 Therefore, I decided to rewrite my blog into Astro.
 
 ## The rewrite
@@ -35,12 +35,12 @@ This is done by using the `client` directive on a component.
 </div>
 ```
 
-Most of the libaries I used, such as Tailwindcss, existed as Astro plugins which made the compatibility quite seamless.
+Most of the libraries I used, such as Tailwindcss, existed as Astro plugins which made the compatibility quite seamless.
 However, I did want to give my page a facelift and decided to do a small rebrand.
 
 ## What went well
 
-### Apperance
+### Appearance
 
 Last year I decided to build a mechanical keyboard and I wanted to use the same color scheme for my blog.
 The keycaps set is [GMK Botanical](https://oblotzky.industries/products/gmk-botanical-2) and the keyboard is a green [Mekanisk Urskog](https://mekanisk.com/products/urskog?variant=42784529875118)
@@ -60,7 +60,7 @@ The keycaps set is [GMK Botanical](https://oblotzky.industries/products/gmk-bota
 	/>
 </div>
 
-I ended up settling for green as my primary color and decided to use [Coolors](https://coolors.co/) to generate a my primary color.
+I ended up settling for green as my primary color and decided to use [Coolors](https://coolors.co/) to generate my primary color.
 
 <Image
 	src="/assets/green_palette.png"
@@ -77,14 +77,43 @@ To show off the green color, I decided to pick:
 - **Brown**: To give off an earthy nature-like feel
 - **Sand**: A gray color based on a desaturated yellow hue. This will fit well with the green and brown color scheme.
 
-This combination worked well together and I'm very happy with the apperance of my personal page.
+This combination worked well together and I'm very happy with the appearance of my page.
 
 ### Content and CMS
 
-I decided after a while to phase out portabletext for my blog and instead use MDX.
+I decided after a while to phase out PortableText for my blog and instead use MDX.
 Quite simply, Astro has amazing MDX support and allows me to easily embed UI-framework components in my markdown files
 The downside is that I have to store my content in a git repository when the rest of my non-blog data is stored in Sanity CMS.
 
 Fetching data from the CMS was quite easy as Astro supports top-level await.
 The data is fetched during build time and is then rendered as static pages.
-This allows me to have a faster and performant blog than previously.
+This allows me to have a faster and more performant blog than previously.
+
+![Performance of my blog](/assets/astro_performance.png)
+
+### Icons
+
+Iconify is a tool to select icons from different icon libraries.
+It allows you to fetch icons based on an icon key, such as `tabler:home`.
+Usually, the icon is fetched client-side through Iconify's web component, but Astro has a plugin that allows us to embed it during build time.
+To add icons to the project cards on my home page, I set the icon key in Sanity and then parse them.
+Therefore, I avoid having to download additional icon packs when mixing and matching.
+
+![Iconify icons](/assets/iconify.png)
+
+## What went wrong
+
+The biggest obstacle I had was getting analytics to work with [partytown](https://partytown.builder.io/).
+Partytown is a library to relocate the script to a web worker, off the main thread.
+Usually, most analytics tools fetch a script from their servers and then run it with async defer.
+I couldn't get [umami](https://umami.is/) to work with party town as I received CORS errors from within the web worker.
+For third-party scripts that do not provide correct CORS headers, we would normally have to reverse proxy through our domain.
+Sadly, Astro's partytown plugin did not support proxying requests, even if the official partytown library did, at the time of writing.
+The solution was to download the script and host it and add it to my assets.
+
+## Conclusion
+
+Overall, I'm very happy with the rewrite.
+I learned a lot about Astro and was surprised at how seamless it was to integrate.
+Astro seems to be an excellent framework for building static sites, which was perfect for my page.
+I will definitely continue to use it for my personal page and I'm excited to see what the future holds for Astro.

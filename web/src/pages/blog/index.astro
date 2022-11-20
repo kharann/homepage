@@ -1,35 +1,33 @@
 ---
 import { format } from 'date-fns'
-import { fetchListPosts } from '../../api/all-post'
 import Section from '../../components/Section.astro'
 import Layout from '../../layouts/Layout.astro'
-import {} from '@astrojs/mdx'
 
-const posts = await fetchListPosts()
+const allPosts = await Astro.glob('./*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
+const posts = allPosts.filter((post) => !post.frontmatter.draft)
 ---
 
 <Layout title="Kharann • All posts">
 	<section>
 		<h1 class="text-4xl font-bold text-primary-9">Blog</h1>
 		<p class="my-4">
-			In 2021, I decided to start writing more on my own time. After all, I love teaching and
-			sharing my experiences. I mostly write about web development, cloud, team processes or tech
-			careers.
+			Here you can find all the posts I've written. I write about web development, technology, and
+			other things I find interesting.
 		</p>
 		<Section name="All posts.">
 			<ul>
 				{
 					posts.map((post) => (
 						<li>
-							<a href={`/blog/${post.slug}`}>
+							<a href={post.url}>
 								<article class="text-foreground hover:text-highlight">
-									<h3 class="mt-4 text-xl text-inherit">{post.title}</h3>
+									<h3 class="mt-4 text-xl text-inherit">{post.frontmatter.title}</h3>
 									<p class="flex items-center justify-between">
 										<span class="text-gray dark:text-gray-300">
-											{format(new Date(post._createdAt), 'LLLL dd, y')}
+											{format(new Date(post.frontmatter.pubDate), 'LLLL dd, y')}
 										</span>
 										<span class="text-gray dark:text-gray-300">
-											{post.estimatedReadingTime} min read
+											{post.frontmatter.minutesRead} min read
 										</span>
 									</p>
 								</article>

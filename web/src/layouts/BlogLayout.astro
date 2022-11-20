@@ -2,6 +2,7 @@
 import Divider from '../components/divider.svelte'
 import Layout from './Layout.astro'
 import { format } from 'date-fns'
+import clsx from 'clsx'
 
 const { frontmatter } = Astro.props
 const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
@@ -15,7 +16,13 @@ const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
 			<p>Anh-Kha Vo &bull; {publishedDate}</p>
 			<p>{frontmatter.minutesRead} min read</p>
 		</div>
-		<div class="prose prose-invert">
+		<div
+			class={clsx(
+				'prose prose-invert',
+				'hover:prose-a:text-brand-5 prose-a:transition-colors prose-a:text-primary',
+				'prose-h2:text-brown-12 prose-headings:text-gray-12'
+			)}
+		>
 			<slot />
 		</div>
 	</article>
