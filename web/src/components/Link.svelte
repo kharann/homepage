@@ -23,7 +23,7 @@
 	a {
 		position: relative;
 		z-index: 1;
-		padding: 0.5em;
-		margin: -0.5em;
+		padding: 0.65em;
+		margin: -0.65em;
 	}
 </style>
