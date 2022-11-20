@@ -2,7 +2,7 @@ import type { InputValue } from '@portabletext/svelte/ptTypes'
 import groq from 'groq'
 import { sanityClient } from '../lib/sanity'
 
-export interface Experience {
+export type Experience = {
 	company: string
 	company_full_name: string
 	url: string
@@ -13,14 +13,22 @@ export interface Experience {
 		type: string
 		description: InputValue | undefined
 	}[]
+
+}
+export type Project = {
+	title: string
+	description: string
+	github: string
+	icons: string[]
 }
 
-interface FrontpageData {
+export interface FrontpageData {
 	introduction: {
 		role: string
 		about_me: InputValue
 	}
 	experiences: Experience[]
+	projects: Project[]
 }
 
 const frontpageQuery = groq`
@@ -34,7 +42,13 @@ const frontpageQuery = groq`
 			company_full_name,
 			positions,
 			url
-	} | order(end desc)
+	} | order(end desc),
+	"projects": *[_type == "project" && !(_id in path("drafts.**"))] {
+		title,
+		description,
+		github,
+		icons
+	}
 }`
 
 export const fetchFrontpageData = async () =>

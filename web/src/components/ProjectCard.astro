@@ -1,0 +1,57 @@
+---
+import { Image } from '@astrojs/image/components'
+import { Icon } from 'astro-icon'
+import clsx from 'clsx'
+import type { Project } from '../api/frontpage'
+import Link from './Link.svelte'
+
+export interface Props {
+	project: Project
+}
+
+const { project } = Astro.props
+const { title, description, github, icons } = project
+const org = github.split('/')[3]
+
+const overrides: { [key: string]: string } = {
+	'mdi:microsoft-azure': 'text-[#1769AA]',
+	'mdi:aws': 'text-[#ec912d]'
+}
+---
+
+<div
+	class="bg-mauve-3 rounded-md py-5 px-6 w-full shadow-sm shadow-mauve-3 transition-colors flex flex-col justify-between"
+>
+	<!-- <div class="p-1 bg-brand-8 rounded-md w-min">
+		<Icon name="tabler:terminal-2" width="20" height="20" class="text-brand-2" />
+	</div> -->
+	<div>
+		<Link url={github}>
+			<Image
+				src={`https://github.com/${org}.png?size=48`}
+				alt="avatar"
+				width="32"
+				height="32"
+				class="rounded-full bg-mauve-11"
+			/>
+		</Link>
+		<h3 class="text-lg font-bold my-4 text-brown-12">{title}</h3>
+		<div>
+			{description}
+		</div>
+	</div>
+	<div class="flex mt-8 self-start justify-self-end">
+		{
+			icons
+				? icons.map((icon) => (
+						<Icon
+							name={icon}
+							width="28"
+							height="28"
+							class={clsx('mx-2 fill-foreground', overrides[icon])}
+						/>
+				  ))
+				: null
+		}
+	</div>
+</div>

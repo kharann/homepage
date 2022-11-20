@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro'
 import { fetchFrontpageData } from '../api/frontpage'
 import PortableText from '../components/PortableText/index.svelte'
 import Experiences from '../components/experiences.svelte'
-import Card from '../components/Card.astro'
+import ProjectCard from '../components/ProjectCard.astro'
 import Section from '../components/Section.astro'
 
-const { introduction, experiences } = await fetchFrontpageData()
+const { introduction, experiences, projects } = await fetchFrontpageData()
 ---
 
 <Layout title="Kharann • Homepage">
@@ -23,12 +23,11 @@ const { introduction, experiences } = await fetchFrontpageData()
 	<Section name="Experiences.">
 		<Experiences experiences={experiences} client:load />
 	</Section>
-	<!-- <Section name="Projects.">
+	<Section name="Projects.">
+		I've worked on multiple projects, from open-source ones to small hobby projects. Here's some
+		highlights.
 		<div class="grid grid-cols-2 mt-8 gap-4">
-			<Card title="Monoweb" />
-			<Card title="Grades" />
-			<Card title="Bomba" />
-			<Card title="Scrimbot" />
+			{projects.map((project) => <ProjectCard project={project} />)}
 		</div>
-	</Section> -->
+	</Section>
 </Layout>

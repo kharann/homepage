@@ -1,13 +1,20 @@
 <script lang="ts">
+	import clsx from 'clsx'
+
 	export let url: string
 	export let accent: boolean = true
+	export let className: string | undefined = undefined
 </script>
 
 <a
-	class={`inline-flex transition-colors duration-300 hover:text-highlight-hover ${
-		accent && 'text-highlight '
-	}`}
-	href={url} target="_blank" rel="noreferrer"><slot /></a
+	class={clsx(
+		'inline-flex transition-colors duration-300 hover:text-highlight-hover',
+		accent && 'text-highlight',
+		className
+	)}
+	href={url}
+	target="_blank"
+	rel="noreferrer"><slot /></a
 >
 
 <style>
