@@ -3873,6 +3873,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astro-seo@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "astro-seo@npm:0.6.0"
+  checksum: ded710aa0c0bf449110983fc39110f46d438afa69f28aee162178a5a0182f486ed90855e8041ff8ddb3abba50a679ba4a30e0c95913ce586065c1ec6aa5971a4
+  languageName: node
+  linkType: hard
+
 "astro@npm:^1.6.10":
   version: 1.6.10
   resolution: "astro@npm:1.6.10"
@@ -9831,6 +9838,7 @@ fsevents@~2.3.2:
   resolution: "monorepo@workspace:."
   dependencies:
     "@sanity/cli": ^3.0.0-dev-preview.9
+    astro-seo: ^0.6.0
     eslint: ^8.12.0
     prettier: ^2.6.1
     tsconfig-paths: ^3.14.1

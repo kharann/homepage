@@ -4,6 +4,7 @@
 	export let url: string
 	export let accent: boolean = true
 	export let className: string | undefined = undefined
+	export let arialabel: string | undefined = undefined
 </script>
 
 <a
@@ -12,6 +13,7 @@
 		accent && 'text-highlight',
 		className
 	)}
+	aria-label={arialabel}
 	href={url}
 	target="_blank"
 	rel="noreferrer"><slot /></a

@@ -1,0 +1,90 @@
+---
+layout: ../layouts/BlogLayout.astro
+title: 'Building my blog'
+pubDate: 2022-10-03
+description: 'This is a post about a rewrite of my sveltekit blog into astro'
+tags: ['astro', 'sveltekit', 'blog', 'typescript', 'building in public']
+---
+
+import { Image } from '@astrojs/image/components'
+
+I recently decided to rewrite my personal page into astro.
+Previously, it was built with SvelteKit which I was quite satisfied with.
+The performance was quite good and the development experience was great.
+
+![Performance of my blog](/assets/old_performance.png)
+
+However, I wanted to try out Astro as I had heard good things about it and was curious of their island architecture.
+Afterall, my blog was server-side-rendered and thought that it obviously should be static.
+Therefore, I decided to rewrite my blog into Astro.
+
+## The rewrite
+
+Most of the components were reusable because Astro has something called [ui framework integrations](https://docs.astro.build/en/core-concepts/framework-components/).
+This feature allows us to use components written in common javascript frameworks such as React, Vue, Svelte and Solid.
+In our case, we could reuse the majority of our components because they were written in Svelte.
+However, some of the components were not compatible with Astro because in Astro we need to specify when a component can ship javascript.
+This is done by using the `client` directive on a component.
+
+```astro
+<div>
+	{/*This component will only ship javascript when the media query is true*/}
+	<Header url={url} client:media="(max-width: 760px)" />
+	{/*This component will load and hydrate on page load*/}
+	<InteractiveComponent client:load />
+</div>
+```
+
+Most of the libaries I used, such as Tailwindcss, existed as Astro plugins which made the compatibility quite seamless.
+However, I did want to give my page a facelift and decided to do a small rebrand.
+
+## What went well
+
+### Apperance
+
+Last year I decided to build a mechanical keyboard and I wanted to use the same color scheme for my blog.
+The keycaps set is [GMK Botanical](https://oblotzky.industries/products/gmk-botanical-2) and the keyboard is a green [Mekanisk Urskog](https://mekanisk.com/products/urskog?variant=42784529875118)
+
+<div class="flex flex-row rounded-md">
+	<Image
+		src="https://cdn.shopify.com/s/files/1/0335/2087/7700/products/gmk_botanical_2_keyboard_bauer_x_01_2048x2048.jpg?v=1626084448"
+		alt="GMK Botanical"
+		width="330"
+		aspectRatio="1.5"
+	/>
+	<Image
+		src="https://cdn.shopify.com/s/files/1/1347/2157/products/DSC04420.jpg?v=1658955789&width=1946"
+		alt="Mekanisk urskog"
+		width="330"
+		aspectRatio="1.5"
+	/>
+</div>
+
+I ended up settling for green as my primary color and decided to use [Coolors](https://coolors.co/) to generate a my primary color.
+
+<Image
+	src="assets/green_color_palete.png"
+	alt="Green color palete"
+	width="700"
+	aspectRatio={4 / 1}
+	class="rounded-md"
+/>
+
+Then, I went to [Radix colors](https://www.radix-ui.com/colors) to pick out some supporting colors.
+This is a set of colors often used to be used for semantic uses or component states (such as hover).
+To show off the green color, I decided to pick:
+
+- **Brown**: To give off an earthy nature-like feel
+- **Sand**: A gray color based on a desaturated yellow hue. This will fit well with the green and brown color scheme.
+
+This combination worked well together and I'm very happy with the apperance of my personal page.
+
+### Content and CMS
+
+I decided after a while to phase out portabletext for my blog and instead use MDX.
+Quite simply, Astro has amazing MDX support and allows me to easily embed UI-framework components in my markdown files
+The downside is that I have to store my content in a git repository when the rest of my non-blog data is stored in Sanity CMS.
+
+Fetching data from the CMS was quite easy as Astro supports top-level await.
+The data is fetched during build time and is then rendered as static pages.
+This allows me to have a faster and performant blog than previously.

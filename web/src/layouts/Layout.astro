@@ -1,11 +1,13 @@
 ---
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header/Header.svelte'
+import { SEO } from 'astro-seo'
 export interface Props {
 	title: string
+	description?: string
 }
 
-const { title } = Astro.props
+const { title, description } = Astro.props
 const url = Astro.url.pathname
 ---
 
@@ -15,8 +17,8 @@ const url = Astro.url.pathname
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-
 		<meta name="generator" content={Astro.generator} />
+		<SEO title={title} description={description} />
 		<link
 			href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
 			rel="stylesheet"
@@ -61,6 +63,7 @@ const url = Astro.url.pathname
 			html {
 				font-family: Satoshi, system-ui, sans-serif;
 				font-size: 16px;
+				font-display: auto;
 			}
 			code {
 				font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
