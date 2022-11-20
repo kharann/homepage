@@ -5,8 +5,14 @@ import PortableText from '../components/PortableText/index.svelte'
 import Experiences from '../components/experiences.svelte'
 import ProjectCard from '../components/ProjectCard.astro'
 import Section from '../components/Section.astro'
+import PreviewPosts from '../components/PreviewPosts.astro'
 
 const { introduction, experiences, projects } = await fetchFrontpageData()
+const allPosts = await Astro.glob('./blog/*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
+const posts = allPosts
+	.filter((post) => !post.frontmatter.draft)
+	.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
+	.slice(0, 3)
 ---
 
 <Layout title="Kharann • Homepage" description="Anhkha's developer portfolio">
@@ -19,6 +25,9 @@ const { introduction, experiences, projects } = await fetchFrontpageData()
 	</Section>
 	<Section name="About me.">
 		<PortableText blocks={introduction.about_me} />
+	</Section>
+	<Section name="Latest posts." className="pb-6">
+		<PreviewPosts posts={posts} />
 	</Section>
 	<Section name="Experiences.">
 		<Experiences experiences={experiences} client:load />

@@ -1,5 +1,6 @@
 ---
 import { format } from 'date-fns'
+import PreviewPosts from '../../components/PreviewPosts.astro'
 import Section from '../../components/Section.astro'
 import Layout from '../../layouts/Layout.astro'
 
@@ -15,27 +16,7 @@ const posts = allPosts.filter((post) => !post.frontmatter.draft)
 			other things I find interesting.
 		</p>
 		<Section name="All posts.">
-			<ul>
-				{
-					posts.map((post) => (
-						<li>
-							<a href={post.url}>
-								<article class="text-foreground hover:text-highlight">
-									<h3 class="mt-4 text-xl text-inherit">{post.frontmatter.title}</h3>
-									<p class="flex items-center justify-between">
-										<span class="text-gray dark:text-gray-300">
-											{format(new Date(post.frontmatter.pubDate), 'LLLL dd, y')}
-										</span>
-										<span class="text-gray dark:text-gray-300">
-											{post.frontmatter.minutesRead} min read
-										</span>
-									</p>
-								</article>
-							</a>
-						</li>
-					))
-				}
-			</ul>
+			<PreviewPosts posts={posts} />
 		</Section>
 	</section>
 </Layout>

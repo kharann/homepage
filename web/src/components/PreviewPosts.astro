@@ -1,0 +1,29 @@
+---
+import type { MDXInstance } from 'astro'
+import { format } from 'date-fns'
+export interface Props {
+	posts: MDXInstance<Record<any, any>>[]
+}
+
+const { posts } = Astro.props
+---
+
+<ul>
+	{
+		posts.map((post) => (
+			<li>
+				<a href={post.url}>
+					<article class="text-foreground hover:text-highlight">
+						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.frontmatter.title}</h3>
+						<p class="flex items-center justify-between">
+							<span class="text-gray-11">
+								{format(new Date(post.frontmatter.pubDate), 'LLLL dd, y')}
+							</span>
+							<span class="text-gray-11">{post.frontmatter.minutesRead}</span>
+						</p>
+					</article>
+				</a>
+			</li>
+		))
+	}
+</ul>
