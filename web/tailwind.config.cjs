@@ -53,13 +53,28 @@ const mauve = {
 	12: 'hsl(256, 6.0%, 93.2%)'
 }
 
+const sand = {
+	1: 'hsl(61, 2.0%, 8.3%)',
+	2: 'hsl(60, 4%, 11%)',
+	3: 'hsl(58, 3.7%, 13.1%)',
+	4: 'hsl(57, 3.6%, 15.3%)',
+	5: 'hsl(56, 3.7%, 17.4%)',
+	6: 'hsl(55, 3.7%, 19.9%)',
+	7: 'hsl(53, 3.7%, 23.6%)',
+	8: 'hsl(50, 3.8%, 30.6%)',
+	9: 'hsl(50, 4.0%, 42.7%)',
+	10: 'hsl(52, 3.1%, 48.3%)',
+	11: 'hsl(50, 4.0%, 61.8%)',
+	12: 'hsl(56, 4.0%, 92.8%)',
+}
+
 const colors = {
-	background: mauve[2],
+	background: sand[1],
 	foreground: {
-		DEFAULT: mauve[12],
+		DEFAULT: sand[12],
 		accent: brand[1]
 	},
-	mauve: mauve,
+	gray: sand,
 	accent: '#73bbc5',
 	brand: brand,
 	green: green,
@@ -88,8 +103,9 @@ module.exports = {
 			typography: {
 				DEFAULT: {
 					css: {
-						'--tw-prose-body': colors.mauve[12],
-						'--tw-prose-headings': colors.foreground.accent
+						'--tw-prose-body': colors.gray[12],
+						'--tw-prose-headings': colors.foreground.accent,
+						'--tw-prose-bold': colors.brown[11],
 					}
 				}
 			},

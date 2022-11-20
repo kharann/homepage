@@ -1,0 +1,22 @@
+---
+import Divider from '../components/divider.svelte'
+import Layout from './Layout.astro'
+import { format } from 'date-fns'
+
+const { frontmatter } = Astro.props
+const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
+---
+
+<Layout title={frontmatter.title}>
+	<article class="flex w-full max-w-2xl flex-col">
+		<h1 class="mb-4 text-4xl font-bold text-foreground-accent">{frontmatter.title}</h1>
+		<Divider />
+		<div class="mt-2 mb-8 flex flex-col justify-between sm:flex-row">
+			<p>Anh-Kha Vo &bull; {publishedDate}</p>
+			<p>{frontmatter.minutesRead} min read</p>
+		</div>
+		<div class="prose prose-invert">
+			<slot />
+		</div>
+	</article>
+</Layout>

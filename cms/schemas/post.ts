@@ -32,7 +32,13 @@ const postSchema = defineType({
       title: 'Post content',
       name: 'content',
       type: 'portable_text'
+    }),
+    defineField({
+      title: "Markdown",
+      name: 'markdown',
+      type: "markdown"
     })
+
   ]
 })
 
