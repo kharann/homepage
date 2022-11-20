@@ -24,8 +24,9 @@ const { introduction, experiences, projects } = await fetchFrontpageData()
 		<Experiences experiences={experiences} client:load />
 	</Section>
 	<Section name="Projects.">
-		I've worked on multiple projects, from open-source ones to small hobby projects. Here's some
-		highlights.
+		I've worked on multiple projects, from commercial ones to small hobby projects.
+		<br />
+		Here's are some of my open-source highlights.
 		<div class="grid sm:grid-cols-2 mt-8 gap-4">
 			{projects.map((project) => <ProjectCard project={project} />)}
 		</div>
