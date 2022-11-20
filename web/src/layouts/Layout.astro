@@ -20,8 +20,10 @@ const url = Astro.url.pathname
 		<meta name="generator" content={Astro.generator} />
 		<SEO title={title} description={description} />
 		<link
+			rel="preload"
 			href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
-			rel="stylesheet"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
 		/>
 		<link
 			rel="preload"
@@ -31,7 +33,12 @@ const url = Astro.url.pathname
 		/>
 		<noscript>
 			<link
-				href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
+				href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+			<link
+				href="https:////cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
 				rel="stylesheet"
 				type="text/css"
 			/>
