@@ -103,7 +103,7 @@ Therefore, I avoid having to download additional icon packs when mixing and matc
 ## What went wrong
 
 The biggest obstacle I had was getting analytics to work with [partytown](https://partytown.builder.io/).
-Partytown is a library to relocate the script to a web worker, off the main thread.
+Partytown is a library to delegate the script to a web worker, off the main thread.
 Usually, most analytics tools fetch a script from their servers and then run it with async defer.
 I couldn't get [umami](https://umami.is/) to work with party town as I received CORS errors from within the web worker.
 For third-party scripts that do not provide correct CORS headers, we would normally have to reverse proxy through our domain.
