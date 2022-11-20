@@ -26,7 +26,7 @@ const { introduction, experiences, projects } = await fetchFrontpageData()
 	<Section name="Projects.">
 		I've worked on multiple projects, from open-source ones to small hobby projects. Here's some
 		highlights.
-		<div class="grid grid-cols-2 mt-8 gap-4">
+		<div class="grid sm:grid-cols-2 mt-8 gap-4">
 			{projects.map((project) => <ProjectCard project={project} />)}
 		</div>
 	</Section>
