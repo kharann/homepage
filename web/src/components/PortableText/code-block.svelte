@@ -19,5 +19,5 @@
 </svelte:head>
 
 <pre>
-<code class="whitespace-nowrap">{@html highlight}</code>
+<code>{@html highlight}</code>
 </pre>
