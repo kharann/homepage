@@ -9,7 +9,7 @@
 	export let blocks: InputValue
 </script>
 
-<div class="prose">
+<div class="prose max-w-[75ch]">
 	<PortableText
 		value={blocks}
 		components={{
