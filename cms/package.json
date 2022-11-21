@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@sanity/code-input": "studio-v3",
+    "@sanity/vision": "dev-preview",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",

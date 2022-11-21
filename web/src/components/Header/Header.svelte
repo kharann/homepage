@@ -7,12 +7,6 @@
 	const routes = [
 		{ link: '/', text: 'Home' },
 		{ link: '/blog', text: 'Blog' },
-		{
-			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/8a3fb1a5f8d2dbdbfb965b6d28023030afb61abc.pdf',
-			text: 'Resume'
-		}
-		// { link: '/about', text: 'About' }
-		// { link: '/resume', text: 'Resume' }
 	]
 
 	let open: boolean = false
@@ -31,7 +25,6 @@
 					<RouteLink
 						href={route.link}
 						text={route.text}
-						external={route.text === 'Resume'}
 						isActive={route.link === url}
 					/>
 				{/each}

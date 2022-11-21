@@ -1,7 +1,6 @@
 <script lang="ts">
 	export let text: string
 	export let href: string
-	export let external: boolean = false
 	export let isActive: boolean = false
 </script>
 
@@ -10,5 +9,5 @@
 		isActive && 'font-bold text-brand-1'
 	}`}
 >
-	<a {href} target={external ? '_blank' : undefined}>{text}</a>
+	<a {href} >{text}</a>
 </li>
