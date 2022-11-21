@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props
 const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description}>
+<Layout title={frontmatter.title} description={`${frontmatter.description}. ${frontmatter.tags.join(",")}`}>
 	<article class="flex w-full max-w-2xl flex-col">
 		<h1 class="mb-4 text-4xl font-bold text-foreground-accent">{frontmatter.title}</h1>
 		<Divider />
