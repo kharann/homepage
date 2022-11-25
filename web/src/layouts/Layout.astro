@@ -63,7 +63,7 @@ const url = Astro.url.pathname
 	</head>
 	<body class="bg-background antialiased">
 		<div class="flex h-full min-h-screen w-full flex-col transition duration-300 text-gray-12">
-			<Header url={url} client:idle />
+			<Header url={url} client:load/>
 			<main class="m-auto mt-8 w-full max-w-3xl px-4">
 				<slot />
 			</main>
