@@ -1,28 +1,34 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
-import tailwind from '@astrojs/tailwind';
-import svelte from '@astrojs/svelte';
+import tailwind from '@astrojs/tailwind'
+import svelte from '@astrojs/svelte'
 
 // https://astro.build/config
-import image from '@astrojs/image';
+import image from '@astrojs/image'
 
 // https://astro.build/config
-import partytown from '@astrojs/partytown';
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
-import { remarkReadingTime } from './src/lib/remark-reading-time';
+import mdx from '@astrojs/mdx'
+import { remarkReadingTime } from './src/lib/remark-reading-time'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), partytown({
-    config: {
-      forward: 'panelbear.apply'
-    }
-  }), mdx({
-    remarkPlugins: [remarkReadingTime],
-  })],
-});
+	integrations: [
+		tailwind(),
+		svelte(),
+		image({
+			serviceEntryPoint: '@astrojs/image/sharp'
+		}),
+		partytown({
+			config: {
+				forward: 'panelbear.apply'
+			}
+		}),
+		mdx({
+			remarkPlugins: [remarkReadingTime]
+		})
+	]
+})
