@@ -8,7 +8,7 @@
 		{ link: '/', text: 'Home' },
 		{ link: '/blog', text: 'Blog' },
 		{
-			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/bd345445055518a33991596fde94a0fe04e79693.pdf',
+			link: 'https://cdn.sanity.io/files/r4l4xmqo/production/88fe6b28879c1d78e9a8f4a8044ed55e7c87c666.pdf',
 			text: 'Resume'
 		}
 	]
