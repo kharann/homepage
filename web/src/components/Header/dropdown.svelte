@@ -11,7 +11,7 @@
 </script>
 
 {#if open}
-	<aside class="bg-gray-1 absolute z-10 h-screen w-full overflow-hidden">
+	<aside class="bg-background absolute z-10 h-screen w-full overflow-hidden">
 		<nav
 			class="bg-gray-1 text-gray-12 mt-20 flex h-full flex-col px-8 pb-2 transition duration-300 ease-in-out"
 		>
