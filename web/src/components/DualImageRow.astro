@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 
-type Image = {
+interface ImageValue {
 	src: string
 	alt: string
 }
 export interface Props {
-	images: [Image, Image]
+	images: [ImageValue, ImageValue]
 }
 const { images } = Astro.props
 ---

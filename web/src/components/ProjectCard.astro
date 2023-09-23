@@ -13,7 +13,7 @@ const { project } = Astro.props
 const { title, description, github, icons } = project
 const org = github.split('/')[3]
 
-const overrides: { [key: string]: string } = {
+const overrides: Record<string, string> = {
 	'mdi:microsoft-azure': 'text-[#1769AA]',
 	'mdi:aws': 'text-[#ec912d]'
 }

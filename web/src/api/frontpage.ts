@@ -1,8 +1,11 @@
-import type { InputValue } from '@portabletext/svelte/ptTypes'
+import type { PortableText } from '@portabletext/svelte'
 import groq from 'groq'
 import { sanityClient } from '../lib/sanity'
+import type { ComponentProps } from 'svelte'
 
-export type Experience = {
+type InputValue = ComponentProps<PortableText>["value"] 
+
+export interface Experience {
 	company: string
 	company_full_name: string
 	url: string
@@ -15,7 +18,7 @@ export type Experience = {
 	}[]
 
 }
-export type Project = {
+export interface Project {
 	title: string
 	description: string
 	github: string

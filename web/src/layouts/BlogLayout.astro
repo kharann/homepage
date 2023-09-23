@@ -4,6 +4,16 @@ import Layout from './Layout.astro'
 import { format } from 'date-fns'
 import clsx from 'clsx'
 
+interface Props {
+	frontmatter: {
+		title: string
+		pubDate: string
+		description: string
+		tags: string[]
+		minutesRead: number
+	}
+}
+
 const { frontmatter } = Astro.props
 const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
 ---

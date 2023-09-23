@@ -1,4 +1,4 @@
-import sanity from '@sanity/client'
+import {createClient} from '@sanity/client'
 
 const config = {
 	projectId: 'r4l4xmqo',
@@ -7,12 +7,10 @@ const config = {
 	useCdn: true
 }
 
-export const sanityClient = sanity(config)
+export const sanityClient = createClient(config)
 
 export type Fetch = (input: RequestInfo, init?: RequestInit) => Promise<Response>
-export type Parameters = {
-	[key: string]: string
-}
+export type Parameters = Record<string, string>;
 export const getFetchUrl = (query: string, parameters?: Parameters) => {
 	let url = `https://${config.projectId}.api.sanity.io/${config.apiVersion}/data/query/${
 		config.dataset
