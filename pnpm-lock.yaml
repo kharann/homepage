@@ -3,10 +3,6 @@ lockfileVersion: '6.0'
 importers:
 
   .:
-    dependencies:
-      astro-seo:
-        specifier: ^0.6.0
-        version: 0.6.0
     devDependencies:
       '@sanity/cli':
         specifier: ^3.0.0-dev-preview.9
@@ -72,9 +68,6 @@ importers:
 
   web:
     dependencies:
-      '@astrojs/image':
-        specifier: ^0.18.0
-        version: 0.18.0(astro@3.1.2)(sharp@0.32.6)
       '@astrojs/mdx':
         specifier: ^1.1.0
         version: 1.1.0(astro@3.1.2)
@@ -83,7 +76,7 @@ importers:
         version: 2.0.0
       '@astrojs/svelte':
         specifier: ^4.0.2
-        version: 4.0.2(astro@3.1.2)(svelte@4.2.1)(typescript@5.2.2)(vite@4.4.9)
+        version: 4.0.2(astro@3.1.2)(svelte@4.2.1)(typescript@4.9.5)(vite@4.4.9)
       '@astrojs/tailwind':
         specifier: ^5.0.0
         version: 5.0.0(astro@3.1.2)(tailwindcss@3.3.3)
@@ -102,6 +95,9 @@ importers:
       astro-icon:
         specifier: ^0.8.1
         version: 0.8.1
+      astro-seo:
+        specifier: ^0.8.0
+        version: 0.8.0
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -155,10 +151,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@altano/tiny-async-pool@1.0.2:
-    resolution: {integrity: sha512-qQzaI0TBUPdpjZ3qo5b2ziQY9MSNpbziH2ZrE5lvtUZL+kn9GwVuVJwoOubaoNkeDB+rqEefnpu1k+oMpOCYiw==}
-    dev: false
-
   /@ampproject/remapping@2.2.1:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
@@ -168,26 +160,6 @@ packages:
 
   /@astrojs/compiler@2.1.0:
     resolution: {integrity: sha512-Mp+qrNhly+27bL/Zq8lGeUY+YrdoU0eDfIlAeGIPrzt0PnI/jGpvPUdCaugv4zbCrDkOUScFfcbeEiYumrdJnw==}
-    dev: false
-
-  /@astrojs/image@0.18.0(astro@3.1.2)(sharp@0.32.6):
-    resolution: {integrity: sha512-IAsECAGG5s0u7KItQMVVfhU8gAkIeIlzoSga6LymLvWvTWJacjxtnRYjct5uR03kuxIYAdjZhwQowKR1bYpwDA==}
-    deprecated: '@astrojs/image is deprecated in favor of astro:assets. Please see the migration guide for more information: https://docs.astro.build/en/guides/upgrade-to/v3/\#removed-astrojsimage'
-    peerDependencies:
-      astro: ^2.10.15
-      sharp: '>=0.31.0'
-    peerDependenciesMeta:
-      sharp:
-        optional: true
-    dependencies:
-      '@altano/tiny-async-pool': 1.0.2
-      astro: 3.1.2
-      http-cache-semantics: 4.1.1
-      image-size: 1.0.2
-      kleur: 4.1.5
-      magic-string: 0.30.3
-      mime: 3.0.0
-      sharp: 0.32.6
     dev: false
 
   /@astrojs/internal-helpers@0.2.0:
@@ -258,7 +230,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/svelte@4.0.2(astro@3.1.2)(svelte@4.2.1)(typescript@5.2.2)(vite@4.4.9):
+  /@astrojs/svelte@4.0.2(astro@3.1.2)(svelte@4.2.1)(typescript@4.9.5)(vite@4.4.9):
     resolution: {integrity: sha512-XB9Sexq+iW5aUpctDk6zuKHbWIAuPlAnZKbfgaS9VOaOUtx1t12crP9YoKEVcTifXYgoRuWWfeEAm2I8pYlLIQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -268,7 +240,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 2.4.6(svelte@4.2.1)(vite@4.4.9)
       astro: 3.1.2
       svelte: 4.2.1
-      svelte2tsx: 0.6.22(svelte@4.2.1)(typescript@5.2.2)
+      svelte2tsx: 0.6.22(svelte@4.2.1)(typescript@4.9.5)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2237,7 +2209,7 @@ packages:
       '@motionone/types': 10.16.3
       '@motionone/utils': 10.16.3
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.6.2
     dev: false
 
   /@motionone/easing@10.16.3:
@@ -3636,8 +3608,8 @@ packages:
       svgo: 2.8.0
     dev: false
 
-  /astro-seo@0.6.0:
-    resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
+  /astro-seo@0.8.0:
+    resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
     dev: false
 
   /astro@3.1.2:
@@ -6446,14 +6418,6 @@ packages:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
 
-  /image-size@1.0.2:
-    resolution: {integrity: sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==}
-    engines: {node: '>=14.0.0'}
-    hasBin: true
-    dependencies:
-      queue: 6.0.2
-    dev: false
-
   /immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
     dev: false
@@ -8649,12 +8613,6 @@ packages:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
     dev: false
 
-  /queue@6.0.2:
-    resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==}
-    dependencies:
-      inherits: 2.0.4
-    dev: false
-
   /raf@3.4.1:
     resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
     dependencies:
@@ -9982,7 +9940,7 @@ packages:
       svelte: 4.2.1
     dev: false
 
-  /svelte2tsx@0.6.22(svelte@4.2.1)(typescript@5.2.2):
+  /svelte2tsx@0.6.22(svelte@4.2.1)(typescript@4.9.5):
     resolution: {integrity: sha512-eFCfz0juaWeanbwGeQV21kPMwH3LKhfrUYRy1PqRmlieuHvJs8VeK7CaoHJdpBZWCXba2cltHVdywJmwOGhbww==}
     peerDependencies:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0
@@ -9991,7 +9949,7 @@ packages:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
       svelte: 4.2.1
-      typescript: 5.2.2
+      typescript: 4.9.5
     dev: false
 
   /svelte@4.2.1:
@@ -10432,9 +10390,9 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.2.2:
-    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
-    engines: {node: '>=14.17'}
+  /typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false
 
