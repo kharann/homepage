@@ -6,7 +6,7 @@ description: 'This is a post about a rewrite of my sveltekit blog into astro'
 tags: ['astro', 'sveltekit', 'blog', 'typescript', 'building in public']
 ---
 
-import { Image } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 import DualImageRow from '../../components/DualImageRow.astro'
 
 I recently decided to rewrite my personal page into Astro.
@@ -65,7 +65,7 @@ I ended up settling for green as my primary color and decided to use [Coolors.co
 	src="/assets/green_palette.png"
 	alt="Green color palete"
 	width="700"
-	aspectRatio={4 / 1}
+	height="170"
 	class="rounded-md"
 />
 

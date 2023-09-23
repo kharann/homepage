@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 
 type Image = {
 	src: string
@@ -12,20 +12,18 @@ const { images } = Astro.props
 ---
 
 <div class="grid sm:grid-cols-2 my-8">
-	<Picture
+	<Image
 		src={images[0].src}
 		alt={images[0].alt}
-		widths={[600, 330]}
-		sizes={'(max-width: 660px), 100vw'}
+		width="600"
+		height="200"
 		class="m-0"
-		aspectRatio={16 / 9}
 	/>
-	<Picture
+	<Image
 		src={images[1].src}
 		alt={images[1].alt}
-		widths={[600, 330]}
+		width="600"
+		height="200"
 		class="m-0"
-		sizes={'(max-width: 660px), 100vw'}
-		aspectRatio={16 / 9}
 	/>
 </div>
