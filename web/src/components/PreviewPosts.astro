@@ -13,7 +13,7 @@ const { posts } = Astro.props
 		posts.map((post) => (
 			<li>
 				<a href={post.url}>
-					<article class="text-foreground hover:text-highlight">
+					<article class="text-foreground hover:text-highlight-hover">
 						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.frontmatter.title}</h3>
 						<p class="flex items-center justify-between">
 							<span class="text-gray-11">
