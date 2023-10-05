@@ -60,7 +60,7 @@ module.exports = {
 	brand: brand,
 	green: green,
 	brown: brown,
-	background: 'hsl(61, 2.0%, 8.3%)',
+	background: 'l(61, 2.0%, 8.3%),
 	foreground: {
 		DEFAULT: sand[12],
 		accent: brand[1]

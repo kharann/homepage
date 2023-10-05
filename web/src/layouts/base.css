@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    body {
+        @apply text-sand-12
+    }
+	/* h1 {
+		@apply text-3xl my-4;
+	}
+	h2 {
+		@apply text-2xl font-semibold my-3;
+	}
+	h3 {
+		@apply text-xl font-bold my-2;
+	}
+	h4 {
+		@apply text-lg font-bold my-1;
+	}
+	h5 {
+		@apply text-lg font-semibold;
+	}
+	h6 {
+		@apply text-lg;
+	} */
+}

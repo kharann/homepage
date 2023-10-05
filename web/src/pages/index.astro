@@ -6,6 +6,7 @@ import Experiences from '../components/experiences.svelte'
 import ProjectCard from '../components/ProjectCard.astro'
 import Section from '../components/Section.astro'
 import PreviewPosts from '../components/PreviewPosts.astro'
+import { compareAsc, isAfter, isBefore } from 'date-fns'
 
 const { introduction, experiences, projects } = await fetchFrontpageData()
 const allPosts = await Astro.glob('./blog/*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
@@ -13,13 +14,15 @@ const posts = allPosts
 	.filter((post) => !post.frontmatter.draft)
 	.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
 	.slice(0, 3)
+
+
 ---
 
 <Layout title="Kharann • Homepage" description="Anhkha's developer portfolio">
 	<Section>
 		<h1 class="mb-2 text-4xl font-bold">
 			Hi, my name is
-			<span class="font-hack font-bold text-primary">Anhkha 👋</span>
+			<span class="font-hack font-bold text-brand-7 dark:text-brand-3">Anhkha 👋</span>
 		</h1>
 		<byline class="text-lg">{introduction.role}</byline>
 	</Section>

@@ -1,4 +1,4 @@
-<h1 class="font-hack text-brand-3 m-0 text-2xl font-bold">
+<h1 class="font-hack text-brand-7 dark:text-brand-3 m-0 text-2xl font-bold">
 	<span class="text-brown-11 relative">&lt;</span>Kharann<span class="text-brown-11 relative"
 		>/&gt;</span
 	>

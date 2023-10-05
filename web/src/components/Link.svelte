@@ -9,8 +9,8 @@
 
 <a
 	class={clsx(
-		'inline-flex transition-colors duration-300 hover:text-highlight-hover',
-		accent && 'text-highlight',
+		'inline-flex transition-colors duration-300 hover:text-brand-9',
+		accent && 'text-brand-6',
 		className
 	)}
 	aria-label={arialabel}

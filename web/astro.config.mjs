@@ -5,22 +5,16 @@ import tailwind from '@astrojs/tailwind'
 import svelte from '@astrojs/svelte'
 
 // https://astro.build/config
-import partytown from '@astrojs/partytown'
-
-// https://astro.build/config
 import mdx from '@astrojs/mdx'
 import { remarkReadingTime } from './src/lib/remark-reading-time'
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
-		tailwind(),
-		svelte(),
-		partytown({
-			config: {
-				forward: 'panelbear.apply'
-			}
+		tailwind({
+			applyBaseStyles: false
 		}),
+		svelte(),
 		mdx({
 			remarkPlugins: [remarkReadingTime]
 		})

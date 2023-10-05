@@ -45,7 +45,7 @@ const frontpageQuery = groq`
 			company_full_name,
 			positions,
 			url
-	} | order(end desc),
+	},
 	"projects": *[_type == "project" && !(_id in path("drafts.**"))] {
 		title,
 		description,

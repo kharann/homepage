@@ -20,7 +20,7 @@ const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
 
 <Layout title={frontmatter.title} description={`${frontmatter.description}. ${frontmatter.tags.join(",")}`}>
 	<article class="flex w-full max-w-2xl flex-col">
-		<h1 class="mb-4 text-4xl font-bold text-foreground-accent">{frontmatter.title}</h1>
+		<h1 class="mb-4 text-4xl font-bold dark:text-brand-2 text-brand-10">{frontmatter.title}</h1>
 		<Divider />
 		<div class="mt-2 mb-8 flex flex-col justify-between sm:flex-row">
 			<p>Anh-Kha Vo &bull; {publishedDate}</p>
@@ -28,9 +28,9 @@ const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
 		</div>
 		<div
 			class={clsx(
-				'prose prose-invert',
+				'prose dark:prose-invert',
 				'hover:prose-a:text-brand-5 prose-a:transition-colors prose-a:text-primary',
-				'prose-h2:text-brown-12 prose-headings:text-gray-12'
+				'prose-h2:text-brown-12 prose-headings:text-sand-12'
 			)}
 		>
 			<slot />

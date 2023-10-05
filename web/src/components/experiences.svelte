@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Experience } from '../api/frontpage'
 	import { cubicInOut } from 'svelte/easing'
-	import { format, isSameYear } from 'date-fns'
+	import { compareAsc, format, isAfter, isSameYear } from 'date-fns'
 	import { tweened } from 'svelte/motion'
 	import Link from './Link.svelte'
 	import { fade } from 'svelte/transition'
@@ -35,6 +35,7 @@
 			return `${startText} - ${endText}`
 		}
 	}
+	
 </script>
 
 <div class="mt-8 flex h-full min-h-[300px] w-full flex-col sm:flex-row">
@@ -46,7 +47,7 @@
 					'py-2 flex justify-start transition-colors duration-500',
 					i == active
 						? 'font-bold bg-brown-4 text-brown-11 border-b-2 border-brown-11 sm:border-none'
-						: 'font-medium bg-background border-none'
+						: 'font-medium bg-background dark:bg-background-dark border-none'
 				)}
 			>
 				<button class="w-32" on:click={() => handleClick(i)}>
