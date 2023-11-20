@@ -1,0 +1,22 @@
+---
+import { cn } from '../utils';
+
+export type Props = {
+  'aria-label'?: string;
+  class?: string;
+  href?: string;
+};
+const props = Astro.props;
+---
+
+<a
+  class={cn(
+    'inline-flex transition-colors duration-300 font-semibold underline',
+    'text-brand-6 hover:text-brand-10 dark:text-brand-2 dark:hover:text-brand-5',
+    props['class'],
+  )}
+  aria-label={props['aria-label']}
+  href={props['href']}
+  target="_blank"
+  rel="noreferrer"><slot /></a
+>

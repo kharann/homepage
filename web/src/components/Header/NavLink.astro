@@ -1,0 +1,18 @@
+---
+import { cn } from '../../utils';
+
+interface Props {
+  href: string;
+  isActive?: boolean;
+}
+
+const { href, isActive } = Astro.props;
+---
+
+<a
+  class={cn(
+    'text-gray-12 rounded-md py-1 px-2 text-lg duration-300 hover:bg-gray-4',
+    isActive && 'font-bold text-brand-9 dark:text-brand-1',
+  )}
+  {href}><slot /></a
+>

@@ -1,5 +1,4 @@
 ---
-import Divider from './divider.svelte'
 import clsx from 'clsx'
 
 export interface Props {
@@ -15,7 +14,7 @@ const { name, className } = Astro.props
 		name ? (
 			<>
 				<h2 class="pb-2 text-2xl font-bold text-brand-9 dark:text-brand-3">{name}</h2>
-				<Divider />
+				<div class="border-brown-11 mb-2 w-24 border-b-4" />
 			</>
 		) : null
 	}

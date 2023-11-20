@@ -7,7 +7,6 @@ tags: ['astro', 'sveltekit', 'blog', 'typescript', 'building in public']
 ---
 
 import { Image } from 'astro:assets'
-import DualImageRow from '../../components/DualImageRow.astro'
 
 I recently decided to rewrite my personal page into Astro.
 Previously, it was built with SvelteKit which I was quite satisfied with.
@@ -46,18 +45,22 @@ However, I did want to give my page a facelift and decided to do a small rebrand
 Last year I decided to build a mechanical keyboard and I wanted to use the same color scheme for my blog.
 The keycaps set is [GMK Botanical](https://oblotzky.industries/products/gmk-botanical-2) and the kebboard is a green [Mekanisk Urskog](https://mekanisk.com/products/urskog?variant=42784529875118)
 
-<DualImageRow
-	images={[
-		{
-			src: 'https://cdn.shopify.com/s/files/1/0335/2087/7700/products/gmk_botanical_2_keyboard_bauer_x_01_2048x2048.jpg?v=1626084448',
-			alt: 'GMK Botanical'
-		},
-		{
-			src: 'https://cdn.shopify.com/s/files/1/1347/2157/products/DSC04420.jpg?v=1658955789&width=1946',
-			alt: 'Mekanisk urskog'
-		}
-	]}
-/>
+<div class="grid sm:grid-cols-2 my-8">
+	<Image
+		src={'https://cdn.shopify.com/s/files/1/0335/2087/7700/products/gmk_botanical_2_keyboard_bauer_x_01_2048x2048.jpg?v=1626084448'}
+		alt={'GMK Botanical'}
+		width="600"
+		height="200"
+		class="m-0"
+	/>
+	<Image
+		src={ 'https://cdn.shopify.com/s/files/1/1347/2157/products/DSC04420.jpg?v=1658955789&width=1946'}
+		alt={'Mekanisk urskog'}
+		width="600"
+		height="200"
+		class="m-0"
+	/>
+</div>
 
 I ended up settling for green as my primary color and decided to use [Coolors.co](https://coolors.co/) to generate my primary color.
 

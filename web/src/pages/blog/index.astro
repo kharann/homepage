@@ -1,9 +1,9 @@
 ---
-import PreviewPosts from '../../components/PreviewPosts.astro'
+import BlogPostItem from '../../components/BlogPostItem.astro'
 import Section from '../../components/Section.astro'
 import Layout from '../../layouts/Layout.astro'
 
-const allPosts = await Astro.glob('./*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
+const allPosts = await Astro.glob('../../content/blog/*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
 const posts = allPosts.filter((post) => !post.frontmatter.draft)
 ---
 
@@ -15,7 +15,7 @@ const posts = allPosts.filter((post) => !post.frontmatter.draft)
 			other things I find interesting.
 		</p>
 		<Section name="All posts.">
-			<PreviewPosts posts={posts} />
+			<BlogPostItem posts={posts} />
 		</Section>
 	</section>
 </Layout>

@@ -1,56 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { fetchFrontpageData } from '../api/frontpage'
-import PortableText from '../components/PortableText/index.svelte'
-import Experiences from '../components/experiences.svelte'
-import ProjectCard from '../components/ProjectCard.astro'
-import Section from '../components/Section.astro'
-import PreviewPosts from '../components/PreviewPosts.astro'
-import { compareAsc, isAfter, isBefore } from 'date-fns'
-
-const { introduction, experiences, projects } = await fetchFrontpageData()
-const allPosts = await Astro.glob('./blog/*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
-const posts = allPosts
-	.filter((post) => !post.frontmatter.draft)
-	.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
-	.slice(0, 3)
+import FrontPagePost from '../components/BlogPostItem.astro';
+import Link from '../components/Link.astro';
+import Section from '../components/Section.astro';
+import Layout from '../layouts/Layout.astro';
 
 
+const allPosts = await Astro.glob('../content/blog/*.mdx') 
+const posts = allPosts.filter((post) => !post.frontmatter.draft)
 ---
 
 <Layout title="Kharann • Homepage" description="Anhkha's developer portfolio">
-	<Section>
-		<h1 class="mb-2 text-4xl font-bold">
-			Hi, my name is
-			<span class="font-hack font-bold text-brand-7 dark:text-brand-3">Anhkha 👋</span>
-		</h1>
-		<byline class="text-lg">{introduction.role}</byline>
-	</Section>
-	<Section name="About me.">
-		<PortableText blocks={introduction.about_me} />
-	</Section>
-	<Section name="Latest posts." className="pb-6">
-		<PreviewPosts posts={posts} />
-	</Section>
-	<Section name="Experiences.">
-		<Experiences experiences={experiences} client:load />
-	</Section>
-	<Section name="Projects.">
-		I've worked on multiple projects, from commercial ones to small hobby projects.
-		<br />
-		During my free time, I love working on open-source projects. Here are some of my open-source highlights.
-		<div class="grid sm:grid-cols-2 mt-8 gap-4">
-			{projects.map((project) => <ProjectCard project={project} />)}
-		</div>
-	</Section>
-	<Section name="Contact.">
-		<div class="flex flex-col">
-			<p>Feel free to each out if you have any questions or just want to chat!</p>
-			<a
-				href="mailto:hey@akvo.no"
-				class="py-3 px-10 font-bold text-center self-center mt-6 rounded bg-green-2 border-brand-3 text-brand-3 border-2 hover:border-brand-5 hover:text-brand-5 transition-colors"
-				>Say hi!</a
-			>
-		</div>
-	</Section>
+  <Section>
+    <h1 class="mb-2 text-4xl font-bold">
+      Hi, my name is
+      <span class="font-hack font-bold text-brand-7 dark:text-brand-3">Anhkha 👋</span>
+    </h1>
+    <byline class="text-lg"
+      >I'm a software developer specializing in building unique user-oriented products without sacrificing quality.</byline
+    >
+  </Section>
+  <Section name="About me.">
+    <p>
+      Ever since I was a child, I've been fascinated by technology. Nevertheless, I quickly found myself tinkering with
+      the computer for hours if given the chance. Turns out hacking together Lua scripts for video games taught me a
+      thing or two about coding. A lot has changed since then, but I still found myself in front of the computer, but
+      tinkering around with some code instead. <br><br>
+      
+      Since then, I've built multiple web applications, managed software teams,
+      and designed scalable software architectures, all while juggling volunteering, work, and university.111111
+      
+      Fast forward to today, I've just finished my Master's degree in Informatics from NTNU and moved to Oslo. I currently work at
+      <Link aria-label="Link to liflig" href="https://www.capraconsulting.no/dette-kan-vi/liflig">Liflig</Link> as a full-stack developer with a passion for web applications. In my spare time, you might find me playing
+      video games, reading books, developing open-source software, or working out.<br><br>
+    </p>
+  </Section>
+  <Section name="Latest posts." className="pb-6">
+    <FrontPagePost posts={posts} />
+  </Section>
+  <!-- <Section name="Experiences.">
+    <Experiences experiences={experiences} client:load />
+  </Section>
+  <Section name="Projects.">
+    I've worked on multiple projects, from commercial ones to small hobby projects.
+    <br />
+     During my free time, I love working on open-source projects. Here are some of my open-source highlights.
+    <div class="grid sm:grid-cols-2 mt-8 gap-4">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </Section> -->
+  <Section name="Contact.">
+    <div class="flex flex-col">
+      <p>Feel free to each out if you have any questions or just want to chat!</p>
+      <a
+        href="mailto:hey@akvo.no"
+        class="py-2 px-6 font-bold text-center self-center mt-6 rounded border-2 transition-colors bg-sand-3 text-sand-11 hover:bg-sand-8"
+        >Say hi!</a
+      >
+    </div>
+  </Section>
 </Layout>

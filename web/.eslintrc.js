@@ -1,11 +1,10 @@
-const config = require("../.eslintrc.cjs")
-
 module.exports = {
-  ...config,
+  // ...
   extends: [
-    ...config.extends,
+    // ...
     "plugin:astro/recommended",
   ],
+  // ...
   overrides: [
     {
       // Define the configuration for `.astro` file.
@@ -23,6 +22,6 @@ module.exports = {
         // "astro/no-set-html-directive": "error"
       },
     },
+    // ...
   ],
-  ignorePatterns: ['**/*.js']
 }

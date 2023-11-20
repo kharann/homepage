@@ -1,5 +1,4 @@
 ---
-/* eslint-disable */
 import type { MDXInstance } from 'astro'
 import { format } from 'date-fns'
 
@@ -8,13 +7,14 @@ export interface Props {
 }
 
 const { posts } = Astro.props
+const getUrl = (url: string | undefined) => url ? url.split("/").slice(2).join("/").split(".").shift() :"/"
 ---
 
 <ul>
 	{
 		posts.map((post) => (
 			<li>
-				<a href={post.url}>
+				<a href={getUrl(post.url)}>
 					<article class="text-foreground hover:text-brand-7">
 						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.frontmatter.title}</h3>
 						<p class="flex items-center justify-between">
