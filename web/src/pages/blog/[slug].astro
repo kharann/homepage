@@ -1,18 +1,23 @@
 ---
-export async function getStaticPaths() {
+import { getCollection } from 'astro:content';
 
-const allPosts = await Astro.glob('../../content/blog/*.mdx') // returns an array of posts that live at ./src/pages/post/*.md
-const posts = allPosts.filter((post) => !post.frontmatter.draft)
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => {
+    return data.draft !== true;
+  });
 
   return posts.map((post) => {
     return {
-      params: { slug: post.file.split("/").pop()?.split(".").shift() },
+      params: { slug: post.slug },
       props: { post },
     };
   });
 }
 
-const { Content } = Astro.props.post;
+const { slug } = Astro.params;
+import { getEntry } from 'astro:content';
+const entry = await getEntry('blog', slug!);
+const { Content } = await entry!.render();
 ---
 
-<Content/>
+<Content />

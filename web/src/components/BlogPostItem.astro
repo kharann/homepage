@@ -1,27 +1,27 @@
 ---
-import type { MDXInstance } from 'astro'
+import type { CollectionEntry } from 'astro:content'
 import { format } from 'date-fns'
 
 export interface Props {
-	posts: MDXInstance<Record<any, any>>[]
+	posts: CollectionEntry<'blog'>[]
 }
 
 const { posts } = Astro.props
-const getUrl = (url: string | undefined) => url ? url.split("/").slice(2).join("/").split(".").shift() :"/"
+
 ---
 
 <ul>
 	{
 		posts.map((post) => (
 			<li>
-				<a href={getUrl(post.url)}>
+				<a href={`/blog/${post.slug}`}>
 					<article class="text-foreground hover:text-brand-7">
-						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.frontmatter.title}</h3>
+						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.data.title}</h3>
 						<p class="flex items-center justify-between">
 							<span class="text-gray-11">
-								{format(new Date(post.frontmatter.pubDate), 'LLLL dd, y')}
+								{format(new Date(post.data.pubDate), 'LLLL dd, y')}
 							</span>
-							<span class="text-gray-11">{post.frontmatter.minutesRead}</span>
+							<span class="text-gray-11">2 min</span>
 						</p>
 					</article>
 				</a>

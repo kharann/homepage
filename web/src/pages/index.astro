@@ -1,12 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import FrontPagePost from '../components/BlogPostItem.astro';
 import Link from '../components/Link.astro';
 import Section from '../components/Section.astro';
 import Layout from '../layouts/Layout.astro';
 
 
-const allPosts = await Astro.glob('../content/blog/*.mdx') 
-const posts = allPosts.filter((post) => !post.frontmatter.draft)
+const posts = await getCollection("blog", ({data}) => data.draft !== false)
 ---
 
 <Layout title="Kharann • Homepage" description="Anhkha's developer portfolio">
