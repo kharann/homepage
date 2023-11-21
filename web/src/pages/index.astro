@@ -6,7 +6,7 @@ import Section from '../components/Section.astro';
 import Layout from '../layouts/Layout.astro';
 
 
-const posts = await getCollection("blog", ({data}) => data.draft !== false)
+const posts = await getCollection("blog", ({data}) => !data.draft)
 ---
 
 <Layout title="Kharann • Homepage" description="Anhkha's developer portfolio">
@@ -39,7 +39,7 @@ const posts = await getCollection("blog", ({data}) => data.draft !== false)
   </Section>
   <!-- <Section name="Experiences.">
     <Experiences experiences={experiences} client:load />
-  </Section>
+  <true/Section>
   <Section name="Projects.">
     I've worked on multiple projects, from commercial ones to small hobby projects.
     <br />

@@ -4,9 +4,7 @@ import BlogPostItem from '../../components/BlogPostItem.astro';
 import Section from '../../components/Section.astro';
 import Layout from '../../layouts/Layout.astro';
 
-const posts = await getCollection('blog', ({ data }) => {
-  return data.draft !== true;
-});
+const posts = await getCollection('blog', ({ data }) => !data.draft);
 ---
 
 <Layout title="Kharann • All posts">
