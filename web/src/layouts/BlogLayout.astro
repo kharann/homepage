@@ -1,6 +1,5 @@
 ---
 import Layout from './Layout.astro'
-import { format } from 'date-fns'
 import clsx from 'clsx'
 
 interface Props {
@@ -12,9 +11,13 @@ interface Props {
 		minutesRead: number
 	}
 }
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
+  dateStyle: 'long',
+  timeStyle: 'short',
+});
 
 const { frontmatter } = Astro.props
-const publishedDate = format(new Date(frontmatter.pubDate), 'LLLL d Y')
+const publishedDate = dateFormat.format(new Date(frontmatter.pubDate))
 ---
 
 <Layout title={frontmatter.title} description={`${frontmatter.description}. ${frontmatter.tags.join(",")}`}>

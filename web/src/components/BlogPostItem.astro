@@ -1,31 +1,32 @@
 ---
-import type { CollectionEntry } from 'astro:content'
-import { format } from 'date-fns'
+import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
-	posts: CollectionEntry<'blog'>[]
+  posts: CollectionEntry<'blog'>[];
 }
 
-const { posts } = Astro.props
+const { posts } = Astro.props;
 
+const dateFormat = new Intl.DateTimeFormat('en-GB', {
+  dateStyle: 'long',
+  timeStyle: 'short',
+});
 ---
 
 <ul>
-	{
-		posts.map((post) => (
-			<li>
-				<a href={`/blog/${post.slug}`}>
-					<article class="text-foreground hover:text-brand-7">
-						<h3 class="mt-4 text-xl text-inherit transition-colors">{post.data.title}</h3>
-						<p class="flex items-center justify-between">
-							<span class="text-gray-11">
-								{format(new Date(post.data.pubDate), 'LLLL dd, y')}
-							</span>
-							<span class="text-gray-11">2 min</span>
-						</p>
-					</article>
-				</a>
-			</li>
-		))
-	}
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.slug}`}>
+          <article class="text-foreground hover:text-brand-7">
+            <h3 class="mt-4 text-xl text-inherit transition-colors">{post.data.title}</h3>
+            <p class="flex items-center justify-between">
+              <span class="text-gray-11">{dateFormat.format(new Date(post.data.pubDate))}</span>
+              <span class="text-gray-11">2 min</span>
+            </p>
+          </article>
+        </a>
+      </li>
+    ))
+  }
 </ul>
